@@ -10,7 +10,7 @@ The demo scenario consists of three apps:
 
 The architecture is illustrated in the diagram below.
 
-![demo](demo.png)
+![demo](docs/demo.png)
 
 ## Run the demo
 

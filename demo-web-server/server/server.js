@@ -15,7 +15,7 @@ boot(app, __dirname, function(err) {
     var httpServer = http.createServer(app).listen(port, host, function() {
       if (isMain) console.log('HTTP server listening at: %s', app.get('url'));
 
-      var sslCert = require('../../private/ssl-cert');
+      var sslCert = require('./private/ssl_cert');
       var httpsOptions = {
         key: sslCert.privateKey,
         cert: sslCert.certificate

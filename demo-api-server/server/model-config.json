@@ -26,7 +26,7 @@
     "dataSource": "db",
     "public": false
   },
-  "note": {
+  "Note": {
     "dataSource": "db",
     "public": true
   }

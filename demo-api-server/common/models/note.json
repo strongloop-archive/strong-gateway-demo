@@ -1,14 +1,11 @@
 {
-  "name": "note",
+  "name": "Note",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "title": {
-      "type": "string"
-    },
     "content": {
       "type": "string"
     }

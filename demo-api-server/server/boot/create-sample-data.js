@@ -1,11 +1,11 @@
-module.exports = function(server, cb) {
-  server.models.note.create([
-    {title: 'First note', content: 'Hello, World!'},
-    {title: 'Second note', content: 'StrongLoop Gateway'}
+module.exports = function(app, cb) {
+  app.models.Note.create([
+    {content: 'Buy eggs'},
+    {content: 'Buy milk'},
+    {content: 'Buy sausages'}
   ], function(err, notes) {
-    if (!err) {
-      console.log('Notes created: %j', notes);
-    }
-    cb(err);
+    if (err) throw err;
+    console.log('Notes created: %j', notes);
+    cb();
   });
 };

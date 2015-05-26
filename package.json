@@ -15,7 +15,10 @@
     "api"
   ],
   "scripts": {
+    "clean": "rm -rf ./demo-api-server/node_modules;rm -rf ./demo-web-server/node_modules",
+    "preinstall": "cd demo-api-server && npm i;cd ../demo-web-server && npm i",
     "pretest": "jshint .",
+    "start": "npm i;node .",
     "test": "mocha"
   },
   "dependencies": {

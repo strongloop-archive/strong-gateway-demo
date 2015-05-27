@@ -24,7 +24,6 @@
   "dependencies": {
     "strong-gateway": "git+ssh://git@github.com:strongloop/strong-gateway"
   },
-  "optionalDependencies": {},
   "homepage": "https://github.com/strongloop/strong-gateway-demo",
   "repository": {
     "type": "git",

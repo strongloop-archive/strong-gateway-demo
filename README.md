@@ -1,5 +1,10 @@
 # strong-gateway-demo
 
+```
+$ git clone git@github.com:strongloop/strong-gateway-demo.git
+$ npm start
+```
+
 ## Overview
 
 The demo scenario consists of three apps:
@@ -11,15 +16,3 @@ The demo scenario consists of three apps:
 The architecture is illustrated in the diagram below.
 
 ![demo](docs/demo.png)
-
-## Run the demo
-
-```sh
-cd demo-api-server
-npm install
-cd ../demo-web-server
-npm install
-cd ..
-npm install
-node .
-```

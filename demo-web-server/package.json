@@ -1,6 +1,7 @@
 {
   "name": "demo-web-server",
   "version": "1.0.0",
+  "private": true,
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint ."

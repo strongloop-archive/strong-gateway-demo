@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "demo-web-server",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -22,9 +22,5 @@
   "devDependencies": {
     "jshint": "^2.5.6"
   },
-  "repository": {
-    "type": "",
-    "url": ""
-  },
-  "description": "client"
+  "description": "demo-web-server"
 }

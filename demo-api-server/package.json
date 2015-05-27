@@ -1,5 +1,5 @@
 {
-  "name": "api-server",
+  "name": "demo-api-server",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -21,9 +21,5 @@
   "devDependencies": {
     "jshint": "^2.5.6"
   },
-  "repository": {
-    "type": "",
-    "url": ""
-  },
-  "description": "api-server"
+  "description": "demo-api-server"
 }

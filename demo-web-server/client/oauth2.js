@@ -1,7 +1,7 @@
 var client_id = "123";
 var client_secret = "secret";
 var client_registration_loaded = false;
-var baseURL = location.protocol + "//localhost:3005";// + location.host;
+var baseURL = location.protocol + "//localhost:3005";
 var tokenEndpoint = baseURL + "/oauth/token";
 var authEndpoint = baseURL + "/oauth/authorize";
 
@@ -151,5 +151,9 @@ function updateJson(id, jsonObject) {
 }
 
 function displayMessage(msg) {
-  updateHtml("msg", msg);
+  updateHtml('msg', msg);
+}
+
+function getUrlWithToken(url, token) {
+  return url + '?access_token=' + token;
 }

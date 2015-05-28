@@ -1,9 +1,3 @@
-var clientId = '123';
-var clientSecret = 'secret';
-var clientRegistrationLoaded = false;
-var baseUrl = 'https://localhost:3005';
-var tokenEndpoint = baseUrl + '/oauth/token';
-var authEndpoint = baseUrl + '/oauth/authorize';
 
 // utility
 
@@ -49,7 +43,7 @@ function tokenByClientCredentials(clientId, clientSecret, username, scope, token
     .error(errorCallback);
 }
 
-function tokenByResourceOwnerPasswordCredentials(clientId, clientSecret, username, password, scope, tokenCallback, errorCallback) {
+function getTokenByResourceOwnerPasswordCredentials(clientId, clientSecret, username, password, scope, tokenCallback, errorCallback) {
   scope = scope || "demo";
   var data = "grant_type=password&client_id=" + clientId + "&client_secret="
     + clientSecret + "&username=" + username + "&password=" + password + "&scope=" + scope;

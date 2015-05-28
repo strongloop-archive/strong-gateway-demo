@@ -2,6 +2,7 @@
 
 ```
 $ git clone git@github.com:strongloop/strong-gateway-demo.git
+$ cd strong-gateway-demo
 $ npm start
 ```
 

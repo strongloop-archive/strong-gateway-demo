@@ -23,18 +23,17 @@
           OauthToken
         );
         var resourceUrls = [
-          '<p>',
+          '<div>',
             '<a href="' + protectedUrl + '">',
               'Access OAuth 2.0 protected resources',
             '</a>',
-          '</p>',
-          '<p>',
+          '</div>',
+          '<div>',
             '<a href="' + notesUrl + '">',
-              '/api/notes',
+              'Call /api/notes',
             '</a>',
-          '</p>',
+          '</div>',
         ].join('');
-
         displayMessage(resourceUrls);
       });
     </script>

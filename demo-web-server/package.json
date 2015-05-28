@@ -23,5 +23,9 @@
   "devDependencies": {
     "jshint": "^2.5.6"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/strong-gateway-demo.git"
+  },
   "description": "demo-web-server"
 }

@@ -3,18 +3,15 @@
   <head>
     <title>StrongLoop API gateway demo</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="oauth2.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/oauth2.js"></script>
     <script>
       $(function() {
-        var hasQueryStr = window.location.search;
-        params = hasQueryStr ? queryStr.substring(1).split('&') : [];
-
-        if (params.length !== 0)
+        if (hasQueryStrParams())
           return displayMessage(window.location);
 
-        var hasFragment = window.location.hash.length !== 0;
-        if (!hasFragment)
-          return implicit(client_id);
+        if (!hasFragment())
+          return implicit(clientId);
 
         var OauthToken = getAccessToken();
         var protectedUrl = getUrlWithToken(

@@ -1,31 +1,20 @@
 <!doctype html>
 <html>
   <head>
-  <title>Client - Authorization code flow</title>
+  <title>StrongLoop API gateway demo</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-  <script src="oauth2.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/oauth2.js"></script>
   <script>
     $(function() {
+      if (!hasQueryStrParams() && hasFragment())
+        return displayMessage(window.location);
 
-      var query = window.location.search;
-      var parameters = [];
+      if (!hasQueryStrParams() && !hasFragment())
+        return authorizationCode(clientId);
 
-      if (query != null && query != "") {
-        parameters = query.substring(1).split('&');
-      }
-
-      if (parameters.length == 0) {
-        if (window.location.hash.length == 0) {
-          authorizationCode(client_id);
-        } else {
-          // alert(window.location);
-          displayMessage(window.location);
-        }
-      } else {
-        oAuthCode = getCode();
-        tokenByCode(client_id, client_secret, oAuthCode, processToken);
-      }
-
+      oAuthCode = getCode();
+      tokenByCode(clientId, clientSecret, oAuthCode, processToken);
     });
 
     function processToken(data) {
@@ -43,8 +32,11 @@
   </head>
   <body>
     <h1>OAuth 2.0 authorization code flow</h1>
+
     <hr>
-    <p>Message: <strong id='msg'></strong></p>
-    <p><a href='/index.html'>Home</a></p>
+
+    <p>Message: <strong id="msg"></strong></p>
+
+    <p><a href="/">Home</a></p>
   </body>
 </html>

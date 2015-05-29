@@ -14,11 +14,11 @@
         if (!hasQueryStrParams() && !hasFragment())
           return getAuthorizationCode(clientId);
 
-        oAuthCode = getCode();
-        getTokenByCode(clientId, clientSecret, oAuthCode, processToken);
+        var OauthCode = getCode();
+        getTokenByCode(clientId, clientSecret, OauthCode, successCallback);
       });
 
-      function processToken(data) {
+      function successCallback(data) {
         var OauthToken = getAccessToken();
         var protectedUrl = getUrlWithToken(
           'https://localhost:3005/protected/protected-apis.html',

@@ -12,10 +12,10 @@
           return displayMessage(window.location);
 
         if (!hasQueryStrParams() && !hasFragment())
-          return authorizationCode(clientId);
+          return getAuthorizationCode(clientId);
 
         oAuthCode = getCode();
-        tokenByCode(clientId, clientSecret, oAuthCode, processToken);
+        getTokenByCode(clientId, clientSecret, oAuthCode, processToken);
       });
 
       function processToken(data) {

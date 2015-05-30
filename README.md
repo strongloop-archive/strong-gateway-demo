@@ -20,7 +20,7 @@ The architecture is illustrated in the diagram below.
 
 ![demo](docs/demo.png)
 
-### `demo-web-server`
+### demo-web-server
 
 The `demo-web-server` is a simple web app used to access REST APIs protected by
 the API gateway. Access is granted through any of the following flows:
@@ -50,13 +50,13 @@ See http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-
 
 See http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Resourceownerpasswordcredentialsgrant
 
-### `strong-gateway`
+### strong-gateway
 
 The StrongLoop API Gateway is a standalone LoopBack application used to expose
 and protect APIs. See https://github.com/strongloop/strong-gateway for more
 info.
 
-### `demo-api-server`
+### demo-api-server
 
 The `demo-api-server` is a LoopBack app used to serve a REST API. In this case,
 we serve the [`notes` model](demo-api-server/models/common/notes.json) which has

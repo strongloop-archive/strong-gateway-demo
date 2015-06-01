@@ -25,30 +25,10 @@ The architecture is illustrated in the diagram below.
 The `demo-web-server` is a simple web app used to access REST APIs protected by
 the API gateway. Access is granted through any of the following flows:
 
-- [Implicit flow](#implicit-flow)
-- [Authorization code flow](#authorization-code-flow)
-- [Client credentials flow](#client-credentials-flow)
-- [Resource password owner credentials flow](#resource-password-owner-credentials-flow)
-
-#### Implicit flow
-
-See http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Implicitgrant
-.
-
-#### Authorization code flow
-
-See
-http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant
-.
-
-#### Client credentials flow
-
-See http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Clientcredentialsgrant
-.
-
-#### Resource owner password credentials flow
-
-See http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Resourceownerpasswordcredentialsgrant
+- [Implicit flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Implicitgrant)
+- [Authorization code flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
+- [Client credentials flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Clientcredentialsgrant)
+- [Resource password owner credentials flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Resourceownerpasswordcredentialsgrant)
 
 ### strong-gateway
 
@@ -70,4 +50,4 @@ apps on ports 3000 to 3005.
 2. Browse to `http://localhost:3000`. Your browser will be redirected to `https://localhost:3001`
 . You should see a list of links, which you can use to invoke a particular flow.
 
-3. Choose the [implicit-flow](#implicit-flow).
+3. Choose the *implicit-flow*

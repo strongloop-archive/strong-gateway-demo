@@ -12,9 +12,9 @@ $ npm start
 between an API consumer, [API gateway](https://github.com/strongloop/strong-gateway)
 , and API server. The example consists of three distinct apps:
 
-- [demo-web-server](#demo-web-server)
-- [strong-gateway](#strong-gateway)
-- [demo-api-server](#demo-api-server)
+- [demo-web-server](#demo-web-server) - API consumer
+- [strong-gateway](#strong-gateway) - API gateway
+- [demo-api-server](#demo-api-server) - API server
 
 The architecture is illustrated in the diagram below.
 

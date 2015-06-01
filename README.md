@@ -85,6 +85,7 @@ Our request to the API gateway has been proxied to the `demo-api-server` and
 the results sent back as JSON (notice the URL is `https://localhost:3005/api/notes`
 instead of https://localhost:3002/api/notes`.
 
-11. That's it for the implicit flow. Click on back and then the *Home* link and
-try out the other flows listed (Authorization code, Client credentials, and
-Resource owner password credentials). Each flow has its own differences, see http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Getanaccesstoken and https://tools.ietf.org/html/rfc6749#section-1.3 for more info.
+11. That's it for the implicit flow. Click on *back* button in your browser and
+then click the *Home* link. Try out some of the other flows listed on the page
+(Authorization code, Client credentials, and Resource owner password
+credentials). Each flow has its own differences, see http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Getanaccesstoken and https://tools.ietf.org/html/rfc6749#section-1.3 for more info.

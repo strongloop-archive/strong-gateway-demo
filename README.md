@@ -47,7 +47,49 @@ a single property `content`.
 1. Run `npm start` in the [project root](/). The command will start all three
 apps on ports 3000 to 3005.
 
-2. Browse to `http://localhost:3000`. Your browser will be redirected to `https://localhost:3001`
-. You should see a list of links, which you can use to invoke a particular flow.
+2. Browse to `http://localhost:3000`. Your browser will be redirected to `https://localhost:3001 `
+and you should see a list of links.
 
-3. Choose the *implicit-flow*
+3. Start by choosing the *implicit-flow*. You will see a popup asking if you
+want to be redirected to the given URL (notice the query string contains all the
+params expected by the API gateway). Choose *OK*.
+
+4. At this point, your browser will be redirected to the gateway's
+authenticadtion page (notice the URL is now pointing at localhost:3005 instead
+of 3001). Log in using the provided credentials (bob:secret) by clicking
+*Submit*.
+
+5. Once you log in, notice the URL changes to `https://localhost:3005/oauth/authorize?client_id...`
+. The API gateway will then ask you to grant permissions to `demo-app` with
+`demo` permissions (scope). Click allow to approve the grant. You will then be
+redirected to `https://localhost:3001/implicit-flow.html`.
+
+6. After the redirectly, notice the URL has changed to `https:://localhost:3001/implicit-flow.html#access_token=...`
+. The main point here is you have an access token embedded into the URL, which
+you can use to access resources protected by the API gateway. You should also
+see two links on the page with access tokens embedded in their respectiev URLs.
+
+7. The first link, *Access OAuth 2.0 protected resources* is a link to a
+resource hosted on the local server protected by the API gateway. Click the link
+and you will see that the URL has redirected you to `localhost:3001/protected/protected-apis.html...`.
+What has happened here is the API gateway has proxied your request back to a
+resource on the local server (see [client/protected/protected-apis.html](client/protected/protected-apis.html)
+.
+
+8. Click the back button in your browser to go back to the page listing the
+resources. Click on the second link *Call /api/notes*.
+
+9. You should see:
+
+```
+[{"content":"Buy eggs","id":1},{"content":"Buy milk","id":2},{"content":"Buy sausages","id":3}]
+```
+
+In this case, the `demo-api-server` is serving resources on `localhost:3002`.
+Our request to the API gateway has been proxied to the `demo-api-server` and
+the results sent back as JSON (notice the URL is `https://localhost:3005/api/notes`
+instead of https://localhost:3002/api/notes`
+
+10. That's it for the implicit flow. Click on back and then the *Home* link and
+try out the other flows listed (Authorization code, Client credentials, and
+Resource owner password credentials). Each flow has its own differences, see https://tools.ietf.org/html/rfc6749#section-1.3 for more info.

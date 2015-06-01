@@ -9,7 +9,7 @@ $ npm start
 ## Overview
 
 `strong-gateway-demo` is an example app that demonstrates the interactions
-between the API consumer, [API gateway](https://github.com/strongloop/strong-gateway)
+between an API consumer, [API gateway](https://github.com/strongloop/strong-gateway)
 , and API server. The example consists of three distinct apps:
 
 - [demo-web-server](#demo-web-server)

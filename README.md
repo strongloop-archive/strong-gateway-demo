@@ -78,11 +78,7 @@ resource hosted on the local server (see [client/protected/protected-apis.html](
 8. Click the back button in your browser to go back to the page listing the
 resources. Click on the second link *Call /api/notes*.
 
-9. You should see:
-
-```
-[{"content":"Buy eggs","id":1},{"content":"Buy milk","id":2},{"content":"Buy sausages","id":3}]
-```
+9. You should see `[{"content":"Buy eggs","id":1},{"content":"Buy milk","id":2},{"content":"Buy sausages","id":3}]`
 
 10. In this case, the `demo-api-server` is serving resources on `localhost:3002`.
 Our request to the API gateway has been proxied to the `demo-api-server` and

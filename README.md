@@ -11,7 +11,7 @@ $ npm start
 `strong-gateway-demo` is an example app that demonstrates the interactions
 between an API consumer, [API gateway](https://github.com/strongloop/strong-gateway), and API server. 
 
-For more information, see [http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway](StrongLoop API Gateway documentation).
+For more information, see [StrongLoop API Gateway documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 
 The example consists of three distinct apps:
 
@@ -36,7 +36,7 @@ the API gateway. Access is granted through any of the following flows:
 ### strong-gateway
 
 The StrongLoop API Gateway is a standalone LoopBack application used to expose
-and protect APIs. For more information, see [http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway](StrongLoop API Gateway documentation).
+and protect APIs. For more information, see [StrongLoop API Gateway documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 
 ### demo-api-server
 

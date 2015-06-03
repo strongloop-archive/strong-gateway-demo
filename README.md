@@ -9,8 +9,11 @@ $ npm start
 ## Overview
 
 `strong-gateway-demo` is an example app that demonstrates the interactions
-between an API consumer, [API gateway](https://github.com/strongloop/strong-gateway)
-, and API server. The example consists of three distinct apps:
+between an API consumer, [API gateway](https://github.com/strongloop/strong-gateway), and API server. 
+
+For more information, see [http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway](StrongLoop API Gateway documentation).
+
+The example consists of three distinct apps:
 
 - [demo-web-server](#demo-web-server) - API consumer
 - [strong-gateway](#strong-gateway) - API gateway
@@ -33,8 +36,7 @@ the API gateway. Access is granted through any of the following flows:
 ### strong-gateway
 
 The StrongLoop API Gateway is a standalone LoopBack application used to expose
-and protect APIs. See https://github.com/strongloop/strong-gateway for more
-info.
+and protect APIs. For more information, see [http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway](StrongLoop API Gateway documentation).
 
 ### demo-api-server
 
@@ -59,12 +61,11 @@ authentication page (notice the URL is now pointing at `https://localhost:3005` 
 of `https://localhost:3001`). Log in using the provided credentials (bob:secret) by
 clicking *Submit*.
 
-5. Once you log in, notice the URL changes to `https://localhost:3005/oauth/authorize?client_id...`
-. The API gateway will then ask you to grant permissions to `demo-app`.  Click
+5. Once you log in, notice the URL changes to `https://localhost:3005/oauth/authorize?client_id...`. The API gateway will then ask you to grant permissions to `demo-app`.  Click
 allow to approve the grant. You will then be redirected to `https://localhost:3001/implicit-flow.html`.
 
-6. After the redirection, notice the URL has changed to `https:://localhost:3001/implicit-flow.html#access_token=...`
-. The key thing to note here is the access token embedded into the URL, which
+6. After the redirection, notice the URL has changed to `https:://localhost:3001/implicit-flow.html#access_token=...`. 
+7. The key thing to note here is the access token embedded into the URL, which
 is used to access resources protected by the API gateway. You should also see
 two links on the page with access tokens embedded in their respective URLs.
 
@@ -72,8 +73,7 @@ two links on the page with access tokens embedded in their respective URLs.
 resource hosted on the local server protected by the API gateway. Click the link
 and you will see that the URL has redirected you to `localhost:3001/protected/protected-apis.html...`.
 What has happened here is the API gateway proxied your request back to a
-resource hosted on the local server (see [client/protected/protected-apis.html](/demo-web-server/client/protected/protected-apis.html)
-.
+resource hosted on the local server (see [client/protected/protected-apis.html](/demo-web-server/client/protected/protected-apis.html).
 
 8. Click the back button in your browser to go back to the page listing the
 resources. Click on the second link *Call /api/notes*.
@@ -85,7 +85,7 @@ Our request to the API gateway has been proxied to the `demo-api-server` and
 the results sent back as JSON (notice the URL is `https://localhost:3005/api/notes`
 instead of `https://localhost:3002/api/notes`.
 
-11. That's it for the implicit flow. Click on *back* button in your browser and
+11. That's it for the implicit flow. Click the *back* button in your browser and
 then click the *Home* link. Try out some of the other flows listed on the page
 (Authorization code, Client credentials, and Resource owner password
 credentials). Each flow has its own differences, see http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Getanaccesstoken and https://tools.ietf.org/html/rfc6749#section-1.3 for more info.

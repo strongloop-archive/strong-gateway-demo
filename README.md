@@ -1,9 +1,17 @@
 # strong-gateway-demo
 
+**Prerequisite**: To get a free 30-day trial license for this beta feature, run StrongLoop Arc as follows:
+
+```slc arc --licenses```
+
+Then login to Arc if you have not already done so.  You'll then see the Arc Licenses page showing your trial licenses.
+
+Then you can run the API Gateway demo as follows:
+
 ```
 $ git clone git@github.com:strongloop/strong-gateway-demo.git
 $ cd strong-gateway-demo
-$ npm start
+$ slc start
 ```
 
 ## Overview

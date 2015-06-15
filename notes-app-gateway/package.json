@@ -1,0 +1,25 @@
+{
+  "name": "notes-app-gateway",
+  "version": "1.0.0",
+  "description": "The \"Notes\" app with strong-gateway integration.",
+  "main": "server.js",
+  "scripts": {
+    "preinstall": "build-servers",
+    "try-demo": "try-demo",
+    "start": "node .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/strong-gateway-demo"
+  },
+  "author": "Simon Ho <simon@strongloop.com> (http://github.com/superkhau)",
+  "license": {
+    "name": "StrongLoop",
+    "url": "https://github.com/strongloop/strong-gateway-demo/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/strongloop/strong-gateway-demo/issues"
+  },
+  "homepage": "https://github.com/strongloop/strong-gateway-demo"
+}

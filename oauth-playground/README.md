@@ -66,7 +66,7 @@ The `api-server` is a LoopBack app used to serve a REST API. In this case, we
 serve the [`notes` model](/api-server/common/models/note.json) which has a
 single property `content`.
 
-### OAuth 2.0 Authorization Grants
+## Procedure
 
 `oauth-playground` supports the following [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:
@@ -76,7 +76,8 @@ flows:
 - [Client credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
 - [Resource owner password credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
 
-We also include sample scripts for other flows:
+When you run the demo, you can click on link to start the corresponding OAuth
+2.0 flow. We also include samples for script based flows:
 
 - [JWT Authorization Grant](scripts/jwt-client-auth.js)
 - [JWT Client Authentication](scripts/jwt-auth-grant.js)

@@ -128,7 +128,7 @@ $ cp -r ../notes-app-plain/web-server web-server
 
 ##### 2. Clone the gateway
 
-Start by cloning `strong-gatway` from GitHub into the project root:
+Start by cloning `strong-gateway` from GitHub into the project root:
 
 ```
 $ git clone https://github.com/strongloop/strong-gateway.git gateway-server

@@ -4,7 +4,6 @@
   "description": "The \"Notes\" app with strong-gateway integration.",
   "main": "server.js",
   "scripts": {
-    "preinstall": "build-servers",
     "try-demo": "try-demo",
     "start": "node .",
     "test": "mocha"

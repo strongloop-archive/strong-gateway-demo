@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "preinstall": "build-servers",
-    "prestart": "build-servers",
     "start": "node .",
     "test": "mocha"
   },

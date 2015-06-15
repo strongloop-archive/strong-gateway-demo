@@ -35,7 +35,7 @@ The example consists of three distinct apps:
 
 The architecture is illustrated in the diagram below.
 
-![architecture-diagram](docs/arch-diagram.png)
+![architecture-diagram](doc/arch-diagram.png)
 
 #### `web-server`
 

@@ -1,4 +1,4 @@
 cd api-server
-npm install
+npm i
 cd ..\web-server
-npm install
+npm i

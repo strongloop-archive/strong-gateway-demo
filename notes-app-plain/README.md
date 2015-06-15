@@ -58,7 +58,8 @@ The completed application will be used as the foundation for the next tutorial
 ## Run the demo
 
 ```
-$ npm start
+$ npm install
+$ node .
 ```
 
 ## Build the demo

@@ -5,11 +5,30 @@ OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial]
 
 ## Prerequisites
 
+### Add the current directory to the PATH environment variable
+
+You will need to add the current directory to the [PATH environment variable](http://en.wikipedia.org/wiki/PATH_(variable))
+to run the included `build-server` scripts. Do this by adding the following to
+your startup script:
+
+```
+PATH=$PATH:.
+```
+
+> We do it this way to ensure the build scripts are [cross-platform](https://en.wikipedia.org/wiki/Cross-platform)
+
+### Tools
+
+See the [prerequisites section in the main README](../README.md#prerequisites)
+
+### Knowledge
+
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 - [`strong-gateway-demo/notes-app-plain`](../notes-app-plain)
 
-
 ## Run the demo
+
+### The main demo (phase-4)
 
 OSX/Linux:
 
@@ -21,6 +40,28 @@ Windows:
 
 ```
 > try-demo.cmd
+```
+
+### Go to a specific phase
+
+OSX/Linux:
+
+```
+$ cd sample-configs/phase-1 # replace 1 with any number (ie. 2, 3, 4, ...)
+$ copy-files
+$ cd ../..
+$ build-servers
+$ node .
+```
+
+Windows:
+
+```
+> cd sample-configs\phase-1 # replace 1 with any number (ie. 2, 3, 4, ...)
+> copy-files.cmd
+> cd ../...
+> build-servers.cmd
+> node .
 ```
 
 ## Overview

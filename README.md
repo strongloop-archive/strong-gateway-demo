@@ -1,3 +1,5 @@
+> WARNING: Some parts of the tutorial require a [StrongLoop license](#obtain-a-strongloop-license)
+
 # strong-gateway-demo
 
 This demo is meant to used in conjunction with [`strong-gateway`](https://github.com/strongloop/strong-gateway).
@@ -10,7 +12,7 @@ typical web application using the [`client-server` architecture](http://simple.w
 
 http://docs.strongloop.com/display/LB/Installing+StrongLoop
 
-### Min versions
+### Minimum versions
 
 Before starting the tutorial or trying out the demos, make sure you have the
 following StrongLoop libraries installed:

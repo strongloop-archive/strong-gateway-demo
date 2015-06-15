@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>oauth-playground</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="js/oauth2.js"></script>
+    <script>
+      $(function() {
+        if (hasQueryStrParams())
+          return displayMessage(window.location);
+
+        if (!hasFragment())
+          return implicit(clientId);
+
+        var OauthToken = getAccessToken();
+        var protectedUrl = getUrlWithToken(
+          'https://localhost:3005/protected/protected-apis.html',
+          OauthToken
+        );
+        var notesUrl = getUrlWithToken(
+          'https://localhost:3005/api/notes',
+          OauthToken
+        );
+        var resourceUrls = [
+          '<div>',
+            '<a href="' + protectedUrl + '">',
+              'Access OAuth 2.0 protected resources',
+            '</a>',
+          '</div>',
+          '<div>',
+            '<a href="' + notesUrl + '">',
+              'Call /api/notes',
+            '</a>',
+          '</div>',
+        ].join('');
+        displayMessage(resourceUrls);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>OAuth 2.0 implicit flow</h1>
+
+    <hr>
+
+    <p>Message: <strong id="msg"></strong></p>
+
+    <p><a href="/">Home</a></p>
+  </body>
+</html>

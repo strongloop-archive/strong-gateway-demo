@@ -1,0 +1,38 @@
+{
+  "name": "oauth-playground",
+  "description": "Demo application for StrongLoop API Gateway",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [
+    "StrongLoop",
+    "LoopBack",
+    "oAuth 2.0",
+    "gateway",
+    "authentication",
+    "authorization",
+    "rate limiting",
+    "reverse proxy",
+    "api"
+  ],
+  "scripts": {
+    "preinstall": "build-servers",
+    "pretest": "jshint .",
+    "start": "node .",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "strong-gateway": "^1.0.0"
+  },
+  "homepage": "https://github.com/strongloop/strong-gateway-demo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strongloop/strong-gateway-demo.git"
+  },
+  "bugs": {
+    "url": "http://github.com/strongloop/strong-gateway-demo/issues"
+  },
+  "license": {
+    "name": "StrongLoop",
+    "url": "https://github.com/strongloop/strong-gateway-demo/blob/master/LICENSE"
+  }
+}

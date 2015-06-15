@@ -1,0 +1,40 @@
+{
+  "initial:before": {
+    "loopback#favicon": {},
+    "strong-express-metrics": {}
+  },
+  "initial": {
+    "compression": {},
+    "cors": {
+      "params": {
+        "origin": true,
+        "credentials": true,
+        "maxAge": 86400
+      }
+    }
+  },
+  "session": {
+  },
+  "auth": {
+  },
+  "parse": {
+  },
+  "routes:before": {
+    "./middleware/https-redirect": {
+      "params": {
+        "httpsPort": 3001
+      }
+    }
+  },
+  "files": {
+    "loopback#static": {
+      "params": "$!../client"
+    }
+  },
+  "final": {
+    "loopback#urlNotFound": {}
+  },
+  "final:after": {
+    "errorhandler": {}
+  }
+}

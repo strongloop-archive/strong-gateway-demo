@@ -1,0 +1,4 @@
+cd api-server
+npm install
+cd ..\web-server
+npm install

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>oauth-playground</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="js/oauth2.js"></script>
+    <script>
+      $(function() {
+        if (!hasQueryStrParams() && hasFragment())
+          return displayMessage(window.location);
+
+        if (!hasQueryStrParams() && !hasFragment())
+          return getAuthorizationCode(clientId);
+
+        var OauthCode = getCode();
+        getTokenByCode(clientId, clientSecret, OauthCode, successCallback);
+      });
+
+      function successCallback(data) {
+        var OauthToken = getAccessToken();
+        var protectedUrl = getUrlWithToken(
+          'https://localhost:3005/protected/protected-apis.html',
+          data.access_token
+        );
+        var notesUrl = getUrlWithToken(
+          'https://localhost:3005/api/notes',
+          data.access_token
+        );
+        var resourceUrls = [
+          '<div>',
+            '<a href="' + protectedUrl + '">',
+              'Access OAuth 2.0 protected resources',
+            '</a>',
+          '</div>',
+          '<div>',
+            '<a href="' + notesUrl + '">',
+              'Call /api/notes',
+            '</a>',
+          '</div>',
+        ].join('');
+        displayMessage(resourceUrls);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>OAuth 2.0 authorization code flow</h1>
+
+    <hr>
+
+    <p>Message: <strong id="msg"></strong></p>
+
+    <p><a href="/">Home</a></p>
+  </body>
+</html>

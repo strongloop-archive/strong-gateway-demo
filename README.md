@@ -1,4 +1,4 @@
-> WARNING: Some parts of this tutorial require a [StrongLoop license](#obtain-a-strongloop-license)
+> WARNING: Some parts of this beta tutorial require a [StrongLoop license](#obtain-a-strongloop-license).
 
 # strong-gateway-demo
 

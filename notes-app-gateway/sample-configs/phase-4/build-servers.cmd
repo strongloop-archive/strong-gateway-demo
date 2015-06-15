@@ -1,6 +1,6 @@
 cd api-server
-npm i
+call npm i
 cd ..\web-server
-npm i
+call npm i
 cd ..\gateway-server
-npm i
+call npm i

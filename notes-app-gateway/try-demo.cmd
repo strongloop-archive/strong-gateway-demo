@@ -1,13 +1,13 @@
 cd api-server
-npm i
+call npm i
 cd ..\web-server
-npm i
+call npm i
 cd ..\gateway-server
-git submodule init
-git submodule update
+call git submodule init
+call git submodule update
 cd ..\sample-configs\phase-4
-copy-files
+call copy-files
 cd ..\..\gateway-server
-npm i
+call npm i
 cd ..
-node .
+call node .

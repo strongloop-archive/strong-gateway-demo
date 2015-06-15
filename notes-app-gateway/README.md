@@ -1,14 +1,31 @@
 # notes-app-gateway
 
+The goal of this tutorial is to show you how to integrate `strong-gateway` as an
+OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial](../notes-app-plain).
+
+## Prerequisites
+
+- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- [`strong-gateway-demo/notes-app-plain`](../notes-app-plain)
+
+
+## Run the demo
+
+OSX/Linux:
+
 ```
-$ npm start
+$ try-demo
+```
+
+Windows:
+
+```
+> try-demo.cmd
 ```
 
 ## Overview
 
-The goal of this tutorial is to show you how to integrate `strong-gateway` as an
-OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial](../notes-app-plain).
-The idea is to have an API gateway sit between the web server and API server:
+We would like to have an API gateway sit between the web server and API server:
 
 ```
 +--------+     +---------+     +--------+
@@ -17,7 +34,9 @@ The idea is to have an API gateway sit between the web server and API server:
 +--------+     +---------+     +--------+
 ```
 
-Along the way, we will be demonstrating a variety of `strong-gateway` concepts:
+While working through the tutorial, we will also be demonstrating a variety of
+[StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
+concepts:
 
 - How to register apps and users for the API gateway
 - How to configure the client app to use the API gateway
@@ -27,11 +46,6 @@ Along the way, we will be demonstrating a variety of `strong-gateway` concepts:
 - How to use a `strong-gateway` policy ([`rate limiting`](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting))
 - How to collect metrics from the API gateway using [StrongLoop Arc](point to docs)
 - How to use a custom datasource for API gateway data/metadata persistence
-
-## Prerequisites
-
-- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- [`strong-gateway-demo/notes-app-plain`](../notes-app-plain)
 
 ## Procedure
 

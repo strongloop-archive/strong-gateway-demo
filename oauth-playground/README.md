@@ -1,17 +1,7 @@
 # oauth-playground
 
-This is a sample web app used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
-flows:
-
-- [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)
-- [Authorization code](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Authorizationcodegrant)
-- [Client credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
-- [Resource owner password credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
-
-We also include sample scripts for other flows:
-
-- [JWT Authorization Grant](scripts/jwt-client-auth.js)
-- [JWT Client Authentication](scripts/jwt-auth-grant.js)
+This is a sample web application used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
+flows.
 
 ## Prerequisites
 
@@ -25,6 +15,13 @@ your startup script:
 PATH=$PATH:.
 ```
 
+## Run the demo
+
+```
+npm install
+node .
+```
+
 > We do it this way to ensure the build scripts are [cross-platform](https://en.wikipedia.org/wiki/Cross-platform)
 
 ### Tools
@@ -36,12 +33,6 @@ See the [prerequisites section in the main README](../README.md#prerequisites)
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 
 ## Overview
-
-`oauth-playground` is an example app that demonstrates the interactions between
-an API consumer, [API gateway](https://github.com/strongloop/strong-gateway),
-and API server.
-
-For more information, see [StrongLoop API Gateway documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 
 The example consists of three distinct apps:
 
@@ -75,12 +66,20 @@ The `api-server` is a LoopBack app used to serve a REST API. In this case, we
 serve the [`notes` model](/api-server/common/models/note.json) which has a
 single property `content`.
 
-## Run the demo
+### OAuth 2.0 Authorization Grants
 
-```
-npm install
-node .
-```
+`oauth-playground` supports the following [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
+flows:
+
+- [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)
+- [Authorization code](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Authorizationcodegrant)
+- [Client credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
+- [Resource owner password credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
+
+We also include sample scripts for other flows:
+
+- [JWT Authorization Grant](scripts/jwt-client-auth.js)
+- [JWT Client Authentication](scripts/jwt-auth-grant.js)
 
 ---
 

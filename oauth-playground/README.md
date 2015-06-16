@@ -5,22 +5,7 @@ flows.
 
 ## Prerequisites
 
-### Add the current directory to the PATH environment variable
-
-You will need to add the current directory to the [PATH environment variable](http://en.wikipedia.org/wiki/PATH_(variable))
-to run the included `build-server` scripts. Do this by adding the following to
-your startup script:
-
-```
-PATH=$PATH:.
-```
-
-### Tools
-
-See the [prerequisites section in the main README](../README.md#prerequisites)
-
-### Knowledge
-
+- Everything in [`prerequisites.md`](docs/prerequisites.md)
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 
 ## Run the demo

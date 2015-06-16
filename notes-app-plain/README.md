@@ -73,7 +73,7 @@ $ slc loopback api-server
 $ ... # follow the prompts
 ```
 
-#### 2. Create the `notes` model
+#### 2. Create the `Note` model
 
 ##### Model info
 

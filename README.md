@@ -65,11 +65,11 @@ in the [`notes-app-gateway` tutorial](notes-app-gateway).
 
 ### `notes-app-gateway`
 
-An in-depth tutorial on how to integrate `strong-gateway` into [the app we built
-in the `notes-app-plain` tutorial](notes-app-plain). We take the existing code
-from [`notes-app-plain`](notes-app-plain) and update it through a series of
-[*phases*](notes-app-gateway/sample-configs). Each phase is a step towards
-implementing the API gateway ([`strong-gateway`](https://github.com/strongloop/strong-gateway-demo)
+An in-depth tutorial on how to integrate [`strong-gateway`](https://github.com/strongloop/strong-gateway)
+into [the app we built in the `notes-app-plain` tutorial](notes-app-plain). We
+take the existing code from [`notes-app-plain`](notes-app-plain) and update it
+through a series of [*phases*](notes-app-gateway/sample-configs). Each phase is
+a step towards implementing the API gateway ([`strong-gateway`](https://github.com/strongloop/strong-gateway-demo)
 as an intermediary between the client and API server. Along the way, we will
 also be introducing a variety of concepts:
 

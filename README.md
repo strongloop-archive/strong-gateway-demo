@@ -57,7 +57,7 @@ Then login to Arc (if you have not already done so) and you'll see the
 
 ### `notes-app-plain`
 
-A basic tutorial where we build a simple web app using the typical
+A basic tutorial where we build a simple web application using the typical
 [`client-server` architecture](http://simple.wikipedia.org/wiki/Client-server).
 The client in this case renders a list of notes after fetching them from an API
 server. This will be the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
@@ -66,10 +66,10 @@ in the [`notes-app-gateway` tutorial](notes-app-gateway).
 ### `notes-app-gateway`
 
 An in-depth tutorial on how to integrate [`strong-gateway`](https://github.com/strongloop/strong-gateway)
-into [the app we built in the `notes-app-plain` tutorial](notes-app-plain). We
-take the existing code from [`notes-app-plain`](notes-app-plain) and update it
-through a series of [*phases*](notes-app-gateway/sample-configs). Each phase is
-a step towards implementing the API gateway ([`strong-gateway`](https://github.com/strongloop/strong-gateway-demo)
+into [the application we built in the `notes-app-plain` tutorial](notes-app-plain).
+We take the existing code from [`notes-app-plain`](notes-app-plain) and update
+it through a series of [*phases*](notes-app-gateway/sample-configs). Each phase
+is a step towards implementing the API gateway ([`strong-gateway`](https://github.com/strongloop/strong-gateway-demo)
 as an intermediary between the client and API server. Along the way, we will
 also be introducing a variety of concepts:
 
@@ -84,7 +84,7 @@ also be introducing a variety of concepts:
 
 ### `oauth-playground`
 
-This is a sample (no tutorial) web app used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
+This is a sample (no tutorial) web application used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:
 
 - [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)

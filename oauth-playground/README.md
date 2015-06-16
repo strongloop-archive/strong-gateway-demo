@@ -15,6 +15,14 @@ your startup script:
 PATH=$PATH:.
 ```
 
+### Tools
+
+See the [prerequisites section in the main README](../README.md#prerequisites)
+
+### Knowledge
+
+- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+
 ## Run the demo
 
 ```
@@ -23,14 +31,6 @@ node .
 ```
 
 > We do it this way to ensure the build scripts are [cross-platform](https://en.wikipedia.org/wiki/Cross-platform)
-
-### Tools
-
-See the [prerequisites section in the main README](../README.md#prerequisites)
-
-### Knowledge
-
-- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 
 ## Overview
 

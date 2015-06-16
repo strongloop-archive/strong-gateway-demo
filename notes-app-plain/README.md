@@ -8,8 +8,8 @@ in the [`notes-app-gateway` tutorial](notes-app-gateway).
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](../doc/prerequisites.md)
-- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Basic LoopBack knowledge from completion of the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- All the requirements in [`prerequisites.md`](../doc/prerequisites.md)
 
 ## Overview
 
@@ -25,7 +25,7 @@ to retrieve a list of notes:
 +--------+     +--------+
 ```
 
-Once the notes are retrieved, the web server simply displays it to the user:
+Once the notes are retrieved, the web server displays it to the user:
 
 ```
 Notes
@@ -47,7 +47,7 @@ $ node .
 
 ## Build the demo
 
-Let's begin by building an an API server to fetch our notes from. We will:
+Let's begin by building an API server to fetch our notes from. We will:
 
 - Scaffold a new LoopBack project
 - Create a `notes` model

@@ -8,7 +8,7 @@ in the [`notes-app-gateway` tutorial](notes-app-gateway).
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](docs/prerequisites.md)
+- Everything in [`prerequisites.md`](../docs/prerequisites.md)
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 
 ## Overview

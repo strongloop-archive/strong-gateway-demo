@@ -5,7 +5,7 @@ OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial]
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](docs/prerequisites.md)
+- Everything in [`prerequisites.md`](../docs/prerequisites.md)
 - [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 - [`strong-gateway-demo/notes-app-plain`](../notes-app-plain)
 

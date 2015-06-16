@@ -1,4 +1,4 @@
-**This beta tutorial requires a [StrongLoop license](#obtain-a-strongloop-license) to complete.**
+**! A [StrongLoop license](#obtain-a-strongloop-license) is required to complete this beta tutorial.**
 
 ---
 

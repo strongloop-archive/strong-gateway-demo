@@ -1,6 +1,4 @@
-**A [StrongLoop license](#obtain-a-strongloop-license) is required to complete this beta tutorial.**
-
----
+> **A [StrongLoop license](#obtain-a-strongloop-license) is required to complete this beta tutorial.**
 
 # strong-gateway-demo
 

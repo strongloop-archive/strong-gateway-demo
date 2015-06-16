@@ -8,7 +8,7 @@ typical web application using the [`client-server` architecture](http://simple.w
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](docs/prerequisites.md)
+- Everything in [`prerequisites.md`](doc/prerequisites.md)
 
 ## Overview
 

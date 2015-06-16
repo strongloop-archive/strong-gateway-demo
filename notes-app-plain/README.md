@@ -1,9 +1,9 @@
 # notes-app-plain
 
-In this tutorial, we build a simple web app using the typical [`client-server`
-architecture](http://simple.wikipedia.org/wiki/Client-server).
-The client in this case renders a list of notes after fetching them from an API
-server. This will be the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
+In this tutorial, we build a simple web application using the [`client-server`
+architecture](http://simple.wikipedia.org/wiki/Client-server). The client will
+render a list of notes after fetching them from an API server. We will use the
+completed project as the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
 in the [`notes-app-gateway` tutorial](notes-app-gateway).
 
 ## Prerequisites
@@ -205,6 +205,8 @@ the web server.
 
 > You can use the included [helper script to start both apps](server.js)
 > instead of having to open new tabs.
+
+That's it! [Proceed to the next tutorial](../notes-app-gateway).
 
 ---
 

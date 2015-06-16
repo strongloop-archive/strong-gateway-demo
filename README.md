@@ -1,5 +1,7 @@
 > **This beta tutorial requires a [StrongLoop license](#obtain-a-strongloop-license) to complete.**
 
+---
+
 # strong-gateway-demo
 
 This demo is meant to used in conjunction with [`strong-gateway`](https://github.com/strongloop/strong-gateway).

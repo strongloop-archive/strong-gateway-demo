@@ -164,8 +164,8 @@ for more info.
 
 We suggest you start at [part 1 of the tutorial](notes-app-plain) and then move
 onto [part 2 of the tutorial](notes-app-gateway). If you do not want to go
-through the tutorials, then you can skip directly to the [`oauth-playground`](oauth-playground)
-example.
+through the tutorials, then you can skip directly to the [`oauth-playground`
+example](oauth-playground).
 
 - [Part 1 of the tutorial (`notes-app-plain`)](notes-app-plain)
 - [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)

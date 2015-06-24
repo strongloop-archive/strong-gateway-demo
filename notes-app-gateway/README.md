@@ -87,11 +87,12 @@ notes-app-gateway
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
 >You can run the included configuration script from the app root to perform
-these step automatically:
-```
-cd $APP_ROOT
-./sample-configs/step-0/configure
-```
+>these step automatically:
+>
+>```
+>cd $APP_ROOT
+>./sample-configs/step-0/configure
+>```
 
 ###Step 1
 

@@ -25,13 +25,32 @@
   },
   "auth": {
   },
-  "routes": {
+  "routes:before": {
+    "./middleware/https-redirect": {
+      "params": {
+        "httpsport": 3022
+      }
+    }
+  },
+  "routes:after": {
+    "./middleware/proxy": {
+      "params": {
+        "rules": [
+          "^/api/(.*)$ http://localhost:3002/api/$1 [p]",
+          "^/protected/(.*)$ http://localhost:3000/protected/$1 [p]"
+        ]
+      }
+    }
   },
   "files": {
     "loopback#static": [
       {
         "params": "$!../client/public",
         "paths": ["/"]
+      },
+      {
+        "params": "$!../client/admin",
+        "paths": ["/admin"]
       }
     ]
   },

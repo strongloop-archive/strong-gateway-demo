@@ -61,15 +61,13 @@ You can run the without the optional steps (up to step 4, without steps 5 and 6)
 by running:
 
 ```
-# osx/linux
-./try-demo
+./try-demo # osx/linux
 ```
 
 or
 
 ```
-# windows
-.\try-demo.cmd
+.\try-demo.cmd # windows
 ```
 
 ###Run the tutorial at a particular step

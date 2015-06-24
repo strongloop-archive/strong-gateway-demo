@@ -171,8 +171,8 @@ example](oauth-playground).
 - [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)
 - [`oauth-playground` example](oauth-playground)
 
->Check the tutorial's README for instructions on how to run the tutorials
-without actually building them.
+>Each tutorial contains instructions on how to run it without actually building
+it.
 
 For more information, see the [official `strong-gateway` documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 

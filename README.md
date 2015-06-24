@@ -96,7 +96,7 @@ API gateway instead of directly from the API server:
 
 #### `oauth-playground`
 
-This is a web app used to demonstration various [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
+This is a web app used to demonstrate various [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:
 
 - [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)
@@ -112,7 +112,6 @@ We also include sample scripts for GUI-less flows:
 ## Setup
 
 - Everything in [`prerequisites.md`](doc/prerequisites.md)
-
 
 ## Run
 

@@ -50,13 +50,16 @@ The final architecture will look like:
 
 ##Set up
 
-## Prerequisites
-
 - The basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 - Everything in the [set up section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
-##Run
+##Tutorial
+
+- [Run the tutorial](#run)
+- [Build the app by going through the tutorial](#build)
+
+###Run
 
 ### The main demo (phase-4)
 

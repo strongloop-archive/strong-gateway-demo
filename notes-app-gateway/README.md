@@ -145,8 +145,7 @@ git clone https://github.com/strongloop/strong-gateway gateway-server
 The StrongLoop API Gateway is preconfigured to start on ports 3000 (HTTP) and
 3001 (HTTPS) out-of-box.
 
-Let's reconfigure the API gateway to start on ports
-3001 (HTTP) and 3101 (HTTPS).
+Let's reconfigure the API gateway to start on ports 3002 (HTTP) and 3022 (HTTPS).
 
 In the API Gateway's [`middleware.json`](sample-configs/step-1/gateway-server/middleware.json),
 [change the HTTP port to 3001](sample-configs/step-1/gateway-server/config.json)
@@ -230,7 +229,7 @@ web server is now fully decoupled from the API server.
 servers at once. Execute `node server.js` from the project root and you should
 see all three servers loading at once.
 
-### Phase 2
+###Step 2
 
 #### Enable security on the API gateway
 

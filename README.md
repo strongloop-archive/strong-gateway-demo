@@ -178,4 +178,4 @@ For more information, see the [official StrongLoop API Gateway docs](http://docs
 
 ---
 
-[Other LoopBack Examples](https://github.com/strongloop/loopback-example)
+[Other LoopBack demos](https://github.com/strongloop/loopback-demo)

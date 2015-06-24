@@ -9,7 +9,7 @@ which we'll refer to as the API gateway from here on.
 
 - [Overview](#overview)
 - [Setup](#setup)
-- [Run](run)
+- [Run](#run)
 
 ##Overview
 

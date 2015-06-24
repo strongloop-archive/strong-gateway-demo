@@ -66,8 +66,7 @@ steps 5 and 6) by running:
 
 ###A particular step of the tutorial
 
-You can run the demo at any major step by executing the corresponding
-`configure-step` script in the `sample-configs` dir and then running `try-demo`:
+You can run the demo at any major step by running:
 
 ```
 cd sample-configs/step-1

@@ -71,8 +71,6 @@ You can run the demo at any major step by executing the corresponding
 
 ```
 cd sample-configs/step-1
-./configure-step
-cd ../..
 ./try-demo
 ```
 

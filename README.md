@@ -21,7 +21,7 @@ The purpose of this two-part tutorial is to show you how to implement the
 [StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
 as an OAuth 2.0 solution into an existing infrastructure.
 
-###Part 1 (`notes-app-plain`)
+####Part 1 (`notes-app-plain`)
 
 In [part 1 of the tutorial (`notes-app-plain`)](notes-app-plain), we build an
 app that simply renders a list of notes:

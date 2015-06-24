@@ -1,6 +1,7 @@
 stepdir=sample-configs/step-0
 
 echo 'cleaning app root'
+slc ctl shutdown
 rm -rf ./*
 rm -rf ~/.strong-pm
 git checkout README.md

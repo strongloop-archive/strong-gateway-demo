@@ -7,8 +7,8 @@ git checkout package.json
 git checkout sample-configs
 
 echo 'configuring step'
-cp -r ../notes-app-plain/api-server ./api-server
-cp -r ../notes-app-plain/web-server ./web-server
+cp -r ../notes-app-plain/client ./client
+cp -r ../notes-app-plain/resource-server ./resource-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .

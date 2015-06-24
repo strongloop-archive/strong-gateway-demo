@@ -56,6 +56,8 @@ cd sample-configs/step-1
 
 ##Tutorial
 
+We will be going through six major steps:
+
 - [Step 1 - Proxy requests through the API gateway without authentication](#step-1)
 - Step 2 - Enable security on the API gateway
 - Step 3 - Enable the OAuth 2.0 Authorization Code Flow on the web server
@@ -64,15 +66,25 @@ cd sample-configs/step-1
 - Step 6 - Use MySQL for the API gateway's data source
 
 Technically, there is a step 0, which is to copy all the files from the
-previous tutorial into a new working directory. Go to the project root
-root and run:
+previous tutorial into a new working directory. Let's start by going to the
+project root root and running:
 
 ```
 mkdir notes-app-gateway
 cd notes-app-gateway
-cp -r ../notes-app-plain/web-server web-server
 cp -r ../notes-app-plain/api-server api-server
+cp -r ../notes-app-plain/web-server web-server
 ```
+
+Your dir structure should look like:
+
+```
+notes-app-gateway
+├── api-server
+└── web-server
+```
+
+We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
 ###Step 1
 

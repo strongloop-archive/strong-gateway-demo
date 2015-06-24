@@ -169,7 +169,7 @@ example](oauth-playground).
 
 - [Part 1 of the tutorial (`notes-app-plain`)](notes-app-plain)
 - [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)
-- [`oauth-playground`](oauth-playground)
+- [`oauth-playground` example](oauth-playground)
 
 >Check the tutorial's README if you want instructions for running the tutorial
 without actually building it.

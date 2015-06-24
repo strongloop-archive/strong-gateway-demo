@@ -1,23 +1,13 @@
-var gatewayServer = require('./gateway-server');
-var apiServer = require('./api-server');
-var webServer = require('./web-server');
+var authServer = require('./auth-server');
+var client = require('./client');
+var resourceServer = require('./resource-server');
 
-gatewayServer.set('port', 3004);
-gatewayServer.set('https-port', 3005);
-gatewayServer.set('url', 'https://localhost:3005');
+authServer.set('port', 3002);
+authServer.set('https-port', 3202);
+authServer.set('url', 'https://localhost:3202');
 
-gatewayServer.once('loaded', function() {
-  gatewayServer.once('started', function() {
-    console.log('Gateway server is ready - %s', gatewayServer.get('url'));
-  });
-  apiServer.once('started', function() {
-    console.log('API server is ready - %s', apiServer.get('url'));
-  });
-  webServer.once('started', function() {
-    console.log('Web server is ready - %s', webServer.get('url'));
-  });
-
-  gatewayServer.start();
-  apiServer.start();
-  webServer.start();
+authServer.once('loaded', function() {
+  authServer.start();
+  client.start();
+  resourceServer.start();
 });

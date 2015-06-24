@@ -111,17 +111,56 @@ We also include sample scripts for GUI-less flows:
 
 ## Setup
 
-- Everything in [`prerequisites.md`](doc/prerequisites.md)
+### Install StrongLoop
+
+http://docs.strongloop.com/display/LB/Installing+StrongLoop
+
+### Minimum versions
+
+```
+strongloop v4.0.4 (node v0.10.36)
+├── strong-arc@1.4.2 (f74d03c)
+├── strong-build@2.0.2 (3221b91)
+├── strong-deploy@2.2.2 (13baab4)
+├── strong-pm@4.2.1 (72a249c)
+├── strong-registry@1.1.5 (f46e58f)
+├── strong-start@1.2.0 (e59f8b5)
+├─┬ strong-supervisor@2.0.0 (4c3ac51)
+│ └── strong-agent@1.6.0
+├── generator-loopback@1.9.1 (5219ef1)
+├── node-inspector@0.7.4
+└── nodefly-register@0.3.3
+```
+
+> Check your library versions by running `slc -v` or update them by running `slc
+update`.
+
+### Obtain a StrongLoop license
+
+To get a free 30-day trial license for this beta demo, run [StrongLoop Arc](https://strongloop.com/node-js/arc/)
+with the `licenses` flag:
+
+```
+slc arc --licenses
+```
+
+Then log in to Arc and you'll see the "Licenses" page showing your trial
+licenses. See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses)
+for more info.
 
 ## Run
 
-- [I want to run the completed tutorial](notes-app-gateway)
-- [I want to go through part one this tutorial to set up `notes-app-plain`](notes-app-plain)
-- [I want to go through part two this tutorial to set up `notes-app-gateway`](notes-app-plain)
-  - Part two depends on files from part one, but you are free to copy the files
-    over if you do not want to build [`notes-app-plain`](notes-app-plain)
-    beforehand
-- [I want to try  out common OAuth 2.0 Authorization Grant flows](oauth-playground)
+For this demo, we suggest you start at [part 1 of the tutorial](notes-app-plain)
+and then move onto [part 2 of the tutorial](notes-app-gateway). If you do not
+want to go through the tutorials, then you can skip to the [`oauth-playground`](oauth-playground)
+example.
+
+- [Part 1 of the tutorial (`notes-app-plain`)](notes-app-plain)
+- [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)
+- [`oauth-playground`](oauth-playground)
+
+>Check the tutorial's README if you want instructions for running the tutorial
+without actually building it.
 
 For more information, see the [official `strong-gateway` documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 

@@ -1,4 +1,17 @@
-# notes-app-gateway
+#notes-app-gateway
+
+This a comprehensive tutorial that builds on from the `notes-app-plain`
+tutorial.
+
+- [Overview](#overview)
+- [Setup](#setup)
+- [Tutorial](#utorial)
+  - [Run](#run)
+  - [Build](#build)
+
+##Overview
+
+Part two of the tutorial builds
 
 The goal of this tutorial is to show you how to integrate `strong-gateway` as an
 OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial](../notes-app-plain).

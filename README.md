@@ -44,6 +44,10 @@ It's infrastructure looks like this:
 +-------+                +--------+                 +----------+
 ```
 
+---
+
+TODO: Fix this section
+
 - The key difference between this app and typical web apps are the actual notes
     are not stored on the web server serving the request to the user agent, but is
     stored on a separate API server instead.
@@ -54,6 +58,8 @@ It's infrastructure looks like this:
 
 We will be building the client and resource server components of the
 infrastructure in preparation for part 2 of the tutorial.
+
+---
 
 ####Part 2 (`notes-app-gateway`)
 

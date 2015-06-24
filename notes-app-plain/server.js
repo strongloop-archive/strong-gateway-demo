@@ -1,5 +1,5 @@
-var apiServer = require('./api-server');
-var webServer = require('./web-server');
+var apiServer = require('./resource-server');
+var webServer = require('./client');
 
 apiServer.once('started', function() {
   console.log('Notes API server ready at: %s', apiServer.get('url'));

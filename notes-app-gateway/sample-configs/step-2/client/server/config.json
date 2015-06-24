@@ -25,5 +25,5 @@
   },
   "legacyExplorer": false,
   "url": "http://localhost:2101",
-  "httpsPort": 2101
+  "https-port": 2101
 }

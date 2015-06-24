@@ -65,11 +65,11 @@ by running:
 ./try-demo
 ```
 
-OR
+or
 
 ```
 # windows
-.\try-demo
+.\try-demo.cmd
 ```
 
 ###Run the tutorial at a particular step
@@ -90,20 +90,6 @@ cd ../.. # `cd ..\..` on Windows
 - [Build the app by going through the tutorial](#build)
 
 ###Run
-
-### The main demo (phase-4)
-
-OSX/Linux:
-
-```
-$ try-demo
-```
-
-Windows:
-
-```
-> try-demo.cmd
-```
 
 ### Go to a specific phase
 

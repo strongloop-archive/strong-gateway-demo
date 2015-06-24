@@ -14,12 +14,15 @@ cp -r ../notes-app-plain/resource-server ./resource-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .
-git clone https://github.com/strongloop/strong-gateway authorization-server
+git clone https://github.com/strongloop/strong-gateway auth-server
 build-servers
 
 echo 'starting app'
 cd resource-server
 slc start
 slc ctl set-size 1 1
-cd ../
+cd ../auth-server
+slc start
+slc ctl set-size 2 1
+cd ..
 node client

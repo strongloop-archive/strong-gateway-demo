@@ -8,9 +8,9 @@ module.exports = function(app) {
   });
 
   app.get('/authorize', function(req, res) {
-    var authEndpoint = 'http://localhost:3004/oauth/authorize';
+    var authEndpoint = 'http://localhost:3002/oauth/authorize';
     var clientId = 123;
-    var redirectUri = 'https://localhost:3001/token';
+    var redirectUri = 'https://localhost:2101/token';
     var scope = 'demo';
     var authUrl = authEndpoint + '?client_id=' + clientId + '&redirect_uri=' +
         redirectUri + '&response_type=code&scope=' + scope + '&state=123';
@@ -64,21 +64,21 @@ module.exports = function(app) {
 };
 
 function getAccessTokenUsingAuthCode(code, cb) {
-  request.post('https://localhost:3005/oauth/token', {
+  request.post('https://localhost:3202/oauth/token', {
     'content-type': 'application/x-www-form-urlencoded',
     form: {
       code: code,
       grant_type: 'authorization_code',
       client_id: 123,
       client_secret: 'secret',
-      redirect_uri: 'https://localhost:3001/token'
+      redirect_uri: 'https://localhost:2101/token'
     },
     strictSSL: false
   }, cb);
 }
 
 function getNotesUsingAccessToken(token, cb) {
-  request.get('https://localhost:3005/api/notes', {
+  request.get('https://localhost:3202/api/notes', {
     qs: {
       access_token: token
     },

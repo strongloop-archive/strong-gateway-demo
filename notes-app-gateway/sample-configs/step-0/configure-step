@@ -1,11 +1,18 @@
 stepdir=sample-configs/step-0
 
+echo 'cleaning app root'
 rm -rf ./*
 git checkout README.md
 git checkout package.json
 git checkout sample-configs
+
+echo 'configuring step'
 cp -r ../notes-app-plain/api-server ./api-server
 cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/try-demo
+build-servers
+
+echo 'starting app'
+node .

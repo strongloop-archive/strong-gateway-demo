@@ -1,2 +1,2 @@
-cd api-server && npm i
-cd ../web-server && npm i
+cd client && npm i
+cd ../resource-server && npm i

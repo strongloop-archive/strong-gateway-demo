@@ -1,2 +1,7 @@
+rm -rf ~/.strong-pm
+slc ctl shutdown
 ./build-servers
-node .
+cd resource-server
+slc start
+cd ..
+node client

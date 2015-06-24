@@ -4,8 +4,10 @@ module.exports = function(app) {
   var router = app.loopback.Router;
 
   app.get('/', function(req, res) {
-    request.get('http://localhost:3001/api/notes', function(err, response,
-        body) {
+    request.get({
+      url: 'http://localhost:3002/api/notes',
+      strictSSL: false
+    }, function(err, response, body) {
       if (err)
         return res.render('error', {
           title: err.code,
@@ -17,7 +19,7 @@ module.exports = function(app) {
       } catch (e) {
         return res.render('error', {
           title: e.name,
-          msg: e.message
+          msg: e.message + ' && ' + body
         });
       }
 

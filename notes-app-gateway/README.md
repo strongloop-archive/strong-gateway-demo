@@ -1,5 +1,5 @@
->Complete [part 1 of the tutorial](../notes-app-plain) before starting this
-tutorial.
+>Make sure you complete [part 1 of the tutorial](../notes-app-plain) before
+starting this tutorial.
 
 #notes-app-gateway
 

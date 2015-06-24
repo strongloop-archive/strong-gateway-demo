@@ -114,9 +114,21 @@ We would like to proxy requests through an authorization server instead:
 +--------+     +---------------+     +----------+
 ```
 
-Let's create the authorization server using the [StrongLoop API Gateway]().
+Let's create the authorization server (auth server) using the
+[StrongLoop API Gateway]().
+
+- 1. Set up the auth server
+- 2. Proxy requests to the auth server
+- 3. Config the client to send reqs to the auth server
+- 4. Verify proxying behaviour
 
 ####1. Set up the API Gateway
+
+- Clone the authorization server
+- Change the default authorization server gateway ports
+- Change the authorization proxy ports
+- Verify the port changes
+
 
 #####Clone the StrongLoop API Gateway
 

@@ -34,15 +34,7 @@ Notes
 - Buy sausages
 ```
 
-- The key difference between this app and typical web apps are the actual notes
-    are not stored on the web server serving the request to the user agent, but is
-    stored on a separate API server instead.
-  - In OAuth 2.0 terminology:
-    - "Web server" is the [*client*](https://tools.ietf.org/html/rfc6749#section-1.1)
-    - "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1)
-- Both the client and resource server are build using [LoopBack](http://loopback.io/).
-
-The entire infrastructure looks like this:
+It's infrastructure looks like:
 
 ```
 (Browser)      (Web Server)                (API Server)
@@ -51,6 +43,15 @@ The entire infrastructure looks like this:
 | Agent |<------|        |<----------------| Server   |
 +-------+       +--------+                 +----------+
 ```
+
+- The key difference between this app and typical web apps are the actual notes
+    are not stored on the web server serving the request to the user agent, but is
+    stored on a separate API server instead.
+  - In OAuth 2.0 terminology:
+    - "Web server" is the [*client*](https://tools.ietf.org/html/rfc6749#section-1.1)
+    - "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1)
+- Both the client and resource server are build using [LoopBack](http://loopback.io/).
+
 
 ####Part 2 (`notes-app-gateway`)
 

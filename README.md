@@ -57,7 +57,8 @@ infrastructure in preparation for part 2 of the tutorial.
 
 ####Part 2 (`notes-app-gateway`)
 
-`notes-app-gateway` is comprehensive tutorial consisting of six major steps:
+[`notes-app-gateway`](notes-app-gateway) is comprehensive tutorial consisting of
+six major steps:
 
 - Step 1 - How to proxy requests through the API gateway without authentication
 - Step 2 - How to enable security on the API gateway

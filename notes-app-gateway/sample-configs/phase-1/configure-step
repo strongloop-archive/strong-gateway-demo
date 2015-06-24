@@ -1,16 +1,14 @@
 stepdir=sample-configs/step-0
 
 echo 'cleaning app root'
-slc ctl shutdown
 rm -rf ./*
-rm -rf ~/.strong-pm
 git checkout README.md
 git checkout package.json
 git checkout sample-configs
 
 echo 'configuring step'
-cp -r ../notes-app-plain/client ./client
-cp -r ../notes-app-plain/resource-server ./resource-server
+cp -r ../notes-app-plain/api-server ./api-server
+cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .
@@ -18,8 +16,4 @@ git clone https://github.com/strongloop/strong-gateway authorization-server
 build-servers
 
 echo 'starting app'
-cd resource-server
-slc start
-slc ctl set-size 1 1
-cd ../
-node client
+node .

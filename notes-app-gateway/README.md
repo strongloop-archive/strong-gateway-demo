@@ -14,7 +14,7 @@ tutorial](../notes-app-plain).
 
 ##Overview
 
-We build on `notes-app-plain` and introduces an authorization server to act as
+We build on `notes-app-plain` and introduce an authorization server to act as
 an intermediary between the client and resource server. This involves going
 through six major steps:
 

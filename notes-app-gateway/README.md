@@ -8,7 +8,7 @@ tutorial](../notes-app-plain).
 
 - [Overview](#overview)
 - [Setup](#setup)
-- [Tutorial](#utorial)
+- [Tutorial](#tutorial)
   - [Run](#run)
   - [Build](#build)
 

@@ -34,7 +34,7 @@ Notes
 - Buy sausages
 ```
 
-It's infrastructure looks like:
+It's infrastructure looks like this:
 
 ```
 (Browser)      (Web Server)                (API Server)

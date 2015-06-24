@@ -57,10 +57,19 @@ The final architecture will look like:
 
 ###Run the tutorial
 
-The tutorial with the optional steps (up to step 4, without steps 5 and 6), run:
+You can run the without the optional steps (up to step 4, without steps 5 and 6)
+by running:
 
 ```
-./try-demo # `.\try-demo` on Windows
+# osx/linux
+./try-demo
+```
+
+OR
+
+```
+# windows
+.\try-demo
 ```
 
 ###Run the tutorial at a particular step

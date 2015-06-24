@@ -21,6 +21,8 @@ The purpose of this two-part tutorial is to show you how to implement the
 [StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
 as an OAuth 2.0 solution into an existing infrastructure.
 
+###Part 1 (`notes-app-plain`)
+
 In [part 1 of the tutorial (`notes-app-plain`)](notes-app-plain), we build an
 app that simply renders a list of notes:
 
@@ -32,11 +34,15 @@ Notes
 - Buy sausages
 ```
 
-The interesting thing is the notes in this list are not stored on the web
-server, but on a separate API server instead. In OAuth 2.0 terminology, the
-"web server" is the [*client*](https://tools.ietf.org/html/rfc6749#section-1.1)
-and the "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1):.
-The infrastructure looks like this:
+- The key difference between this app and typical web apps are the actual notes
+    are not stored on the web server serving the request to the user agent, but is
+    stored on a separate API server instead.
+  - In OAuth 2.0 terminology:
+    - "Web server" is the [*client*](https://tools.ietf.org/html/rfc6749#section-1.1)
+    - "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1)
+- Both the client and resource server are build using [LoopBack](http://loopback.io/).
+
+The entire infrastructure looks like this:
 
 ```
 (Browser)      (Web Server)                (API Server)
@@ -46,16 +52,7 @@ The infrastructure looks like this:
 +-------+       +--------+                 +----------+
 ```
 
-For the purposes of this tutorial, the client is a web server and the resource
-server is a REST API server, both of which are built using [LoopBack](http://loopback.io/).
-We render a list of notes that looks like this:
-
-
-The infrastructure looks like this:
-
-
-As you can see, the client communicates directly to the resource server (via
-REST) with this initial design.
+####Part 2 (`notes-app-gateway`)
 
 In part 2 of the tutorial
 

@@ -91,10 +91,8 @@ We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 >
 >```
 >cd $APP_ROOT
->./sample-configs/step-0/configure-step
+>./sample-configs/step-0/try-demo
 >```
->
->When the configuration is complete, start the app by running `./try-demo`.
 
 ###Step 1
 

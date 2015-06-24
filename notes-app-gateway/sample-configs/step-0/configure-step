@@ -6,5 +6,3 @@ cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/try-demo
-./build-servers
-node .

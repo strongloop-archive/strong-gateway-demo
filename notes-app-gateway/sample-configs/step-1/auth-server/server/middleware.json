@@ -28,7 +28,7 @@
   "routes:before": {
     "./middleware/https-redirect": {
       "params": {
-        "httpsPort": 3022
+        "httpsPort": 3202
       }
     }
   },

@@ -22,6 +22,7 @@ build-servers
 echo 'starting app'
 cd resource-server
 slc start
+sleep 1
 slc ctl set-size 1 1
 cd ../auth-server
 slc start

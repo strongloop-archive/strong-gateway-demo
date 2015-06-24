@@ -1,5 +1,5 @@
 {
-  "name": "web-server",
+  "name": "client",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -26,5 +26,5 @@
     "type": "",
     "url": ""
   },
-  "description": "web-server"
+  "description": "client"
 }

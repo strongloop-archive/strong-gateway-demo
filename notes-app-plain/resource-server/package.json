@@ -1,5 +1,5 @@
 {
-  "name": "api-server",
+  "name": "resource-server",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
@@ -25,5 +25,5 @@
     "type": "",
     "url": ""
   },
-  "description": "api-server"
+  "description": "resource-server"
 }

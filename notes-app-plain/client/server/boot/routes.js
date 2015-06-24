@@ -4,7 +4,7 @@ module.exports = function(app) {
   var router = app.loopback.Router;
 
   app.get('/', function(req, res) {
-    request.get('http://localhost:3002/api/notes', function(err, response,
+    request.get('http://localhost:3001/api/notes', function(err, response,
         body) {
       if (err)
         return res.render('error', {

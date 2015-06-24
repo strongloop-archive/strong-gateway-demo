@@ -237,7 +237,7 @@ At this point, everything is working properly but requests to the API
 gateway are still unauthenticated. Only authenticated users should be allowed to
 access notes from the API server.
 
-##### 1. Set up HTTPS on the web server
+#####1. Set up HTTPS on the web server
 
 Copy the sample SSL certificates:
 

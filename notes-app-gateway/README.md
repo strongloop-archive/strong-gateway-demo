@@ -55,7 +55,7 @@ The final architecture will look like:
 
 ##Run
 
-###Run the tutorial
+###The main tutorial
 
 You can run the without the optional steps (up to step 4, without steps 5 and 6)
 by running:
@@ -70,7 +70,7 @@ or
 .\try-demo.cmd # Windows
 ```
 
-###Run the tutorial at a particular step
+###A particular step of the tutorial
 
 You can run the demo at any major step by executing the corresponding
 `configure-step` script in the `sample-configs` dir and then running `try-demo`:

@@ -15,9 +15,9 @@ tutorial](../notes-app-plain).
 
 We build on `notes-app-plain` and introduce an authorization server to act as
 an intermediary between the client and resource server. This involves going
-through [six major steps](#tutorial). In each step, we incrementally improve on
-`notes-app-plain` and cover various [Strongloop API Gateway]() topics on the
-way. Upon completion, we will transform `notes-app-plain` into
+through [six major steps](#tutorial), incrementally improving on
+the previous tutorial while covering various [Strongloop API Gateway]()
+topics. Upon completion, we will transform `notes-app-plain` into
 `notes-app-gateway`. The final architecture will look like:
 
 ```

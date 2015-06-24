@@ -119,7 +119,11 @@ We also include sample scripts for GUI-less flows:
 
 ### Install StrongLoop
 
-http://docs.strongloop.com/display/LB/Installing+StrongLoop
+Make sure you have [StrongLoop installed](http://docs.strongloop.com/display/LB/Installing+StrongLoop):
+
+```
+npm install -g strongloop
+```
 
 ### Minimum versions
 

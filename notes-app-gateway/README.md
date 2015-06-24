@@ -8,9 +8,8 @@ tutorial](../notes-app-plain).
 
 - [Overview](#overview)
 - [Setup](#setup)
+- [Run](#run)
 - [Tutorial](#tutorial)
-  - [Run](#run)
-  - [Build](#build)
 
 ##Overview
 
@@ -22,8 +21,8 @@ through six major steps:
 - Step 2 - How to enable security on the API gateway
 - Step 3 - How to enable the OAuth 2.0 Authorization Code flow on the web server
 - Step 4 - How to use StrongLoop API Gateway policies
-- Step 5 - How to use MongoDB for the API gateway's data source
-- Step 6 - How to use MySQL for the API gateway's data source
+- Step 5 (optional) - How to use MongoDB for the API gateway's data source
+- Step 6 (optional) - How to use MySQL for the API gateway's data source
 
 In each step, we incrementally improve on `notes-app-plain` and cover various 
 major topics on the way:
@@ -54,9 +53,31 @@ The final architecture will look like:
 - Everything in the [set up section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
+##Run
+
+###Run the tutorial
+
+The tutorial with the optional steps (up to step 4, without steps 5 and 6), run:
+
+```
+./try-demo # `.\try-demo` on Windows
+```
+
+###Run the tutorial at a particular step
+
+You can run the demo at any major step by executing the corresponding
+`configure-step` script in the `sample-configs` dir and then running `try-demo`:
+
+```
+cd sample-configs/step-1 # `cd sample-configs\step-1` on Windows
+./configure-step # `.\configure-step` on Windows
+cd ../.. # `cd ..\..` on Windows
+./try-demo # `cd .\try-demo on Windows
+```
+
 ##Tutorial
 
-- [Run the tutorial](#run)
+- [Run the app](#run)
 - [Build the app by going through the tutorial](#build)
 
 ###Run

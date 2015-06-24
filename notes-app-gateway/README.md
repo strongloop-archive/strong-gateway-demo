@@ -86,6 +86,14 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
+>You can run the included configuration script from  the app root to perform
+these step automatically:
+
+```
+cd $APP_ROOT
+./sample-configs/step-0/configure
+```
+
 ###Step 1
 
 We would like to have an authorization server sit between the client and
@@ -101,41 +109,7 @@ FIXME: gateway and web server should be flipped
 +-------+        +---------------+             +--------+             +----------+
 ```
 
-
-
-## Procedure
-
-We will begin by setting up the *default layout*, which is the basic directory
-structure for each project *phase*. We will then go through each phase:
-
-
-### Set up the default layout
-
-##### 1. Copy the existing web server and API server
-
-Create a new directory to store all the files we'll be creating:
-
-```
-$ mkdir notes-app-gateway
-$ cd notes-app-gateway
-```
-
-We'll refer to this directory as the *project root* from here on.  Next, copy
-[the API server from `notes-app-plain`](../notes-app-plain/api-server) into the
-project root:
-
-```
-$ cp -r ../notes-app-plain/api-server api-server
-```
-
-Then copy [the web server from `notes-app-plain`](../notes-app-plain/web-server)
-into the project root:
-
-```
-$ cp -r ../notes-app-plain/web-server web-server
-```
-
-##### 2. Clone the gateway
+###Step 2
 
 Start by cloning `strong-gateway` from GitHub into the project root:
 
@@ -165,23 +139,15 @@ Your directory structure should look like:
 ```
 notes-app-gateway
 ├── api-server
-├── gateway-server
-├── web-server
+└── web-server
 ```
 
-We'll refer to this set up as the *default layout*. Each phase starts with the
-default layout. The [`sample-configs` directory](sample-configs) contains a
-directory for each phase of the tutorial. Inside these directory are the file
-deltas (changes) for each phase. If you need an example to refer to, thats where
-you would look. In addition to the sample files, each phase directory contains a
-`copy-files` script. You can always set up a phase by reseting the project to
-the default layout and running the corresponding phase's `copy-files` script.
-For example, if you wanted to see the end result of phase 1:
+>You can run the included configuration script from  the app root to perform
+these step automatically:
 
 ```
-... # set up the default layout
-cd sample-configs/phase-1
-./copy-files
+cd $APP_ROOT
+./sample-configs/step-0/configure
 ```
 
 This will automatically configure everything to the last step of phase 1.

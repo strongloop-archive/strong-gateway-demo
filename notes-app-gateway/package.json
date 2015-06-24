@@ -1,11 +1,10 @@
 {
   "name": "notes-app-gateway",
   "version": "1.0.0",
-  "description": "The \"Notes\" app with strong-gateway integration.",
+  "description": "The \"Notes\" app with StrongLoop API gateway integration.",
   "main": "server.js",
   "scripts": {
-    "try-demo": "try-demo",
-    "start": "node .",
+    "start": "./start-demo",
     "test": "mocha"
   },
   "repository": {

@@ -1,6 +1,10 @@
+>Complete [part 1 of the tutorial](../notes-app-plain) before starting this
+tutorial.
+
 #notes-app-gateway
 
-This a comprehensive tutorial that builds on from the `notes-app-plain`
+This tutorial is that builds on `notes-app-plain`. We introduce the StrongLoop
+API Gateway to act as an intermediary between the 
 tutorial.
 
 - [Overview](#overview)

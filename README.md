@@ -81,8 +81,8 @@ demonstrating a variety of StrongLoop API Gateway concepts:
  - How to collect metrics from the API gateway using StrongLoop Arc
  - How to use a custom datasource for API gateway data/metadata persistence
 
-Upon completion, the notes app from part 1 of the tutorial will fetch notes via
-the API gateway instead of directly to the API server:
+Upon completion, the app from part 1 of the tutorial will fetch notes via the
+API gateway instead of directly from the API server:
 
 ```
 (Browser)          (API Gateway)              (Web Server)            (API Server)

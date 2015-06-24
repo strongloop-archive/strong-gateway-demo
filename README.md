@@ -106,14 +106,14 @@ This is a web app used to demonstrate various [OAuth 2.0 Authorization Grant](ht
 flows:
 
 - [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)
-- [Authorization code](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Authorizationcodegrant)
-- [Client credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
-- [Resource owner password credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
+- [Authorization Code](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Authorizationcodegrant)
+- [Client Credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
+- [Resource Owner Password Credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
 
 We also include sample scripts for GUI-less flows:
 
-- [JWT authorization grant](oauth-playground/scripts/jwt-auth-grant.js)
-- [JWT client authentication](oauth-playground/scripts/jwt-client-auth.js)
+- [JWT Authorization Grant](oauth-playground/scripts/jwt-auth-grant.js)
+- [JWT Client Authentication](oauth-playground/scripts/jwt-client-auth.js)
 
 ## Setup
 

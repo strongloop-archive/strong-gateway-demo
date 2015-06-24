@@ -92,7 +92,9 @@ API gateway instead of directly to the API server:
 +-------+        +---------------+             +--------+             +----------+
 ```
 
-####Example (`oauth-playground`)
+###Example
+
+#### `oauth-playground`
 
 This is a sample (no tutorial) web application used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:

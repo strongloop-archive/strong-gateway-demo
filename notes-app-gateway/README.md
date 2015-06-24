@@ -3,9 +3,8 @@ starting this tutorial.
 
 #notes-app-gateway
 
-This tutorial is that builds on `notes-app-plain`. We introduce the StrongLoop
-API Gateway to act as an intermediary between the 
-tutorial.
+This tutorial is a continuation of the `notes-app-plain` app from [part 1 of the
+tutorial](../notes-app-plain).
 
 - [Overview](#overview)
 - [Setup](#setup)
@@ -14,6 +13,12 @@ tutorial.
   - [Build](#build)
 
 ##Overview
+
+We build on `notes-app-plain` and introduces an authorization server
+to act as an intermediary between the client and resource server from [part 1 of
+the tutorial](../notes-app-plain). In addition, we will be demonstration various
+features of the [StrongLoop API Gateway](API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
+along the way.
 
 Part two of the tutorial builds
 

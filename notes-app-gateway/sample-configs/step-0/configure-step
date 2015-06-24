@@ -11,7 +11,7 @@ cp -r ../notes-app-plain/api-server ./api-server
 cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
-cp $stepdir/try-demo
+cp $stepdir/try-demo* .
 build-servers
 
 echo 'starting app'

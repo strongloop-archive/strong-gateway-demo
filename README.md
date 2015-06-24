@@ -76,7 +76,7 @@ demonstrating a variety of StrongLoop API Gateway concepts:
  - How to configure the client app to use the API gateway
  - How to set up the API gateway to act as a reverse proxy to the API server
  - How to enforce security on the API gateway
- - How to implement the OAuth 2.0 Authentication Code flow
+ - How to implement the OAuth 2.0 Authentication Code Grant flow
  - How to use a strong-gateway policy (rate limiting)
  - How to collect metrics from the API gateway using StrongLoop Arc
  - How to use a custom datasource for API gateway data/metadata persistence

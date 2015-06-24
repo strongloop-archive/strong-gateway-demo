@@ -127,7 +127,7 @@ npm install -g strongloop
 
 ### Minimum versions
 
-Make sure you have the following installed:
+Make sure you have the following library versions:
 
 ```
 strongloop v4.0.4 (node v0.10.36)

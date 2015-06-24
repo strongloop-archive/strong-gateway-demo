@@ -3,7 +3,7 @@ starting this tutorial.
 
 #notes-app-gateway
 
-This tutorial is a continuation of the `notes-app-plain` app from [part 1 of the
+This tutorial continues from where we left off in the  [`notes-app-plain`
 tutorial](../notes-app-plain).
 
 - [Overview](#overview)
@@ -14,24 +14,49 @@ tutorial](../notes-app-plain).
 
 ##Overview
 
-We build on `notes-app-plain` and introduces an authorization server
-to act as an intermediary between the client and resource server from [part 1 of
-the tutorial](../notes-app-plain). In addition, we will be demonstration various
-features of the [StrongLoop API Gateway](API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
-along the way.
+We build on `notes-app-plain` and introduces an authorization server to act as
+an intermediary between the client and resource server. This involves going
+through six major steps:
 
-Part two of the tutorial builds
+- Step 1 - How to proxy requests through the API gateway without authentication
+- Step 2 - How to enable security on the API gateway
+- Step 3 - How to enable the OAuth 2.0 Authorization Code flow on the web server
+- Step 4 - How to use StrongLoop API Gateway policies
+- Step 5 - How to use MongoDB for the API gateway's data source
+- Step 6 - How to use MySQL for the API gateway's data source
 
-The goal of this tutorial is to show you how to integrate `strong-gateway` as an
-OAuth 2.0 solution for [the "Notes" web app we created in the previous tutorial](../notes-app-plain).
+In each step, we incrementally improve on `notes-app-plain` and cover various 
+major topics on the way:
+
+- How to register apps and users for the API gateway
+- How to configure the client app to use the API gateway
+- How to set up the API gateway to act as a reverse proxy to the API server
+- How to enforce security on the API gateway
+- How to implement the OAuth 2.0 Authentication Code Grant flow
+- How to use a strong-gateway policy (rate limiting)
+- How to collect metrics from the API gateway using StrongLoop Arc
+- How to use a custom datasource for API gateway data/metadata persistence
+
+Upon completion, we will transform `notes-app-plain` into `notes-app-gateway`.
+The final architecture will look like:
+
+```
+(Browser)          (API Gateway)              (Web Server)            (API Server)
++-------+        +---------------+             +--------+             +----------+
+| User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
+| Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
++-------+        +---------------+             +--------+             +----------+
+```
+
+##Set up
 
 ## Prerequisites
 
-- Everything in [`prerequisites.md`](../doc/prerequisites.md)
-- [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- [`strong-gateway-demo/notes-app-plain`](../notes-app-plain)
+- The basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Everything in the [set up section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
+- Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
-## Run the demo
+##Run
 
 ### The main demo (phase-4)
 

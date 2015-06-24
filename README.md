@@ -78,14 +78,14 @@ Various major topics are covered as we work through the transformation of
 `notes-app-plain` to `notes-app-gateway`. Along the way, we will also be
 demonstrating a variety of StrongLoop API Gateway concepts:
 
- - How to register apps and users for the API gateway
- - How to configure the client app to use the API gateway
- - How to set up the API gateway to act as a reverse proxy to the API server
- - How to enforce security on the API gateway
- - How to implement the OAuth 2.0 Authentication Code Grant flow
- - How to use a strong-gateway policy (rate limiting)
- - How to collect metrics from the API gateway using StrongLoop Arc
- - How to use a custom datasource for API gateway data/metadata persistence
+- How to register apps and users for the API gateway
+- How to configure the client app to use the API gateway
+- How to set up the API gateway to act as a reverse proxy to the API server
+- How to enforce security on the API gateway
+- How to implement the OAuth 2.0 Authentication Code Grant flow
+- How to use a strong-gateway policy (rate limiting)
+- How to collect metrics from the API gateway using StrongLoop Arc
+- How to use a custom datasource for API gateway data/metadata persistence
 
 Upon completion, the app from part 1 of the tutorial will fetch notes via the
 API gateway instead of directly from the API server:

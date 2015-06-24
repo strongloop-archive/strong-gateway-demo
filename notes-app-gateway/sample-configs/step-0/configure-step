@@ -1,6 +1,9 @@
 stepdir=sample-configs/step-0
 
 rm -rf ./*
+git checkout README.md
+git checkout package.json
+git checkout sample-configs
 cp -r ../notes-app-plain/api-server ./api-server
 cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .

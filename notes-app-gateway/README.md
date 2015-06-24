@@ -94,7 +94,7 @@ We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 >./sample-configs/step-0/configure-step
 >```
 >
->Once the step finishing configurations, start the app by running:
+>After the step configuration finishes, start the app by running:
 >
 >```
 >./try-demo

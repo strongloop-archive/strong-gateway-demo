@@ -28,7 +28,7 @@
   "routes:before": {
     "./middleware/https-redirect": {
       "params": {
-        "httpsport": 3022
+        "httpsPort": 3022
       }
     }
   },
@@ -36,8 +36,7 @@
     "./middleware/proxy": {
       "params": {
         "rules": [
-          "^/api/(.*)$ http://localhost:3002/api/$1 [p]",
-          "^/protected/(.*)$ http://localhost:3000/protected/$1 [p]"
+          "^/api/(.*)$ http://localhost:3001/api/$1 [p]"
         ]
       }
     }

@@ -12,6 +12,7 @@ cp -r ../notes-app-plain/web-server ./web-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .
+git clone https://github.com/strongloop/strong-gateway authorization-server
 build-servers
 
 echo 'starting app'

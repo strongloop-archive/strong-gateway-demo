@@ -1,0 +1,32 @@
+stepdir=sample-configs/step-2
+
+echo 'cleaning app root'
+slc ctl shutdown
+rm -rf ./*
+rm -rf ~/.strong-pm
+git checkout README.md
+git checkout package.json
+git checkout sample-configs
+
+echo 'configuring step'
+cp -r ../notes-app-plain/client ./client
+cp -r ../notes-app-plain/resource-server ./resource-server
+git clone https://github.com/strongloop/strong-gateway auth-server
+cp $stepdir/build-servers* .
+cp $stepdir/server.js .
+cp $stepdir/start-demo .
+cp $stepdir/client/server/boot/routes.js client/server/boot/routes.js
+cp $stepdir/auth-server/server/config.json auth-server/server/config.json
+cp $stepdir/auth-server/server/middleware.json auth-server/server/middleware.json
+build-servers
+
+echo 'starting app'
+cd resource-server
+slc start
+sleep 1
+slc ctl set-size 1 1
+cd ../auth-server
+slc start
+slc ctl set-size 2 1
+cd ..
+node client

@@ -1,0 +1,80 @@
+{
+  "initial:before": {
+    "loopback#favicon": {
+    },
+    "cors": {
+    },
+    "strong-express-metrics": {
+    }
+  },
+  "initial": {
+    "compression": {
+      "params": {
+        "threshold": "4kb"
+      }
+    }
+  },
+  "session": {
+    "express-session": {
+      "params": {
+        "saveUninitialized": true,
+        "resave": true,
+        "secret": "keyboard cat"
+      }
+    }
+  },
+  "auth": {
+    "loopback-component-oauth2#authenticate": {
+      "paths": [
+        "/_internal",
+        "/protected",
+        "/api",
+        "/me"
+      ],
+      "params": {
+        "session": false,
+        "scopes": {
+          "demo": [
+            "/me", "/protected", "/_internal", "/api/notes"
+          ],
+          "note": [
+            {
+              "methods": "all",
+              "path": "/api/notes"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "routes:before": {
+    "./middleware/https-redirect": {
+      "params": {
+        "httpsPort": 3005
+      }
+    }
+  },
+  "routes:after": {
+    "./middleware/proxy": {
+      "params": {
+        "rules": [
+          "^/api/(.*)$ http://localhost:3002/api/$1 [P]"
+        ]
+      }
+    }
+  },
+  "files": {
+    "loopback#static": [
+      {
+        "params": "$!../client/public",
+        "paths": ["/"]
+      }
+    ]
+  },
+  "final": {
+    "loopback#url-not-found": {}
+  },
+  "final:after": {
+    "errorhandler": {"params": {"log": false}}
+  }
+}

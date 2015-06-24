@@ -61,13 +61,7 @@ You can run the tutorial without the optional steps (up to step 4, without
 steps 5 and 6) by running:
 
 ```
-./try-demo # OSX/Linux
-```
-
-or
-
-```
-.\try-demo.cmd # Windows
+./try-demo
 ```
 
 ###A particular step of the tutorial
@@ -76,76 +70,56 @@ You can run the demo at any major step by executing the corresponding
 `configure-step` script in the `sample-configs` dir and then running `try-demo`:
 
 ```
-cd sample-configs/step-1 # `cd sample-configs\step-1` on Windows
-./configure-step # `.\configure-step` on Windows
-cd ../.. # `cd ..\..` on Windows
-./try-demo # `cd .\try-demo on Windows
+cd sample-configs/step-1
+./configure-step
+cd ../..
+./try-demo
 ```
 
 ##Tutorial
 
-- [Run the app](#run)
-- [Build the app by going through the tutorial](#build)
+This part of the tutorial consists of six major steps:
 
-###Run
+- [Step 1 - Proxy requests through the API gateway without authentication](#step-1)
+- Step 2 - Enable security on the API gateway
+- Step 3 - Enable the OAuth 2.0 Authorization Code Flow on the web server
+- Step 4 - `strong-gateway` policies
+- Step 5 - Use MongoDB for the API gateway's data source
+- Step 6 - Use MySQL for the API gateway's data source
 
-### Go to a specific phase
-
-OSX/Linux:
-
-```
-$ cd sample-configs/phase-1 # replace 1 with any number (ie. 2, 3, 4, ...)
-$ copy-files
-$ cd ../..
-$ build-servers
-$ node .
-```
-
-Windows:
+Technically, there is a step 0, which is to copy all the files from the
+previous tutorial into a new working directory. Go to the project root
+root and run:
 
 ```
-> cd sample-configs\phase-1 # replace 1 with any number (ie. 2, 3, 4, ...)
-> copy-files.cmd
-> cd ../...
-> build-servers.cmd
-> node .
+mkdir notes-app-gateway
+cd notes-app-gateway
+cp -r ../notes-app-plain/web-server web-server
+cp -r ../notes-app-plain/api-server api-server
 ```
 
-## Overview
+###Step 1
 
-We would like to have an API gateway sit between the web server and API server:
+We would like to have an authorization server sit between the client and
+resource server:
+
+FIXME: gateway and web server should be flipped
 
 ```
-+--------+     +---------+     +--------+
-| Web    |---->| API     |---->| API    |
-| Server |<----| Gateway |<----| Server |
-+--------+     +---------+     +--------+
+(Browser)          (API Gateway)              (Web Server)            (API Server)
++-------+        +---------------+             +--------+             +----------+
+| User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
+| Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
++-------+        +---------------+             +--------+             +----------+
 ```
 
-While working through the tutorial, we will also be demonstrating a variety of
-[StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
-concepts:
 
-- How to register apps and users for the API gateway
-- How to configure the client app to use the API gateway
-- How to set up the API gateway to act as a reverse proxy to the API server
-- How to enforce security on the API gateway
-- How to implement the OAuth 2.0 Authentication Code flow
-- How to use a `strong-gateway` policy ([`rate limiting`](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting))
-- How to collect metrics from the API gateway using [StrongLoop Arc](point to docs)
-- How to use a custom datasource for API gateway data/metadata persistence
 
 ## Procedure
 
 We will begin by setting up the *default layout*, which is the basic directory
 structure for each project *phase*. We will then go through each phase:
 
-- Phase 1 - Proxy requests through the API gateway without authentication
-- Phase 2 - Enable security on the API gateway
-- Phase 3 - Enable the OAuth 2.0 Authorization Code Flow on the web server
-- Phase 4 - `strong-gateway` policies
-- Phase 5 - Use MongoDB for the API gateway's data source
-- Phase 6 - Use MySQL for the API gateway's data source
 
 ### Set up the default layout
 

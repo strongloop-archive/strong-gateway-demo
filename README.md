@@ -12,8 +12,6 @@ Gateway.
 
 ##Overview
 
-The entire demo consists of three separate apps:
-
 - [Tutorial - `notes-app-plain` and `notes-app-gateway`](#tutorial)
 - [Example - `oauth-playground`](#example)
 

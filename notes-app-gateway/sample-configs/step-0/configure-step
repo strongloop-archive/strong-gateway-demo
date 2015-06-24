@@ -15,7 +15,7 @@ cp $stepdir/start-demo .
 build-servers
 
 echo 'starting app'
-cd client
+cd resource-server
 slc start
 cd ../
-node .
+node client

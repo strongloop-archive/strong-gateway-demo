@@ -96,7 +96,7 @@ API gateway instead of directly from the API server:
 
 #### `oauth-playground`
 
-This is a sample (no tutorial) web application used to exercise [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
+This is a web app used to demonstration various [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:
 
 - [Implicit](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Implicitgrant)
@@ -104,7 +104,7 @@ flows:
 - [Client credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
 - [Resource owner password credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
 
-We also include sample scripts for other flows:
+We also include sample scripts for GUI-less flows:
 
 - [JWT authorization grant](oauth-playground/scripts/jwt-auth-grant.js)
 - [JWT client authentication](oauth-playground/scripts/jwt-client-auth.js)

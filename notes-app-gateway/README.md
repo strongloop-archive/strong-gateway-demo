@@ -15,29 +15,10 @@ tutorial](../notes-app-plain).
 
 We build on `notes-app-plain` and introduce an authorization server to act as
 an intermediary between the client and resource server. This involves going
-through six major steps:
-
-- Step 1 - How to proxy requests through the API gateway without authentication
-- Step 2 - How to enable security on the API gateway
-- Step 3 - How to enable the OAuth 2.0 Authorization Code flow on the web server
-- Step 4 - How to use StrongLoop API Gateway policies
-- Step 5 (optional) - How to use MongoDB for the API gateway's data source
-- Step 6 (optional) - How to use MySQL for the API gateway's data source
-
-In each step, we incrementally improve on `notes-app-plain` and cover various 
-major topics on the way:
-
-- How to register apps and users for the API gateway
-- How to configure the client app to use the API gateway
-- How to set up the API gateway to act as a reverse proxy to the API server
-- How to enforce security on the API gateway
-- How to implement the OAuth 2.0 Authentication Code Grant flow
-- How to use a strong-gateway policy (rate limiting)
-- How to collect metrics from the API gateway using StrongLoop Arc
-- How to use a custom datasource for API gateway data/metadata persistence
-
-Upon completion, we will transform `notes-app-plain` into `notes-app-gateway`.
-The final architecture will look like:
+through [six major steps](#tutorial). In each step, we incrementally improve on
+`notes-app-plain` and cover various [Strongloop API Gateway]() topics on the
+way. Upon completion, we will transform `notes-app-plain` into
+`notes-app-gateway`. The final architecture will look like:
 
 ```
 (Browser)          (API Gateway)              (Web Server)            (API Server)

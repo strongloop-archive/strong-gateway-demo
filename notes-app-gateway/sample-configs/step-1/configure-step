@@ -1,4 +1,4 @@
-stepdir=sample-configs/step-0
+stepdir=sample-configs/step-1
 
 echo 'cleaning app root'
 slc ctl shutdown

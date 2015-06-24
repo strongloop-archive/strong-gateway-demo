@@ -123,6 +123,8 @@ http://docs.strongloop.com/display/LB/Installing+StrongLoop
 
 ### Minimum versions
 
+Make sure you have the following installed:
+
 ```
 strongloop v4.0.4 (node v0.10.36)
 ├── strong-arc@1.4.2 (f74d03c)
@@ -138,7 +140,7 @@ strongloop v4.0.4 (node v0.10.36)
 └── nodefly-register@0.3.3
 ```
 
-> Check your library versions by running `slc -v` or update them by running `slc
+>Check your library versions by running `slc -v` or update them by running `slc
 update`.
 
 ### Obtain a StrongLoop license

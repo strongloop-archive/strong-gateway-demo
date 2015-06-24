@@ -3,8 +3,9 @@ beta demo**.
 
 #strong-gateway-demo
 
-This demo contains a two-part tutorial and an example app for the StrongLoop API
-Gateway.
+This demo contains a two-part tutorial and an example app for the [StrongLoop
+API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway),
+which we'll refer to as the API gateway from here on.
 
 - [Overview](#overview)
 - [Setup](#setup)
@@ -17,9 +18,8 @@ Gateway.
 
 ###Tutorial
 
-The purpose of this two-part tutorial is to show you how to implement the
-[StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
-as an OAuth 2.0 solution into an existing infrastructure.
+The purpose of this two-part tutorial is to show you how to implement the API
+gateway as an OAuth 2.0 solution into an existing infrastructure.
 
 ####Part 1 (`notes-app-plain`)
 
@@ -37,11 +37,11 @@ Notes
 It's infrastructure looks like this:
 
 ```
-(Browser)      (Web Server)                (API Server)
-+-------+       +--------+                 +----------+
-| User  |---/-->| Client |---/api/notes--->| Resource |
-| Agent |<------|        |<----------------| Server   |
-+-------+       +--------+                 +----------+
+(Browser)               (Web Server)                (API Server)
++-------+                +--------+                 +----------+
+| User  |--------/------>| Client |---/api/notes--->| Resource |
+| Agent |<-----notes-----|        |<-----notes------| Server   |
++-------+                +--------+                 +----------+
 ```
 
 - The key difference between this app and typical web apps are the actual notes
@@ -52,12 +52,37 @@ It's infrastructure looks like this:
     - "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1)
 - Both the client and resource server are build using [LoopBack](http://loopback.io/).
 
+We will be building the client and resource server components of the
+infrastructure in preparation for part 2 of the tutorial.
 
 ####Part 2 (`notes-app-gateway`)
 
-In part 2 of the tutorial
+`notes-app-gateway` is comprehensive tutorial consisting of six major steps:
 
-###Example
+- Step 1 - How to proxy requests through the API gateway without authentication
+- Step 2 - How to enable security on the API gateway
+- Step 3 - How to enable the OAuth 2.0 Authorization Code flow on the web server
+- Step 4 - How to use StrongLoop API Gateway policies
+- Step 5 - How to use MongoDB for the API gateway's data source
+- Step 6 - How to use MySQL for the API gateway's data source
+
+In each step, we incrementally improve on the app from part 1 of the tutorial.
+Various major topics are covered as we work through the transformation of
+`notes-app-plain` to `notes-app-gateway`. Along the way, we will also be
+demonstrating a variety of StrongLoop API Gateway concepts:
+
+ - How to register apps and users for the API gateway
+ - How to configure the client app to use the API gateway
+ - How to set up the API gateway to act as a reverse proxy to the API server
+ - How to enforce security on the API gateway
+ - How to implement the OAuth 2.0 Authentication Code flow
+ - How to use a strong-gateway policy (rate limiting)
+ - How to collect metrics from the API gateway using StrongLoop Arc
+ - How to use a custom datasource for API gateway data/metadata persistence
+
+
+
+# space in normal mode under the current line##Example
 
 act as an authorization server between your client and resource server.
 act as an authorization server gateway between your [client](https://tools.ietf.org/html/rfc6749#section-1.1) and API server.

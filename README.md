@@ -174,7 +174,7 @@ example](oauth-playground).
 >Each tutorial's README contains instructions on how to run the tutorial without
 actually going through the steps to build it.
 
-For more information, see the [official `strong-gateway` documentation](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
+For more information, see the [official StrongLoop API Gateway docs](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway).
 
 ---
 

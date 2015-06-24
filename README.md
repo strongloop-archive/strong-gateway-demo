@@ -1,3 +1,71 @@
+>**A [StrongLoop license](#obtain-a-strongloop-license) is required for this
+beta demo**.
+
+#strong-gateway-demo
+
+This demo contains a two-part tutorial and an example app for the StrongLoop API
+Gateway.
+
+- [Overview](#overview)
+- [Setup](#setup)
+- [Run](run)
+
+##Overview
+
+- [Tutorial - `notes-app-plain` and `notes-app-gateway`](#tutorial)
+- [Example - `oauth-playground`](#example)
+
+###Tutorial
+
+The purpose of this two-part tutorial is to show you how to implement the
+[StrongLoop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
+as an OAuth 2.0 solution into an existing infrastructure.
+
+In [part 1 of the tutorial (`notes-app-plain`)](notes-app-plain), we build an
+app that simply renders a list of notes:
+
+```
+Notes
+--------------
+- Buy eggs
+- Buy milk
+- Buy sausages
+```
+
+The interesting thing is the notes in this list are not stored on the web
+server, but on a separate API server instead. In OAuth 2.0 terminology, the
+"web server" is the [*client*](https://tools.ietf.org/html/rfc6749#section-1.1)
+and the "API server" is the [*resource server*](https://tools.ietf.org/html/rfc6749#section-1.1):.
+The infrastructure looks like this:
+
+```
+(Browser)      (Web Server)                (API Server)
++-------+       +--------+                 +----------+
+| User  |---/-->| Client |---/api/notes--->| Resource |
+| Agent |<------|        |<----------------| Server   |
++-------+       +--------+                 +----------+
+```
+
+For the purposes of this tutorial, the client is a web server and the resource
+server is a REST API server, both of which are built using [LoopBack](http://loopback.io/).
+We render a list of notes that looks like this:
+
+
+The infrastructure looks like this:
+
+
+As you can see, the client communicates directly to the resource server (via
+REST) with this initial design.
+
+In part 2 of the tutorial
+
+###Example
+
+act as an authorization server between your client and resource server.
+act as an authorization server gateway between your [client](https://tools.ietf.org/html/rfc6749#section-1.1) and API server.
+This repository contains two [tutorials](https://github.com/strongloop/loopback-example#terminology)
+and an [example](https://github.com/strongloop/loopback-example#terminology) for
+the StrongLoop API Gateway.
 > **A [StrongLoop license](#obtain-a-strongloop-license) is required to complete this beta tutorial.**
 
 # strong-gateway-demo

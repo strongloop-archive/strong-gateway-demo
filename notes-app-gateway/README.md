@@ -58,8 +58,8 @@ cd sample-configs/step-1
 
 We will be going through six major steps:
 
-- [Step 1 - Proxy requests through the API gateway without authentication](#step-1)
-- Step 2 - Enable security on the API gateway
+- [Step 1 - Proxy requests through the authorization server](#step-1)
+- [Step 2 - Enable security on the authorization server](#step-2)
 - Step 3 - Enable the OAuth 2.0 Authorization Code Flow on the web server
 - Step 4 - `strong-gateway` policies
 - Step 5 - Use MongoDB for the API gateway's data source
@@ -91,120 +91,62 @@ We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 >
 >```
 >cd $APP_ROOT
->./sample-configs/step-0/try-demo
+>./sample-configs/step-0/configure-step
 >```
 
 ###Step 1
 
-We would like to have an authorization server sit between the client and
-resource server:
-
-FIXME: gateway and web server should be flipped
+At the moment, the client is making requests directly to the resource server:
 
 ```
-(Browser)          (API Gateway)              (Web Server)            (API Server)
-+-------+        +---------------+             +--------+             +----------+
-| User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
-| Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
-+-------+        +---------------+             +--------+             +----------+
++--------+     +----------+
+| Client |---->| Resource |
+|        |<----| Server   |
++--------+     +----------+
 ```
 
-###Step 2
-
-Start by cloning `strong-gateway` from GitHub into the project root:
+We would like to proxy requests through an authorization server instead:
 
 ```
-$ git clone https://github.com/strongloop/strong-gateway.git gateway-server
++--------+     +---------------+     +----------+
+| Client |---->| Authorization |---->| Resource |
+|        |<----| Server        |<----| Server   |
++--------+     +---------------+     +----------+
 ```
 
-> Notice we clone the project into a directory named `gateway-server` instead of
-the default project name.
+Let's create the authorization server using the [StrongLoop API Gateway]().
 
-Then install the gateway server's dependencies:
+####1. Set up the API Gateway
 
-```
-$ cd gateway-server
-$ npm install
-```
+#####Clone the StrongLoop API Gateway
 
-Next, remove `middleware.json` and `config.json`:
-
-```
-rm server/middleware.json
-rm server/config.json
-```
-
-Your directory structure should look like:
-
-```
-notes-app-gateway
-├── api-server
-└── web-server
-```
-
->You can run the included configuration script from  the app root to perform
-these step automatically:
+From the app root, clone the StrongLoop API Gateway into a dir named
+`gateway-server`:
 
 ```
 cd $APP_ROOT
-./sample-configs/step-0/configure
+git clone https://github.com/strongloop/strong-gateway gateway-server
 ```
 
-This will automatically configure everything to the last step of phase 1.
+#####Change the default API gateway ports
 
-> The `copy-files` script MUST be run in it's corresponding sample-configs phase
-directory. This means you MUST `cd sample-configs/phase-\*` before running
-`./copy-files`.
+The StrongLoop API Gateway is preconfigured to start on ports 3000 (HTTP) and
+3001 (HTTPS) out-of-box.
 
-### Phase 1
+Let's reconfigure the API gateway to start on ports
+3001 (HTTP) and 3101 (HTTPS).
 
-#### Proxy requests through the API gateway without authentication
+In the API Gateway's [`middleware.json`](sample-configs/step-1/gateway-server/middleware.json),
+[change the HTTP port to 3001](sample-configs/step-1/gateway-server/config.json)
+and [change the HTTPS port to 3101](sample-configs/step-1/gateway-server/config.json).
 
-At the moment, the web server is making requests directly to the API server:
+#####Change the HTTP redirection port
 
-```
-+--------+     +--------+
-| Web    |---->| API    |
-| Server |<----| Server |
-+--------+     +--------+
-```
+In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/step-1/gateway-server/server/middleware.json#L31)
 
-We will create an API gateway using `strong-gateway` and introduce it as an
-intermediary between the web server and the API the server. In the new
-architecture, the web server will make requests to the API gateway, which acts
-as a reverse proxy to the API server as shown in the following diagram:
+#####Verify the port changes
 
-```
-+--------+     +---------+     +--------+
-| Web    |---->| API     |---->| API    |
-| Server |<----| Gateway |<----| Server |
-+--------+     +---------+     +--------+
-```
-
-##### 1. Reconfigure API gateway ports
-
-We need to:
-
-- Change the gateway server's default ports to [3004 (HTTP)](sample-configs/phase-1/gateway-server/server/config.json#L4) and [3005 (HTTPS)](sample-configs/phase-1/gateway-server/server/config.json#L6)
-- [Change the `http-redirect` middleware to use port 3005](sample-configs/phase-1/gateway-server/server/middleware.json#L31)
-
-> Out-of-box `strong-gateway` is preconfigured to start on ports 3000 (HTTP) and
-3001 (HTTPS). This conflicts with [the web server's default port from the
-previous tutorial](../notes-app-plain/web-server/server/config.json#L4).
-
-To do this, copy the sample [middleware.json](sample-configs/phase-1/gateway-server/server/middleware.json)
-and [config.json](sample-configs/phase-1/gateway-server/server/config.json) to
-the `gateway-server/server` directory:
-
-```
-cp sample-configs/phase-1/gateway-server/server/middleware.json ../gateway-server/server/middleware.json
-cp sample-configs/phase-1/gateway-server/server/config.json ../gateway-server/server/config.json
-```
-
-> We also provide a [`copy-files` script](sample-configs/phase-1/copy-files)
-for convenience sake.
-
-Verify the port changes are working by starting the API gateway:
+Start the gateway and verify everything works.
 
 ```
 node gateway-server

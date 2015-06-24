@@ -2,6 +2,7 @@ stepdir=sample-configs/step-0
 
 echo 'cleaning app root'
 rm -rf ./*
+rm -rf ~/.strong-pm
 git checkout README.md
 git checkout package.json
 git checkout sample-configs

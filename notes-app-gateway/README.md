@@ -57,8 +57,8 @@ The final architecture will look like:
 
 ###The main tutorial
 
-You can run the without the optional steps (up to step 4, without steps 5 and 6)
-by running:
+You can run the tutorial without the optional steps (up to step 4, without
+steps 5 and 6) by running:
 
 ```
 ./try-demo # OSX/Linux

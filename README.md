@@ -160,9 +160,6 @@ example](oauth-playground).
 - [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)
 - [`oauth-playground` example](oauth-playground)
 
->Each tutorial's README contains instructions on how to run the tutorial without
-actually going through the steps to build it.
-
 ---
 
 [Other LoopBack demos](https://github.com/strongloop/loopback-demo)

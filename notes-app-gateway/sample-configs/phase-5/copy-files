@@ -1,4 +1,0 @@
-cp server.js ../../server.js
-cp build-servers* ../../
-cp -r gateway-server/* ../../gateway-server/
-cp -r web-server/* ../../web-server/

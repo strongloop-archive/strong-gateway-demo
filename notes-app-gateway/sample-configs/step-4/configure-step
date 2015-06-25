@@ -15,6 +15,7 @@ git clone https://github.com/strongloop/strong-gateway auth-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .
+cp $stepdir/package.json .
 cp -r $stepdir/client/* client
 cp -r $stepdir/auth-server/* auth-server
 build-servers

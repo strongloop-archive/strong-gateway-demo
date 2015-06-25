@@ -44,7 +44,7 @@ execute the install script from any other dir.
 There are seven steps in this tutorial, the first five are mandatory (1-5) and
 the last two are optional (6-7):
 
-- [Step 1 - Copy client and resource server from `notes-app-plain`](#step-1)
+- [Step 1 - Copy files from `notes-app-plain`](#step-1)
 - [Step 2 - Proxy requests through the authorization server](#step-2)
 - [Step 3 - Enable security on the authorization server](#step-3)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)

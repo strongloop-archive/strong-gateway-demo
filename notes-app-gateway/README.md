@@ -28,7 +28,7 @@ topics. Upon completion, we will transform `notes-app-plain` into
 +-------+        +---------------+             +--------+             +----------+
 ```
 
-##Set up
+##Setup
 
 - The basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 - Everything in the [set up section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)

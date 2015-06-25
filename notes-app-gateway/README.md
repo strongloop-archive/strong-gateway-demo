@@ -28,7 +28,7 @@ topics. The end result of the tutorial will be the transformation of
 
 ##Run
 
-You can run any step of the tutorial by running it's corresponding
+You can run any step of the tutorial by executing it's corresponding
 *configure-step* script from the app root. For example, to run step 1:
 
 ```

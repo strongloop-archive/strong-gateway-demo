@@ -38,15 +38,6 @@ You can run any step of the tutorial by executing it's corresponding
 >We copy and remove files relative to the app root, so make sure you do not
 execute the configure-step script from any other dir.
 
-###A particular step of the tutorial
-
-You can run the demo at any major step by running:
-
-```
-cd sample-configs/step-1
-./try-demo
-```
-
 ##Tutorial
 
 We will be going through six major steps:

@@ -1,5 +1,6 @@
 var request = require('request');
 
+var authServerPort = process.env.PORT || 3202;
 // Build the token request using client credentials grant type
 var form = {
   grant_type: 'password',
@@ -7,17 +8,6 @@ var form = {
   password: 'secret',
   scope: 'demo'
 };
-
-function printRateLimitHeaders(err, res) {
-  console.log('Key: %s, Limit %d Remaining: %d Reset: %d',
-    res.headers['x-ratelimit-key'] || null,
-    res.headers['x-ratelimit-limit'] || null,
-    res.headers['x-ratelimit-remaining'] || null,
-    res.headers['x-ratelimit-reset'] || null);
-}
-
-var authServerPort = process.env.PORT || 3202;
-var iterations = Number(process.argv[2]) || 500;
 
 // Request an access token
 request.post({
@@ -35,13 +25,32 @@ request.post({
   strictSSL: false,
   form: form
 }, function(err, res, body) {
-  var token = JSON.parse(body).access_token;
-  console.log('Access Token: %s', token);
+  if (err) throw err;
 
-  // Request a resource repeatedly
-  for (var i = 0; i < iterations; i++) {
-    request.get('https://localhost:' + authServerPort +
-      '/api/notes?access_token=' + token, {strictSSL: false},
-      printRateLimitHeaders);
+  var accessToken;
+  try {
+    accessToken = JSON.parse(body).access_token;
+    console.log('Access Token: %s', accessToken);
+  } catch (e) {
+    throw e;
   }
+
+  if (!accessToken) return;
+
+  requestResourceRepeatedly(accessToken);
 });
+
+function requestResourceRepeatedly(accessToken) {
+  var iterations = Number(process.argv[2]) || 500;
+  var resourceEndpoint = 'https://localhost:' + authServerPort +
+    '/api/notes?access_token=' + accessToken;
+  for (var i = 0; i < iterations; i++) {
+    request.get(resourceEndpoint, {strictSSL: false}, function(err, res) {
+      console.log('Key: %s - Limit %d - Remaining: %d - Reset: %d',
+        res.headers['x-ratelimit-key'] || null,
+        res.headers['x-ratelimit-limit'] || null,
+        res.headers['x-ratelimit-remaining'] || null,
+        res.headers['x-ratelimit-reset'] || null);
+    });
+  }
+}

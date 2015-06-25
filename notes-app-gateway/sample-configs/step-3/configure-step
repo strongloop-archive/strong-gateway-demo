@@ -17,7 +17,7 @@ cp $stepdir/server.js .
 cp $stepdir/start-demo .
 cp -r $stepdir/client/* client
 cp -r $stepdir/auth-server/* auth-server
-build-servers
+./build-servers
 
 echo 'starting app'
 cd resource-server

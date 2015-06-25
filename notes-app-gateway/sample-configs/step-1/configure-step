@@ -14,7 +14,7 @@ cp -r ../notes-app-plain/resource-server ./resource-server
 cp $stepdir/build-servers* .
 cp $stepdir/server.js .
 cp $stepdir/start-demo .
-build-servers
+./build-servers
 
 echo 'starting app'
 cd resource-server

@@ -22,7 +22,7 @@ boot(app, __dirname, function(err) {
         key: sslCert.privateKey,
         cert: sslCert.certificate
       };
-      var httpsPort = app.httpsPort = 3001;
+      var httpsPort = app.httpsPort = app.get('https-port');
       var httpsServer = https.createServer(httpsOptions, app).listen(
           app.httpsPort, host, function() {
         printServingMsg('https', host, httpsPort);

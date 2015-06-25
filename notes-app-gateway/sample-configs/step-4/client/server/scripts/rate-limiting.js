@@ -46,7 +46,7 @@ function requestResourceRepeatedly(accessToken) {
     '/api/notes?access_token=' + accessToken;
   for (var i = 0; i < iterations; i++) {
     request.get(resourceEndpoint, {strictSSL: false}, function(err, res) {
-      console.log('Key: %s - Limit %d - Remaining: %d - Reset: %d',
+      console.log('Key: %s - Limit %d: - Remaining: %d - Reset: %d',
         res.headers['x-ratelimit-key'] || null,
         res.headers['x-ratelimit-limit'] || null,
         res.headers['x-ratelimit-remaining'] || null,

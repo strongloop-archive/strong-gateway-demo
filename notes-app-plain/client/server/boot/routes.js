@@ -5,7 +5,7 @@ module.exports = function(app) {
 
   app.get('/', function(req, res) {
     request.get({
-      url: 'http://localhost:3002/api/notes',
+      url: 'http://localhost:3001/api/notes',
       strictSSL: false
     }, function(err, response, body) {
       if (err)

@@ -29,7 +29,8 @@ topics. The end result of the tutorial will be the transformation of
 ##Run
 
 You can run any step of the tutorial by executing it's corresponding
-*configure-step* script from the [app root](.). For example, to run step 1:
+*configure-step* script from the [app root (ie. the `notes-app-gateway` dir](.).
+For example, to run step 1:
 
 ```
 ./sample-configs/step-1/configure-step

@@ -1,3 +1,0 @@
-[submodule "notes-app-gateway/gateway-server"]
-	path = notes-app-gateway/gateway-server
-	url = https://github.com/strongloop/strong-gateway

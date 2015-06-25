@@ -1,0 +1,29 @@
+{
+  "restApiRoot": "/api",
+  "host": "0.0.0.0",
+  "port": 2001,
+  "remoting": {
+    "context": {
+      "enableHttpContext": false
+    },
+    "rest": {
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false,
+    "errorHandler": {
+      "disableStackTrace": false
+    }
+  },
+  "legacyExplorer": false,
+  "url": "http://localhost:2101",
+  "https-port": 2101
+}

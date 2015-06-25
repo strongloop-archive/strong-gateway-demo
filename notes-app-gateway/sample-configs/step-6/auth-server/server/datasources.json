@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "database": "strong-gateway-demo",
+    "username": "root",
+    "password": "",
+    "createDatabase": true
+  }
+}

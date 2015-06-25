@@ -29,15 +29,15 @@ topics. The end result of the tutorial will be the transformation of
 ##Run
 
 You can run any step of the tutorial by executing it's corresponding
-*configure-step* script from the [app root (ie. the `notes-app-gateway` dir](.).
+*install* script from the [app root (ie. the `notes-app-gateway` dir](.).
 For example, to run step 1:
 
 ```
-./sample-configs/step-1/configure-step
+./sample-configs/step-1/install
 ```
 
 >We copy and remove files relative to the app root, so make sure you do not
-execute the configure-step script from any other dir.
+execute the install script from any other dir.
 
 ##Tutorial
 
@@ -50,7 +50,7 @@ the last two are optional (6-7):
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
 - [Step 5 - `strong-gateway` policies](#step-5)
 - [Step 6 - Use MongoDB for the API gateway's data source](#step-6)
-- [Step 7 - Use MySQL for the API gateway's data source]((#step-7)
+- [Step 7 - Use MySQL for the API gateway's data source](#step-7)
 
 
 ###Step 1
@@ -73,16 +73,8 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
->You can automatically perform these steps by running
->`./sample-configs/step-1/install`
-
->You can run the included configuration script from the app root to perform
->these step automatically:
->
->```
->cd $APP_ROOT
->./sample-configs/step-0/configure-step
->```
+>You can set up this step automatically by executing
+>`./sample-configs/step-1/install` from the app root.
 
 ###Step 1
 

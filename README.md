@@ -156,8 +156,8 @@ onto [part 2 of the tutorial](notes-app-gateway). If you do not want to go
 through the tutorials, then you can skip directly to the [`oauth-playground`
 example](oauth-playground).
 
-- [Part 1 of the tutorial (`notes-app-plain`)](notes-app-plain)
-- [Part 2 of the tutorial (`notes-app-gateway`)](notes-app-gateway)
+- [`notes-app-plain` tutorial (part 1)](notes-app-plain)
+- [`notes-app-gateway` tutorial (part 2)](notes-app-gateway)
 - [`oauth-playground` example](oauth-playground)
 
 ---

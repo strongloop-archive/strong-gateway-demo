@@ -14,19 +14,11 @@ tutorial](../notes-app-plain).
 ##Overview
 
 We build on `notes-app-plain` and introduce an authorization server to act as
-an intermediary between the client and resource server. This involves going
-through [six major steps](#tutorial), incrementally improving on
-the previous tutorial while covering various [Strongloop API Gateway]()
-topics. Upon completion, we will transform `notes-app-plain` into
-`notes-app-gateway`. The final architecture will look like:
-
-```
-(Browser)          (API Gateway)              (Web Server)            (API Server)
-+-------+        +---------------+             +--------+             +----------+
-| User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
-| Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
-+-------+        +---------------+             +--------+             +----------+
-```
+an intermediary between the client and resource server. We will incrementally
+improve on the previous tutorial over [seven steps](#tutorial). Along the way,
+we will be covering a variety of [Strongloop API Gateway]() topics. The end
+result of the tutorial will be the transformation of `notes-app-plain` into
+`notes-app-gateway`.
 
 ##Setup
 
@@ -36,14 +28,15 @@ topics. Upon completion, we will transform `notes-app-plain` into
 
 ##Run
 
-###The main tutorial
-
-You can run the tutorial without the optional steps (up to step 4, without
-steps 5 and 6) by running:
+You can run any step of the tutorial by running it's corresponding
+*configure-step* script from the app root. For example, to run step 1:
 
 ```
-./try-demo
+./sample-configs/step-1/configure-step
 ```
+
+>Make sure you run configure-step scripts this from the app root because the script removes files
+>based on assuming you are executing it from there.
 
 ###A particular step of the tutorial
 

@@ -41,35 +41,40 @@ execute the configure-step script from any other dir.
 
 ##Tutorial
 
-We will be going through six major steps:
+There are seven steps in this tutorial, the first five are mandatory (1-5) and
+the last two are optional (6-7):
 
-- [Step 1 - Proxy requests through the authorization server](#step-1)
-- [Step 2 - Enable security on the authorization server](#step-2)
-- Step 3 - Enable the OAuth 2.0 Authorization Code Flow on the web server
-- Step 4 - `strong-gateway` policies
-- Step 5 - Use MongoDB for the API gateway's data source
-- Step 6 - Use MySQL for the API gateway's data source
+- [Step 1 - Copy client and resource server from `notes-app-plain`](#step-1)
+- [Step 2 - Proxy requests through the authorization server](#step-2)
+- [Step 3 - Enable security on the authorization server](#step-3)
+- [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
+- [Step 5 - `strong-gateway` policies](#step-5)
+- [Step 6 - Use MongoDB for the API gateway's data source](#step-6)
+- [Step 7 - Use MySQL for the API gateway's data source]((#step-7)
 
-Technically, there is a step 0, which is to copy all the files from the
-previous tutorial into a new working directory. Let's start by going to the
-project root root and running:
+
+###Step 1
+
+Start by copying all the files from `notes-app-plain` into a new working
+directory named `notes-app-gateway`.
 
 ```
-mkdir notes-app-gateway
+cp -r notes-app-plain notes-app-gateway
 cd notes-app-gateway
-cp -r ../notes-app-plain/api-server api-server
-cp -r ../notes-app-plain/web-server web-server
 ```
 
 Your dir structure should look like:
 
 ```
 notes-app-gateway
-├── api-server
-└── web-server
+├── client
+└── resource-server
 ```
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
+
+>You can automatically perform these steps by running
+>`./sample-configs/step-1/install`
 
 >You can run the included configuration script from the app root to perform
 >these step automatically:

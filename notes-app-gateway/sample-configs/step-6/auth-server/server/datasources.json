@@ -1,12 +1,11 @@
 {
   "db": {
     "name": "db",
-    "connector": "mysql",
+    "connector": "mongodb",
     "host": "localhost",
-    "port": 3306,
+    "port": 27017,
     "database": "strong-gateway-demo",
-    "username": "root",
-    "password": "",
-    "createDatabase": true
+    "username": "",
+    "password": ""
   }
 }

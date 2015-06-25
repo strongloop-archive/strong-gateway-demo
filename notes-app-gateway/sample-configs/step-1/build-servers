@@ -1,3 +1,2 @@
 cd client && npm i
 cd ../resource-server && npm i
-cd ../auth-server && npm i

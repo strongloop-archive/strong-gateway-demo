@@ -3,5 +3,9 @@ slc ctl shutdown
 ./build-servers
 cd resource-server
 slc start
+slc ctl set-size 1 1
+cd ../auth-server
+slc start
+slc ctl set-size 2 1
 cd ..
 node client

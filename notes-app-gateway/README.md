@@ -15,10 +15,10 @@ tutorial](../notes-app-plain).
 
 We build on `notes-app-plain` and introduce an authorization server to act as
 an intermediary between the client and resource server. We will incrementally
-improve on the previous tutorial over [seven steps](#tutorial). Along the way,
-we will be covering a variety of [Strongloop API Gateway]() topics. The end
-result of the tutorial will be the transformation of `notes-app-plain` into
-`notes-app-gateway`.
+improve on the previous tutorial over [seven steps](#tutorial) while covering a
+variety of [Strongloop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
+topics. The end result of the tutorial will be the transformation of
+`notes-app-plain` into `notes-app-gateway`.
 
 ##Setup
 
@@ -35,8 +35,8 @@ You can run any step of the tutorial by running it's corresponding
 ./sample-configs/step-1/configure-step
 ```
 
->Make sure you run configure-step scripts this from the app root because the script removes files
->based on assuming you are executing it from there.
+>We copy and remove files relative to the app root, so make sure you do not
+execute the configure-step script from any other dir.
 
 ###A particular step of the tutorial
 

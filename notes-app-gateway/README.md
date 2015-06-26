@@ -202,10 +202,9 @@ Demo
 https://github.com/strongloop/strong-gateway-demo
 ```
 
->You may see a browser warning because we are using self-signed certificates.
-This warning is safe to ignore, so choose the options to proceed when prompted.
-
 Stop the server when you're done verifying the results.
+
+>You may see a browser warning because we are using self-signed certificates.
 
 ####2. Proxy auth server requests to the resource server
 

@@ -291,7 +291,7 @@ Create a dir named `private` in `client/server`:
 mkdir client/server/private
 ```
 
-Copy or create the [SSL certificate files` from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
+Copy or create the [SSL certificate files from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
 into the `private` dir.
 
 >You can create your own self-signed certificates instead of copying the
@@ -301,9 +301,10 @@ provided files.
 cp -r sample-configs/step-4/client/server/private/ client/server/private
 ```
 
-Modify [`server.js` to start an HTTPS server](sample-configs/step-3/client/server/server.js#L21-L36).
+Set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
 
-Set [`https-port` to 2101 in `config.json`](sample-configs/step-3/client/server/config.json#L28).
+Modify [`server.js` to start an HTTPS server](sample-configs/step-4/client/server/server.js#L21-L36).
+
 
 Copy the [`https-redirect` middleware](sample-configs/step-3/client/server/middleware/https-redirect)
 to the client's `middleware` dir:

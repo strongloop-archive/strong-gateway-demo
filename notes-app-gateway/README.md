@@ -138,7 +138,7 @@ node auth-server
 ```
 
 Open your browser and go to `localhost:3002`. If everything is working properly,
-you should be redirected to `localhost:3202` and the following page should load:
+you should be redirected to `localhost:3202` and you should see:
 
 ```
 StrongLoop API Gateway

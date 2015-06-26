@@ -97,17 +97,17 @@ an authorization server instead:
 
 To do this, we need to:
 
-- 1. Set up the auth server
-- 2. Proxy requests to the auth server
-- 3. Configure the client to send requests to the auth server
-- 4. Verify proxying behavior
+- [1. Set up the auth server]()
+- [2. Proxy requests to the auth server]()
+- [3. Configure the client to send requests to the auth server]()
+- [4. Verify proxying behavior]()
 
 ####1. Set up the auth server
 
-- [Clone the authorization server]()
-- [Change the default authorization server gateway ports]()
-- [Change the authorization proxy ports]()
-- [Verify the port changes]()
+- Clone the authorization server
+- Change the default authorization server gateway ports
+- Change the authorization proxy ports
+- Verify the port changes
 
 #####Clone the StrongLoop API Gateway
 

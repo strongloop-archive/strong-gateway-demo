@@ -95,38 +95,39 @@ an authorization server instead:
 +--------+     +---------------+     +----------+
 ```
 
-Let's create the authorization server (auth server) using the
-[StrongLoop API Gateway]().
+Let's create the authorization server (auth server) using the [StrongLoop API Gateway]().
+We need to:
 
 - 1. Set up the auth server
 - 2. Proxy requests to the auth server
-- 3. Config the client to send reqs to the auth server
-- 4. Verify proxying behaviour
+- 3. Configure the client to send requests to the auth server
+- 4. Verify proxying behavior
 
-####1. Set up the API Gateway
+####1. Set up the auth server
 
 - Clone the authorization server
 - Change the default authorization server gateway ports
 - Change the authorization proxy ports
 - Verify the port changes
 
-
 #####Clone the StrongLoop API Gateway
 
 From the app root, clone the StrongLoop API Gateway into a dir named
-`gateway-server`:
+`auth-server`:
 
 ```
-cd $APP_ROOT
-git clone https://github.com/strongloop/strong-gateway gateway-server
+git clone https://github.com/strongloop/strong-gateway auth-server
 ```
 
 #####Change the default API gateway ports
 
 The StrongLoop API Gateway is preconfigured to start on ports 3000 (HTTP) and
-3001 (HTTPS) out-of-box.
+3001 (HTTPS) out-of-box. Modify the auth server's `middleware.json` to start the
+server on ports [3002 (HTTP)](sample-configs/step-1/auth-server/server/middleware.json)
+and [3202 (HTTPS)](sample-configs/step-1/auth-server/server/middleware.json)
+instead.
 
-Let's reconfigure the API gateway to start on ports 3002 (HTTP) and 3022 (HTTPS).
+Modify the auth server to start on port Reconfigure the auth server start on ports 3002 (HTTP) and 3022 (HTTPS) instead.
 
 In the API Gateway's [`middleware.json`](sample-configs/step-1/gateway-server/middleware.json),
 [change the HTTP port to 3001](sample-configs/step-1/gateway-server/config.json)
@@ -141,7 +142,7 @@ In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/st
 Start the gateway and verify everything works.
 
 ```
-node gateway-server
+node auth-server
 ```
 
 Then browse to `localhost:3004` and you should see in the URL bar that you've

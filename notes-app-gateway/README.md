@@ -226,18 +226,16 @@ from the app root.
 
 ###Step 3 - Enable security on the auth server
 
-#### Enable security on the API gateway
+At this point, requests are being proxied properly, but we do not enforce any
+type of security on auth server. Only authenticated users should be allowed to
+access the notes stored on the resource server.
 
-At this point, everything is working properly but requests to the API
-gateway are still unauthenticated. Only authenticated users should be allowed to
-access notes from the API server.
-
-#####1. Set up HTTPS on the web server
+####1. Set up HTTPS on the client
 
 Copy the sample SSL certificates:
 
 ```
-cp -r sample-configs/phase-2/web-server/server/private/ web-server/server/private
+cp -r sample-configs/step-3/client/server/private/ web-server/server/private
 ```
 
 Then modify [`server.js` to start an HTTPS server on port 3001](sample-configs/phase-2/web-server/server/server.js#L1-L58). Additionally, you will need to copy the [`https-redirect`

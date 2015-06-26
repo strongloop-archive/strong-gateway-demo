@@ -311,7 +311,7 @@ provided files.
 
 [Set the `url` and `https-port` port values in `config.json`](sample-configs/step-4/client/server/config.json#L27-L28).
 
-#####Update Configure `server.js`
+#####Start an HTTPS server in `server.js`
 
 Update [`server.js` to start an HTTPS server](sample-configs/step-4/client/server/server.js#L21-L36).
 

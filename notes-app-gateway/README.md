@@ -116,6 +116,8 @@ Notes
 - Buy sausages
 ```
 
+Stop the servers when you're done verifying the results.
+
 >You can set up this step automatically by executing `./sample-configs/step-1/install`
 from the app root.
 
@@ -174,6 +176,10 @@ and [`rate-limiting-policy`](sample-configs/step-2/auth-server/server/middleware
 values from the auth server's `middleware.json`.
 
 >We will explain these values and add the sections back in a later step.
+
+#####Update the `https-redirect` middleware
+
+Change the [`http-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L37).
 
 #####Verify the port changes
 

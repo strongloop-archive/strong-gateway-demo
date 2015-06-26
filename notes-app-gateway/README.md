@@ -312,9 +312,7 @@ and you should see:
 Unauthorized
 ```
 
-### Phase 3
-
-#### Enable the OAuth 2.0 Authorization Code Flow on the web server
+### Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 
 Since the API server is now blocking the web server from retrieving notes, we
 need to configure a way to authenticate on the API gateway. We will use the

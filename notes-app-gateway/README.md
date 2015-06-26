@@ -347,12 +347,12 @@ Shut down the server when you're done verifying the results.
 
 ####Retrieve the authentication code
 
-Create a [handler to retrieve an auth code from the auth server](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+[Create a new `/authorize` handler to retrieve an auth code from the auth server](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
 
 The handler will [redirect the user to the authentication
-URL](sample-configs/phase-3/web-server/server/boot/routes.js#L18)
+URL](sample-configs/step-4/client/server/boot/routes.js#L18)
 on the API gateway to log in. Upon completion, the API gateway will
-respond with the authorization code at the specified [`redirectUri`](sample-configs/phase-3/web-server/server/boot/routes.js#L13).
+respond with the authorization code at the specified [`redirectUri`](sample-configs/step-4/client/server/boot/routes.js#L13).
 
 ####5. Create a handler for the API gateway response
 

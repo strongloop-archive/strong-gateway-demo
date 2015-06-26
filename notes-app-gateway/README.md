@@ -353,7 +353,7 @@ Shut down the server when you're done verifying the results.
 
 [Create the `/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L61).
 
-Create the [helper functions to retrieve the access token and notes](sample-configs/step-4/client/server/boot/routes.js#L57-L78).
+Create the [access token helper function](sample-configs/stesp-4/client/server/boot/routes.js#L66-78) and the [notes helper function](sample-configs/step-4/client/server/boot/routes.js#L80-L86).
 
 ####6. Try it out
 

@@ -180,8 +180,8 @@ In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/s
 
 ####3. Send client requests to the auth server
 
-[Change the request URL port to 3002](sample-configs/step-2/client/server/boot/routes.js#L8)
-and [set the `strictSSL` setting to `false`](sample-configs/step-2/client/server/boot/routes.js#L9)
+Change the [request URL port to 3002](sample-configs/step-2/client/server/boot/routes.js#L8)
+and set the [`strictSSL` setting to `false`](sample-configs/step-2/client/server/boot/routes.js#L9)
 in `client/server/boot/routes.js`.
 
 #### 4. Try it out

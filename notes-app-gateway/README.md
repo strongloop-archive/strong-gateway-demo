@@ -33,7 +33,7 @@ You can run any step of the tutorial by executing it's corresponding
 For example, to run step 1:
 
 ```
-cd `notes-app-gateway`
+cd notes-app-gateway
 ./sample-configs/step-1/install
 ```
 

@@ -29,7 +29,7 @@ topics. The end result of the tutorial will be the transformation of
 ##Run
 
 You can run any step of the tutorial by executing it's corresponding
-*install* script from the [app root (ie. the `notes-app-gateway` dir]().
+*install* script from the [app root (ie. the `notes-app-gateway` dir)]().
 For example, to run step 1:
 
 ```
@@ -56,8 +56,8 @@ There are five main steps and two optional steps:
 
 ####Copy the resource server and client
 
-Start by copying the resource server and client from `notes-app-plain` into a
-new working dir named `notes-app-gateway`:
+Copy the resource server and client from `notes-app-plain` into a new working
+dir named `notes-app-gateway`:
 
 ```
 mkdir notes-app-gateway

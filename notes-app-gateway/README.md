@@ -512,7 +512,7 @@ Make sure MySQL is running on port 3306.
 
 #####Install `loopback-connector-mysql`
 
-Change to the auth server dir and install `loopback-connector-mongodb`:
+Change to the auth server dir and install `loopback-connector-mysql`:
 
 ```
 cd auth-server

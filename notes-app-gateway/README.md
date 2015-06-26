@@ -285,6 +285,10 @@ flow to authenticate client requests.
 
 ####Set up HTTPS on the client
 
+Before authenticating with the auth server, we need to make sure we're using a
+secure communication channel. To do this, we redirect users to HTTPS on the
+client before making any requests to the auth server.
+
 #####Copy the provided SSL certificates
 
 Create a dir named `private` in `client/server`:

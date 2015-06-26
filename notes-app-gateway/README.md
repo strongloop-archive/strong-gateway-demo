@@ -462,13 +462,10 @@ and one relational database (MySQL) in this tutorial.
 
 ####Step 6 - Use MongoDB for the auth server's data source
 
-Throughout the entire tutorial, the auth server has been using an in-memory
-database. Let's configure it to use MongoDB as a datasource instead.
-
 Make sure you have MongoDB running on your machine. Start it using the default
 port 27017.
 
-Install `loopback-connector-mongodb` for the auth server:
+Change to the auth server dir and install `loopback-connector-mongodb`:
 
 ```
 cd auth-server
@@ -499,7 +496,7 @@ Take a look at your MongoDB collections. Notice five collections created:
 Make sure you have MySQL running on your machine. Start it using the default
 port 3306.
 
-Install `loopback-connector-mysql` for the auth server:
+Change to the auth server dir and install `loopback-connector-mysql`:
 
 ```
 cd auth-server

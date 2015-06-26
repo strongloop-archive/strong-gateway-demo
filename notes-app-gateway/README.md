@@ -57,8 +57,10 @@ Start by copying all the files from `notes-app-plain` into a new working
 directory named `notes-app-gateway`.
 
 ```
-cp -r notes-app-plain notes-app-gateway
+mkdir notes-app-gateway
 cd notes-app-gateway
+cp -r ../notes-app-plain/resource-server resource-server
+cp -r ../notes-app-plain/client client
 ```
 
 Your dir structure should look like:

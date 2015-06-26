@@ -462,8 +462,7 @@ and one relational database (MySQL) in this tutorial.
 
 ####Step 6 - Use MongoDB for the auth server's data source
 
-Make sure you have MongoDB running on your machine. Start it using the default
-port 27017.
+Start MongoDB on port 27017.
 
 Change to the auth server dir and install `loopback-connector-mongodb`:
 
@@ -473,7 +472,21 @@ npm install --save loopback-connector-mongodb
 cd .. # change back to the app root
 ```
 
-Start all three servers again and browse to `localhost:2001`. You should see
+Start all three servers again.
+
+```
+cd resource-server
+slc start
+cd ../auth-server
+slc start
+cd ..
+node client
+```
+
+>The resource server and auth server should be started via Strong PM. The client
+should be started normally via `node client`.
+
+Browse to `localhost:2001` and you should see:
 
 ```
 Notes
@@ -483,7 +496,7 @@ Notes
 - Buy sausages
 ```
 
-Take a look at your MongoDB collections. Notice five collections created:
+Take a look at your MongoDB data. The following collections should be created:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode

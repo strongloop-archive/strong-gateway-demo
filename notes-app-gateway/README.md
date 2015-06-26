@@ -534,7 +534,7 @@ Run it to create the tables required by the StrongLoop API Gateway:
 node auth-server/server/scripts/setup-db.js
 ```
 
-Take a look at your MySQL database. The following tables should be created:
+Take a look at your MySQL database and you should see the following tables:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode
@@ -544,8 +544,7 @@ Take a look at your MySQL database. The following tables should be created:
 
 #####Try it out
 
-Start all three servers again.
-client via node):
+Start all three servers:
 
 ```
 cd resource-server
@@ -555,9 +554,6 @@ slc start
 cd ..
 node client
 ```
-
->The resource and auth servers should be started with Strong PM. The client
-should be started using regular node.
 
 Browse to `localhost:2001` and you should see:
 

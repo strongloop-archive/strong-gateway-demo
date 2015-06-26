@@ -442,6 +442,9 @@ Configure the [`rate-limiting-policy` middleware in the auth server's
 Create the [`rate-limiting` script](sample-configs/step-5/client/server/scripts/rate-limiting.js)
 in `client/server/scripts`.
 
+>The script sends a large number of requests to the auth server and logs each
+response header to the console.
+
 #####Try it out
 
 Start the auth server:
@@ -456,10 +459,10 @@ Run the `rate-limiting` script:
 node client/server/scripts/rate-limiting.js
 ```
 
-You should see output like:
+You should see:
 
 ```
-Access Token: PC71...
+Access Token: PC71... # your access token will be different
 Key: url-api/notes - Limit: 1000 - Remaining: 999 - Reset: 60000
 Key: url-api/notes - Limit: 1000 - Remaining: 998 - Reset: 60000
 Key: url-api/notes - Limit: 1000 - Remaining: 997 - Reset: 60000
@@ -470,7 +473,9 @@ Key: url-api/notes - Limit: 1000 - Remaining: 994 - Reset: 59941
 ```
 
 Notice the headers show the number of remaining requests (999, 998, ...) and the
-time left until that count resets in milliseconds (60000, 59982, ...). For more
+time left until that count resets in milliseconds (60000, 59982, ...). See the
+[official docs](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting)
+for more info.
 
 ##### API Metrics
 

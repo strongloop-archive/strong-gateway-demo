@@ -347,10 +347,7 @@ Shut down the server when you're done verifying the results.
 
 [Create a new view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
 
-
-
-
-####3. Create a link to start the authentication flow
+####Create a link to start the authentication flow
 
 In the `unauthorized` view, [create a link to start OAuth 2.0 Authorization Code Grant](sample-configs/phase-3/web-server/server/views/unauthorized.ejs#L3)
 flow.

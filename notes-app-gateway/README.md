@@ -238,8 +238,8 @@ Create a new `private` directory in `client/server`:
 mkdir client/server/private
 ```
 
-Copy the [provided SSL certificates](sample-configs/step-3/client/server/private)
-to the `private` dir you just created.
+Copy all the [provided SSL certificate files](sample-configs/step-3/client/server/private)
+into the `client/server/private`.
 
 Modify [`server.js` to start an HTTPS server](sample-configs/step-3/client/server/server.js#L21-L36). Make sure you set the `https-port` value in [`client/server/config.json`](sample-configs/
  on port 2101

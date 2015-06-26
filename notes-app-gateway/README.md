@@ -370,9 +370,7 @@ when not run in production mode (ie. NODE_ENV=prod). Also take a look at
 [`sample-data.json`](https://github.com/strongloop/strong-gateway/tree/master/server/sample-data.json)
 for more info.
 
-###Step 5
-
-#### `strong-gateway` policies
+###Step 5 - StrongLoop API Gateway policies
 
 While the main purpose of API gateways are typically authentication and
 authorization, `strong-gateway` also provides several auditing features out-of-box known as ["policies"](http://docs.strongloop.com/display/LGW/Configuring+policies).

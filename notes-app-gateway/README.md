@@ -22,7 +22,7 @@ topics. The end result of the tutorial will be the transformation of
 
 ##Prerequisites
 
-- Completion of the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Knowledge of the basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
 - Knowledge of [StrongLoop Process Manager (PM)](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
 - Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)

@@ -481,7 +481,7 @@ Update [`auth-server/server/datasources.json`](sample-configs/step-6/auth-server
 
 #####Try it out
 
-Start all three servers again.
+Start all three servers:
 
 ```
 cd ../resource-server
@@ -492,20 +492,16 @@ cd ..
 node client
 ```
 
->The resource server and auth server should be started via Strong PM. The client
-should be started normally via `node client`.
-
 Browse to `localhost:2001` and you should see:
 
 ```
 Notes
 ----
 - Buy eggs
-- Buy mlik
+- Buy milk
 - Buy sausages
 ```
-
-Take a look at your MongoDB database. You should see the following collections:
+You should see the following collections in your MongoDB database:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode

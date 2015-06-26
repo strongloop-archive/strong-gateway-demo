@@ -370,7 +370,7 @@ when not run in production mode (ie. NODE_ENV=prod). Also take a look at
 [`sample-data.json`](https://github.com/strongloop/strong-gateway/tree/master/server/sample-data.json)
 for more info.
 
-### Phase 4
+###Step 5
 
 #### `strong-gateway` policies
 

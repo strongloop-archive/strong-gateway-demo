@@ -73,7 +73,7 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
-Install resource server and client dependencies:
+Install resource server and client deps:
 
 ````
 cd resource-server
@@ -118,7 +118,7 @@ into a dir named `auth-server`:
 git clone https://github.com/strongloop/strong-gateway auth-server
 ```
 
-Install the auth server's dependencies:
+Install the auth server's deps:
 
 ````
 cd auth-server

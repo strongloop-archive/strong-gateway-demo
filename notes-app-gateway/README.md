@@ -164,13 +164,11 @@ This warning is safe to ignore.
 
 Stop the server when you're done verifying the results.
 
----
-
-##### 2. Proxy API gateway requests to the API server.
+#####2. Proxy auth server requests to the resource server.
 
 #####Change the auth server's proxy port
 
-In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/step-1/gateway-server/server/middleware.json#L31)
+In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/step-2/auth-server/server/middleware.json#L31).
 
 By default, the API gateway is already [configured to proxy requests to the API
 server on port 3002](sample-configs/phase-1/gateway-server/server/middleware.json#L36-L42).

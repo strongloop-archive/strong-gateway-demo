@@ -437,7 +437,8 @@ Configure the [`rate-limiting-policy` middleware in the auth server's
 
 #####Create the `rate-limiting-client` script
 
-[Create the `rate-limiting` script in `client/server/scripts`](sample-configs/step-5/client/server/scripts/rate-limiting.js).
+Create the [`rate-limiting` script](sample-configs/step-5/client/server/scripts/rate-limiting.js)
+in `client/server/scripts`.
 
 #####Try it out
 

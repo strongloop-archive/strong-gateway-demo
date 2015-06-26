@@ -284,9 +284,7 @@ need to configure a way to authenticate on the API gateway. We will use the
 [OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
 flow to do this.
 
-1. [Set up HTTPS on the client](#1---setup-https-on-the-client)
-
-####1. Set up HTTPS on the client
+####Set up HTTPS on the client
 
 Create a new dir named `private` in `client/server`:
 

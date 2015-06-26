@@ -104,12 +104,7 @@ To do this, we need to:
 
 ####1. Set up the auth server
 
-- Clone the authorization server
-- Change the default authorization server gateway ports
-- Change the authorization proxy ports
-- Verify the port changes
-
-#####Clone the StrongLoop API Gateway
+#####Clone the auth server
 
 From the app root, clone the StrongLoop API Gateway into a dir named
 `auth-server`:
@@ -120,13 +115,10 @@ git clone https://github.com/strongloop/strong-gateway auth-server
 
 #####Change the default auth server ports
 
-We do not want to use the default auth server ports. Modify the auth server's
-[`middlware.json`](auth-server/server/middleware.json) to use port [3002 (HTTP)](auth-server/server/middleware.json)
-and [3202 (HTTPS)](auth-server/server/middleware.json).
+We do not want to use the default auth server ports in this demo.
 
-#####Change the HTTP redirection port
-
-In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/step-1/gateway-server/server/middleware.json#L31)
+Modify the auth server's [`middlware.json`](auth-server/server/middleware.json)
+to use ports [3002 (HTTP)](auth-server/server/middleware.json) and [3202 (HTTPS)](auth-server/server/middleware.json).
 
 #####Verify the port changes
 
@@ -153,6 +145,11 @@ https://github.com/strongloop/strong-gateway-demo
 Stop the server when you're done verifying the results.
 
 ##### 2. Proxy API gateway requests to the API server.
+
+#####Change the auth server's proxy port
+
+In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/step-1/gateway-server/server/middleware.json#L31)
+
 
 By default, the API gateway is already [configured to proxy requests to the API
 server on port 3002](sample-configs/phase-1/gateway-server/server/middleware.json#L36-L42).

@@ -43,7 +43,7 @@ execute the install script from any other dir.
 We recommend running step 5 to view the completed demo.
 
 >To run steps 6 or 7, you need to start the corresponding database for that
->particular step.
+>particular step before executing it's install script.
 
 ##Tutorial
 

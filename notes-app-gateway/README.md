@@ -512,39 +512,44 @@ Notice there are five collections created:
 
 These collections are automatically set up by `strong-gateway`.
 
-#### Phase 6
-
-##### Use MySQL for the API gateway's data source
+####Step 7 - Use MySQL for the API gateway's data source
 
 Make sure you have MySQL running on your machine. Start it using the default
 port 3306.
 
-Then change to the [`gateway-server` directory](gateway) and install
-`loopback-connector-mysql`:
+Install `loopback-connector-mysql`:
 
 ```
-cd gateway-server
+cd auth-server
 npm install --save loopback-connector-mysql
 ```
 
-Next, [create `setup-db.js` script](sample-configs/gateway-server/server/scripts/setup-db.js).
+[Create the `setup-db.js` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
 
 Run the script to create all the tables required by `strong-gateway`:
 
 ```
-node gateway-server/server/scripts/setup-db.js
+node auth-server/server/scripts/setup-db.js
 ```
 
-Then start all three servers again and take a look at your MySQL tables.  Notice
-there are five tables created:
+Start all three servers again and browse to `localhost:2001`. You should see
+
+```
+Notes
+----
+- Buy eggs
+- Buy mlik
+- Buy sausages
+```
+
+Also take a look at your MySQL tables. Notice five tables were created by the
+[`setup-db` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js):
 
 - OAuthAccessToken
 - OAuthAuthorizationCode
 - OAuthClientApplication
 - OAuthPermission
 - User
-
-These tables are automatically created by [`setup-db` script](server-configs/phases-6/gateway-server/server/scripts/setup-db.js).
 
 ---
 

@@ -246,6 +246,8 @@ While the results look identical to `notes-app-plain`, the client is now making
 requests to the auth server, which is acting as a proxy to the resource server.
 The client is now fully decoupled from the resource server.
 
+Shutdown all the servers when you're done verifying the results.
+
 >You can set up this step automatically by executing `./sample-configs/step-2/install`
 from the app root.
 

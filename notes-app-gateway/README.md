@@ -285,13 +285,13 @@ flow to authenticate client requests.
 
 ####Set up HTTPS on the client
 
-Create a new dir named `private` in `client/server`:
+Create a dir named `private` in `client/server`:
 
 ```
 mkdir client/server/private
 ```
 
-Copy all the [provided SSL certificate files](sample-configs/step-3/client/server/private)
+Copy the [SSL certificate files from the `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
 into the `private` dir.
 
 ```

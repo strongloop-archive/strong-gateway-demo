@@ -53,6 +53,7 @@ There are five main steps and two optional steps:
 
 ###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 
+####Copy the resource server and client into `notes-app-gateway`
 Start by copying all the files from `notes-app-plain` into a new working
 directory named `notes-app-gateway`.
 
@@ -73,6 +74,8 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
+####Install deps
+
 Install resource server and client deps:
 
 ````
@@ -81,6 +84,27 @@ npm install
 cd ../client
 npm install
 cd .. # change back to the app root
+```
+
+####Try it out
+
+Start both servers:
+
+```
+cd resource server
+slc start
+cd .. # change back to the app root
+node client
+```
+
+You should see:
+
+```
+Notes
+------------
+- Buy eggs
+- Buy milk
+- Buy sausages
 ```
 
 >You can set up this step automatically by executing `./sample-configs/step-1/install`

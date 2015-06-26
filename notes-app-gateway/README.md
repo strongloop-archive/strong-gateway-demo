@@ -106,8 +106,8 @@ To do this, we need to:
 
 #####Clone the auth server
 
-From the app root, clone the StrongLoop API Gateway into a dir named
-`auth-server`:
+From the app root, clone the [StrongLoop API Gateway](https://github.com/strongloop/strong-gateway)
+into a dir named `auth-server`:
 
 ```
 git clone https://github.com/strongloop/strong-gateway auth-server
@@ -129,6 +129,9 @@ and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
 >We do not not use the default auth server ports because we want to assign
 consistent ports throughout the entire demo.
 
+#####Remove unused portions of `middleware.json`
+
+Remove all values from the auth server's [`middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L26-27).
 
 #####Verify the port changes
 
@@ -152,6 +155,8 @@ https://github.com/strongloop/strong-gateway-demo
 ```
 
 Stop the server when you're done verifying the results.
+
+
 
 ##### 2. Proxy API gateway requests to the API server.
 

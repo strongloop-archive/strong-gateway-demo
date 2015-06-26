@@ -475,10 +475,7 @@ for information on how to read the outputs.
 
 ### Choosing a datasource for the `strong-gateway` data/metadata
 
-Throughout the tutorial, the API gateway has been using the in-memory database
-to persist data/metadata. In production, you will want to choose a specific
-datasource to store your information. Since `strong-gateway` is built using
-LoopBack, it supports all the same data sources types (Microsoft SQL Server,
+with LoopBack, it supports all the same data sources types (Microsoft SQL Server,
 MongoDB, MySQL, Oracle, and PostgreSQL). We'll demonstrate one NoSQL (MongoDB)
 and one relational database (MySQL) in this tutorial.
 
@@ -486,23 +483,37 @@ and one relational database (MySQL) in this tutorial.
 - Run setudb.js to create tables for relational db
 - Point to he docs for other types of datasources
 
-#### Phase 5
+####Step 6 - Use MongoDB for the API gateway's data source
 
-##### Use MongoDB for the API gateway's data source
+Throughout the entire tutorial, the auth server has been using an in-memory
+database to persist data/metadata. In production, you will want to choose a
+specific datasource to store your information. Let's set up the auth server to
+use MongoDB.
+
+---
 
 Make sure you have MongoDB running on your machine. Start it using the default
 port 27017.
 
-Then change to the [`gateway-server directory`](gateway-server) and install
-`loopback-connector-monogdb`:
+Install `loopback-connector-mongodb` for the auth server:
 
 ```
-cd gateway-server
+cd auth-server
 npm install --save loopback-connector-mongodb
+cd .. # change back to the app root
 ```
 
-Then start all three servers again and take a look at your MongoDB collections.
-Notice there are five collections created:
+Start all three servers again and browse to `localhost:2001`. You should see
+
+```
+Notes
+----
+- Buy eggs
+- Buy mlik
+- Buy sausages
+```
+
+Take a look at your MongoDB collections. Notice five collections created:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode
@@ -510,18 +521,17 @@ Notice there are five collections created:
 - OAuthPermission
 - User
 
-These collections are automatically set up by `strong-gateway`.
-
 ####Step 7 - Use MySQL for the API gateway's data source
 
 Make sure you have MySQL running on your machine. Start it using the default
 port 3306.
 
-Install `loopback-connector-mysql`:
+Install `loopback-connector-mysql` for the auth server:
 
 ```
 cd auth-server
 npm install --save loopback-connector-mysql
+cd .. # change back to the app root
 ```
 
 [Create the `setup-db.js` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
@@ -542,7 +552,7 @@ Notes
 - Buy sausages
 ```
 
-Also take a look at your MySQL tables. Notice five tables were created by the
+Also take a look at your MySQL tables. Notice the five tables created by the
 [`setup-db` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js):
 
 - OAuthAccessToken

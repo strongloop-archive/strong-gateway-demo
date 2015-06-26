@@ -119,7 +119,7 @@ Modify the auth server's `config.json` to use ports [3002 (HTTP)](sample-configs
 and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
 
 >We do not not use the default auth server ports because we want to assign
-consistent ports throughout the demo.
+consistent ports throughout the entire demo.
 
 #####Verify the port changes
 

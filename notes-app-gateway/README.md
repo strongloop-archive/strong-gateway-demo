@@ -371,7 +371,7 @@ Notes
 Click [here] to start the OAuth 2.0 Authorization Grant flow.
 ```
 
-Click "here". You should see:
+Click the "here" link. You should see:
 
 ```
 Log in
@@ -403,12 +403,11 @@ Do you approve?
 ```
 
 Once you are authenticated as `bob`, the auth server asks if you want to allow
-`demo-app` access to your account. Choose "Allow" to approve the permission
+`demo-app` access to your account. Click "Allow" to approve the permission
 request.
 
->`bob` and `demo-app` values is simply sample data that has been preregistered
-with the auth server. StrongLoop API Gateway [includes these sample users
-out-of-box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
+>`bob` and `demo-app` are preregistered sample data values included with the
+auth server. StrongLoop API Gateway [includes this data out-of-box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
 for demo purposes.
 
 

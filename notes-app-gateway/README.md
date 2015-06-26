@@ -7,7 +7,7 @@ This tutorial continues from where we left off in the  [`notes-app-plain`
 tutorial](../notes-app-plain).
 
 - [Overview](#overview)
-- [Setup](#setup)
+- [Prerequisites](#prerequisites)
 - [Run](#run)
 - [Tutorial](#tutorial)
 
@@ -20,9 +20,10 @@ while covering a variety of [Strongloop API Gateway](http://docs.strongloop.com/
 topics. The end result of the tutorial will be the transformation of
 `notes-app-plain` into `notes-app-gateway`.
 
-##Setup
+##Prerequisites
 
-- The basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Completion of the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Knowledge of [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
 - Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
@@ -100,6 +101,7 @@ Start both servers:
 ```
 cd resource server
 slc start
+slc ctl set size 1 1
 cd .. # change back to the app root
 node client
 ```

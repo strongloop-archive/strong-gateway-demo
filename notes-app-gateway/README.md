@@ -86,7 +86,7 @@ At the moment, the client is making requests directly to the resource server:
 ```
 
 We would like to [proxy](https://en.wikipedia.org/wiki/Proxy) requests through
-an authorization server instead:
+an authorization server (auth server) instead:
 
 ```
 +--------+     +---------------+     +----------+
@@ -116,22 +116,21 @@ git clone https://github.com/strongloop/strong-gateway auth-server
 #####Change the default auth server ports
 
 Modify the auth server's `config.json` to use ports [3002 (HTTP)](sample-configs/step-2/auth-server/server/config.json#L4)
-and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6).
+and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
 
 >We do not not use the default auth server ports because we want to assign
 consistent ports throughout the demo.
 
 #####Verify the port changes
 
-Start the gateway and verify everything works.
+Start the auth server:
 
 ```
 node auth-server
 ```
 
-Then browse to `localhost:3004` and you should see in the URL bar that you've
-been redirected to `localhost:3005` and the default `strong-gateway` home page
-should be loaded:
+Open your browser and go to `localhost:3002`. If everything is working properly,
+you should be redirected to `localhost:3202` and the following page should load:
 
 ```
 StrongLoop API Gateway

@@ -524,7 +524,7 @@ cd .. # change back to the app root
 
 Update [`auth-server/server/datasources.json`](sample-configs/step-7/auth-server/server/datasources.json#L4-L10).
 
-#####Create the MySQL tables
+#####Create the database tables
 
 In `auth-server/server/scripts`, [create `setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
 

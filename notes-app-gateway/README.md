@@ -53,7 +53,7 @@ There are five main steps and two optional steps:
 
 ###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 
-####Copy the resource server and client into `notes-app-gateway`
+####Copy the resource server and client
 Start by copying all the files from `notes-app-plain` into a new working
 directory named `notes-app-gateway`.
 

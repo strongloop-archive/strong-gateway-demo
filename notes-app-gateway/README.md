@@ -182,7 +182,7 @@ In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/s
 
 [Change the request URL port to 3002](sample-configs/step-2/client/server/boot/routes.js#L8)
 and [set the `strictSSL` setting](sample-configs/step-2/client/server/boot/routes.js#L9)
-to false in `client/server/boot/routes.js`.
+to false in [`client/server/boot/routes.js`](sample-configs/step-2/client/server/boot/routes.js).
 
 #### 4. Try it out
 

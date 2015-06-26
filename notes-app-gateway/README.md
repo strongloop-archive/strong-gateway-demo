@@ -506,11 +506,11 @@ Take a look at your MongoDB data. The following collections should be created:
 
 ####Step 7 - Use MySQL for the auth server's data source
 
-#####Make sure MySQL is running
+#####Start MySQL
 
-Start MySQL on port 3306.
+Make sure MySQL is running on port 3306.
 
-#####Install `loopback-connector-mongodb`
+#####Install `loopback-connector-mysql`
 
 Change to the auth server dir and install `loopback-connector-mongodb`:
 

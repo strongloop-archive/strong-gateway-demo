@@ -425,27 +425,26 @@ the scenes, see the [official documentation for this particular flow](http://doc
 
 ###Step 5 - StrongLoop API Gateway policies
 
-While the main purpose of API gateways are typically authentication and
-authorization, `strong-gateway` also provides several auditing features out-of-box known as ["policies"](http://docs.strongloop.com/display/LGW/Configuring+policies).
-Let's try some out using the existing API gateway.
+In addition to the basic gateway features, the StrongLoop API gateway also
+provides set of features known as ["policies"](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway#StrongLoopAPIGateway-Policies).
 
-##### Rate limiting
+####Rate limiting
 
 [Rate limiting](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting) is used to control the number of API calls from clients within a certain period of time.
 
-###### 1. Set up the API gateway to use rate limiting
+#####Set up the API gateway to use rate limiting
 
 In the `routes:after` section of the API gateway's `middleware.json`, [configure
 the rate limiting middleware](sample-configs/phase-4/gateway-server/server/middleware.json#L58-L82).
 
-###### 2. Create the `rate-limiting-client` script
+#####Create the `rate-limiting-client` script
 
 [Create a helper script named
 `rate-limiting-client`](sample-configs/phase-4/web-server/server/scripts/rate-limiting-client.js). We will use this script to
 make a large number of requests and print the responses returned by the API
 gateway.
 
-###### 3. Try it out
+#####Try it out
 
 Start the API gateway:
 

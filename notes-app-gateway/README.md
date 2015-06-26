@@ -462,20 +462,29 @@ and one relational database (MySQL) in this tutorial.
 
 ####Step 6 - Use MongoDB for the auth server's data source
 
-Start MongoDB on port 27017.
+#####Start MongoDB
+
+Make sure MongoDB is running on port 27017.
+
+#####Install `loopback-connector-mongodb`
 
 Change to the auth server dir and install `loopback-connector-mongodb`:
 
 ```
 cd auth-server
 npm install --save loopback-connector-mongodb
-cd .. # change back to the app root
 ```
+
+#####Configure the datasource
+
+Update [`auth-server/server/datasources.json`](sample-configs/step-6/auth-server/server/datasources.json#L4-L10).
+
+#####Try it out
 
 Start all three servers again.
 
 ```
-cd resource-server
+cd ../resource-server
 slc start
 cd ../auth-server
 slc start
@@ -496,7 +505,7 @@ Notes
 - Buy sausages
 ```
 
-Take a look at your MongoDB data. The following collections should be created:
+Take a look at your MongoDB database. You should see the following collections:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode
@@ -534,7 +543,7 @@ Run it to create the tables required by the StrongLoop API Gateway:
 node auth-server/server/scripts/setup-db.js
 ```
 
-Take a look at your MySQL database and you should see the following tables:
+Take a look at your MySQL database. You should see the following tables:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode
@@ -561,7 +570,7 @@ Browse to `localhost:2001` and you should see:
 Notes
 ----
 - Buy eggs
-- Buy mlik
+- Buy milk
 - Buy sausages
 ```
 

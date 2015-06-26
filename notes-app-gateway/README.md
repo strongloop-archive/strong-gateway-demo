@@ -246,7 +246,15 @@ Unauthorized
 The server is now denying unauthorized users access to the notes on the resource
 server..
 
-####Step 4 - 
+
+### Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
+
+Since the API server is now blocking the web server from retrieving notes, we
+need to configure a way to authenticate on the API gateway. We will use the
+[OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
+flow to do this.
+
+1. [Set up HTTPS on the client](#1---setup-https-on-the-client)
 
 ####1. Set up HTTPS on the client
 
@@ -281,7 +289,7 @@ middleware we just copied](sample-configs/step-3/client/server/middleware.json#L
 
 [Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
-##### 2. Verify web server requests are being redirected to HTTPS
+Verify web server requests are being redirected to HTTPS
 
 Start the web-server:
 
@@ -293,44 +301,18 @@ Browse to [`http://localhost:3000`](http://localhost:3000) and check the URL bar
 to see if you've been redirected to `https://localhost:3001`. Shut down the
 server once you're done verifying the results.
 
-##### 3. Enable security on the API gateway
-
-Add the [`loopback-component-oauth2` configurations to the `auth` section to the
-gateway's middleware.json](sample-configs/phase-2/gateway-server/server/middleware.json#L27-L48).
-
-##### 4. Test it out
-
-To prove the security is working, start up all three servers again and browse
-to [`http://localhost:3000`](http://localhost:3000). As usual, the web server
-will try to make a request to fetch notes again, but will fail this time. If
-everything worked properly, you should be redirected to `https://localhost:3001`
-and you should see:
-
-```
-401
-
-Unauthorized
-```
-
-### Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
-
-Since the API server is now blocking the web server from retrieving notes, we
-need to configure a way to authenticate on the API gateway. We will use the
-[OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
-flow to do this.
-
-##### 1. Render then unauthorized view for the `/` route
+####2. Render then unauthorized view for the `/` route
 
 On the web server, create a [new view named `unauthorized.ejs`](sample-configs/phase-3/web-server/server/views/unauthorized.ejs)
 
 Then [modify the `/` route to render this view](sample-configs/phase-3/web-server/server/boot/routes.js#L6-L8).
 
-##### 2. Create a link to start the authentication flow
+####3. Create a link to start the authentication flow
 
 In the `unauthorized` view, [create a link to start OAuth 2.0 Authorization Code Grant](sample-configs/phase-3/web-server/server/views/unauthorized.ejs#L3)
 flow.
 
-##### 3. Retrieve the authentication code
+####4. Retrieve the authentication code
 
 Create a [handler to retrieve an authentication code from the API
 gateway](sample-configs/phase-3/web-server/server/boot/routes.js#L10-L19).
@@ -339,7 +321,7 @@ URL](sample-configs/phase-3/web-server/server/boot/routes.js#L18)
 on the API gateway to log in. Upon completion, the API gateway will
 respond with the authorization code at the specified [`redirectUri`](sample-configs/phase-3/web-server/server/boot/routes.js#L13).
 
-##### 4. Create a handler for the API gateway response
+####5. Create a handler for the API gateway response
 
 [Create the `/token` endpoint to handle the API gateway authentication response](sample-configs/phase-3/web-server/server/boot/routes.js#L21-L52). You will also need to create the [helper functions to retrieve the access token and notes](sample-configs/phase-3/web-server/server/boot/routes.js#L57-L78).
 
@@ -355,7 +337,7 @@ token retrieve the notes](sample-configs/phase-3/web-server/server/boot/routes.j
 When the notes are returned to the web server, we [render the index page and
 display it usual](sample-configs/phase-3/web-server/server/boot/routes.js#L49).
 
-##### 5. Try it out
+####6. Try it out
 
 Start all three servers again and browse to [`localhost:3000`](http://localhost:3000).
 Click the authentication link and respond to the questions and eventually you

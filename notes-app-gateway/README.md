@@ -115,8 +115,6 @@ git clone https://github.com/strongloop/strong-gateway auth-server
 
 #####Change the default auth server ports
 
-We do not want to use the default auth server ports in this demo.
-
 Modify the auth server's [`middlware.json`](auth-server/server/middleware.json)
 to use ports [3002 (HTTP)](auth-server/server/middleware.json) and [3202 (HTTPS)](auth-server/server/middleware.json).
 

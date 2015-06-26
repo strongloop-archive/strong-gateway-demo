@@ -107,10 +107,10 @@ an authorization server (auth server) instead:
 
 To do this, we need to:
 
-1. [Set up the auth server](#set-up-the-auth-server)
-2. [Proxy requests to the auth server](#proxy-requests-to-the-auth-server)
-3. [Send client requests to the auth server](#send-client-requests-to-the-auth-server)
-4. [Try it out](#try-it-out)
+1. [Set up the auth server](#1-set-up-the-auth-server)
+2. [Proxy requests to the auth server](#2-proxy-requests-to-the-auth-server)
+3. [Send client requests to the auth server](#3-send-client-requests-to-the-auth-server)
+4. [Try it out](#4-try-it-out)
 
 ####1. Set up the auth server
 

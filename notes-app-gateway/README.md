@@ -309,8 +309,7 @@ provided files.
 
 #####Add HTTPS settings `config.json`
 
-[Add the `url` key ](sample-configs/step-3/client/server/config.json#L27)
-and set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
+[Set the `url` and `https-port` port values in `config.json`](sample-configs/step-4/client/server/config.json#L27-L28).
 
 #####Update Configure `server.js`
 

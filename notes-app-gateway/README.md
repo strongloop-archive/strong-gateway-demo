@@ -279,10 +279,10 @@ The server is now denying requests from unauthorized users.
 
 ###Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 
-Since the API server is now blocking the web server from retrieving notes, we
-need to configure a way to authenticate on the API gateway. We will use the
-[OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
-flow to do this.
+Since the auth server now denying the client from retrieving notes, we need a
+way to authenticate the client. Let's modify the auth server and allow it to
+authorize users using the [OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
+flow.
 
 ####Set up HTTPS on the client
 

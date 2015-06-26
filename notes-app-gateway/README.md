@@ -473,6 +473,7 @@ Change to the auth server dir and install `loopback-connector-mongodb`:
 ```
 cd auth-server
 npm install --save loopback-connector-mongodb
+cd .. # change back to the app root
 ```
 
 #####Configure the datasource
@@ -484,7 +485,7 @@ Update [`auth-server/server/datasources.json`](sample-configs/step-6/auth-server
 Start all three servers:
 
 ```
-cd ../resource-server
+cd resource-server
 slc start
 cd ../auth-server
 slc start

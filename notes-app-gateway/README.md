@@ -486,11 +486,7 @@ and one relational database (MySQL) in this tutorial.
 ####Step 6 - Use MongoDB for the API gateway's data source
 
 Throughout the entire tutorial, the auth server has been using an in-memory
-database to persist data/metadata. In production, you will want to choose a
-specific datasource to store your information. Let's set up the auth server to
-use MongoDB.
-
----
+database. Let's configure it to use MongoDB as a datasource instead.
 
 Make sure you have MongoDB running on your machine. Start it using the default
 port 27017.

@@ -28,7 +28,7 @@ topics. The end result of the tutorial will be the transformation of
 
 ##Run
 
-You can run any step of the tutorial by executing it's corresponding
+You can run any step of this tutorial by executing it's corresponding
 *install* script from the [app root (ie. the `notes-app-gateway` dir)]().
 For example, to run step 1:
 

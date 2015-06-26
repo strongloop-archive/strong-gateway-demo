@@ -326,6 +326,7 @@ cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 
 [Register the `https-redirect` middleware in `middleware.json`](sample-configs/step-4/client/server/middleware.json#L22-28).
 
+#####Try it out
 
 Start the client:
 
@@ -333,8 +334,8 @@ Start the client:
 node client
 ```
 
-Browse to [`http://localhost:3000`](http://localhost:2001) and check the URL bar
-to see if you've been redirected to `https://localhost:2101`.
+Browse to `http//localhost:2001` and check the URL bar to see if you've been
+redirected to `https://localhost:2101`.
 
 Shut down the server once you're done verifying the results.
 

@@ -307,15 +307,14 @@ cp -r sample-configs/step-4/client/server/private/ client/server/private
 >You can create your own self-signed certificates instead of copying the
 provided files.
 
-#####Add the HTTPS port to `config.json`
+#####Add HTTPS settings `config.json`
 
-Set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
+[Add the `url` key ](sample-configs/step-3/client/server/config.json#L27)
+and set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
 
-#####Update `config.json`
+#####Update Configure `server.js`
 
 Update [`server.js` to start an HTTPS server](sample-configs/step-4/client/server/server.js#L21-L36).
-
-[Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
 #####Add HTTPS redirect middleware
 

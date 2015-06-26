@@ -104,6 +104,8 @@ To do this, we need to:
 
 ####1. Set up the auth server
 
+#####Clone the auth server
+
 From the app root, clone the StrongLoop API Gateway into a dir named
 `auth-server`:
 
@@ -111,7 +113,7 @@ From the app root, clone the StrongLoop API Gateway into a dir named
 git clone https://github.com/strongloop/strong-gateway auth-server
 ```
 
-Then install the auth server's dependencies:
+Install the auth server's dependencies:
 
 ````
 cd auth-server

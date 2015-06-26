@@ -263,7 +263,6 @@ In the `auth` section of `auth-server/server/middleware.json`, [configure the
 Then start up all the servers (like you did in the previous section) and browse
 to `localhost:2001`. This time you should see:
 
-
 ```
 401
 
@@ -271,6 +270,8 @@ Unauthorized
 ```
 
 The server is now denying unauthorized users.
+
+>You can set up this step automatically by executing `./sample-configs/step-3/install`
 
 ###Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 

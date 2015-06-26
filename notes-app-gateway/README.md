@@ -43,9 +43,9 @@ execute the install script from any other dir.
 
 There are five main steps and two optional steps:
 
-- [Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`](#step-1)
-- [Step 2 - Proxy requests through the auth server](#step-2)
-- [Step 3 - Enable security on the auth server](#step-3)
+- [Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`](#step-1---copy-files-from-notes-app-plain-to-notes-app-gateway)
+- [Step 2 - Proxy requests through the auth server](#step-2---proxy-requests-through-the-auth-server)
+- [Step 3 - Enable security on the auth server](#step-3---enable-security-on-the-auth-server)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
 - [Step 5 - `strong-gateway` policies](#step-5)
 - [Step 6 (optional) - Use MongoDB for the API gateway's data source](#step-6)

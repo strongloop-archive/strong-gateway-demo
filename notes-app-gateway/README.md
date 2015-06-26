@@ -41,17 +41,15 @@ execute the install script from any other dir.
 
 ##Tutorial
 
-There are seven steps in this tutorial, the first five are mandatory (1-5) and
-the last two are optional (6-7):
+There are five main steps and two optional steps:
 
 - [Step 1 - Copy every file from `notes-app-plain` into `notes-app-gateway`](#step-1)
 - [Step 2 - Proxy requests through the authorization server](#step-2)
 - [Step 3 - Enable security on the authorization server](#step-3)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
 - [Step 5 - `strong-gateway` policies](#step-5)
-- [Step 6 - Use MongoDB for the API gateway's data source](#step-6)
-- [Step 7 - Use MySQL for the API gateway's data source](#step-7)
-
+- [Step 6 (optional) - Use MongoDB for the API gateway's data source](#step-6)
+- [Step 7 (optional) - Use MySQL for the API gateway's data source](#step-7)
 
 ###Step 1
 
@@ -87,7 +85,8 @@ At the moment, the client is making requests directly to the resource server:
 +--------+     +----------+
 ```
 
-We would like to proxy requests through an authorization server instead:
+We would like to [proxy](https://en.wikipedia.org/wiki/Proxy) requests through
+an authorization server instead:
 
 ```
 +--------+     +---------------+     +----------+

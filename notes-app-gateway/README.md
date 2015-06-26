@@ -328,7 +328,7 @@ cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 
 #####Modify the auth server sample app registration
 
-Change the [`redirectURIs` value to `https://localhost:2101`](sample-configs/step-4/auth-server/server/sample-data.json)
+Change the [`redirectURIs` value to `https://localhost:2101`](sample-configs/step-4/auth-server/server/sample-data.json#L14)
 in `auth-server/server/sample-data.json`.
 
 #####Try it out

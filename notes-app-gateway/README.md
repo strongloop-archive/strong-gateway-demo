@@ -238,9 +238,10 @@ Copy the sample provided SSL certificates to `client/server/private`:
 cp -r sample-configs/step-3/client/server/private/ client/server/private
 ```
 
-Then modify [`server.js` to start an HTTPS server on port 3001](sample-configs/phase-2/web-server/server/server.js#L1-L58). Additionally, you will need to copy the [`https-redirect`
-middleware`](sample-configs/phase-2/web-server/server/middleware/https-redirect) to the
-web server's `middleware` directory:
+Modify [`server.js` to start an HTTPS server on port 2101](sample-configs/step-3/client/server/server.js#L1-L58).
+
+Copy the [`https-redirect` middleware`](sample-configs/step-3/client/server/middleware/https-redirect)
+to the client's `middleware` directory:
 
 ```
 cp -r sample-configs/phase-2/web-server/server/middleware web-server/server/middleware

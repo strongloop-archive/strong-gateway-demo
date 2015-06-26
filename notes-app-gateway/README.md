@@ -40,7 +40,7 @@ cd `notes-app-gateway`
 >We copy and remove files relative to the app root, so make sure you do not
 execute the install script from any other dir.
 
-We recommend running step 5 to view the complete demo.
+We recommend running step 5 to view the completed demo.
 
 >Steps 6 and 7 requires an external database for persistence. These two steps
 will not run automatically unless you have MongoDB/MySQL running properly.

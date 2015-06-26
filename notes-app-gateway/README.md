@@ -239,12 +239,11 @@ mkdir client/server/private
 ```
 
 Copy all the [provided SSL certificate files](sample-configs/step-3/client/server/private)
-into the `client/server/private`.
+into the `private` dir.
 
 Modify [`server.js` to start an HTTPS server](sample-configs/step-3/client/server/server.js#L21-L36).
 
-Set the [`https-port` value in `client/server/config.json`](sample-configs/step-3/client/server/config.js#L4)
- to port 2101.
+Set [`https-port` to 2101 in `config.json`](sample-configs/step-3/client/server/config.js#L4).
 
 Copy the [`https-redirect` middleware](sample-configs/step-3/client/server/middleware/https-redirect)
 to the client's `middleware` directory:

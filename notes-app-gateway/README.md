@@ -104,13 +104,19 @@ To do this, we need to:
 
 ####1. Set up the auth server
 
-#####Clone the auth server
-
 From the app root, clone the StrongLoop API Gateway into a dir named
 `auth-server`:
 
 ```
 git clone https://github.com/strongloop/strong-gateway auth-server
+```
+
+Then install the auth server's dependencies:
+
+````
+cd auth-server
+npm install
+cd .. # change back to the app root after installing deps
 ```
 
 #####Change the default auth server ports
@@ -121,13 +127,6 @@ and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
 >We do not not use the default auth server ports because we want to assign
 consistent ports throughout the entire demo.
 
-#####Install the auth server's dependencies
-
-```
-cd auth-server
-npm install
-cd .. # change back to app root after installing deps
-```
 
 #####Verify the port changes
 
@@ -157,7 +156,6 @@ Stop the server when you're done verifying the results.
 #####Change the auth server's proxy port
 
 In `middleware.json`, change the `http-redirect` port to 3101](sample-configs/step-1/gateway-server/server/middleware.json#L31)
-
 
 By default, the API gateway is already [configured to proxy requests to the API
 server on port 3002](sample-configs/phase-1/gateway-server/server/middleware.json#L36-L42).

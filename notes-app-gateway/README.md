@@ -118,6 +118,9 @@ git clone https://github.com/strongloop/strong-gateway auth-server
 Modify the auth server's [`middlware.json`](auth-server/server/middleware.json)
 to use ports [3002 (HTTP)](auth-server/server/middleware.json) and [3202 (HTTPS)](auth-server/server/middleware.json).
 
+>We do not not use the default auth server ports because we want to assign
+ports for consistency throughout the demo.
+
 #####Verify the port changes
 
 Start the gateway and verify everything works.

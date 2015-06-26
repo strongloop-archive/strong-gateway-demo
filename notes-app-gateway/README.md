@@ -433,7 +433,7 @@ provides set of features known as [*policies*](http://docs.strongloop.com/displa
 #####Configure rate limiting
 
 Configure the [`rate-limiting-policy` middleware in the auth server's
-`middleware.json`](configure the rate limiting middleware](sample-configs/step-5/auth-server/server/middleware.json#L58-L82).
+`middleware.json`](sample-configs/step-5/auth-server/server/middleware.json#L58-L82).
 
 #####Create the `rate-limiting-client` script
 

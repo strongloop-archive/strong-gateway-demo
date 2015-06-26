@@ -317,7 +317,7 @@ Copy the [`https-redirect` middleware](sample-configs/step-4/client/server/middl
 to the client's `middleware` dir:
 
 ```
-cp -r sample-configs/step-3/client/server/middleware web-server/server/middleware
+cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 ```
 
 Add a [`routes:before` section to the client's `middleware.json` to register the

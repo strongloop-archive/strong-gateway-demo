@@ -14,8 +14,8 @@ tutorial](../notes-app-plain).
 ##Overview
 
 We build on `notes-app-plain` and introduce an authorization server (auth
-server)to act as an intermediary between the client and resource server. We will
-incrementally improve on the previous tutorial over [seven steps](#tutorial)
+server) to act as an intermediary between the client and resource server. We
+will incrementally improve on the previous tutorial over [seven steps](#tutorial)
 while covering a variety of [Strongloop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
 topics. The end result of the tutorial will be the transformation of
 `notes-app-plain` into `notes-app-gateway`.
@@ -33,6 +33,7 @@ You can run any step of the tutorial by executing it's corresponding
 For example, to run step 1:
 
 ```
+cd `notes-app-gateway`
 ./sample-configs/step-1/install
 ```
 

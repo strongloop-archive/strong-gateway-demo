@@ -522,7 +522,7 @@ Update [`auth-server/server/datasources.json`](sample-configs/step-7/auth-server
 
 #####Create the database tables
 
-In `auth-server/server/scripts`, [create `setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
+Create [`auth-server/server/scripts/setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
 
 Run it to create the StrongLoop API Gateway tables:
 

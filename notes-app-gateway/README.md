@@ -403,16 +403,26 @@ Do you approve?
 ```
 
 Once you are authenticated as `bob`, the auth server asks if you want to allow
-`demo-app` access to your account. Click "Allow" to approve the permission
-request.
+`demo-app` access to your account.
 
 >`bob` and `demo-app` are preregistered sample data values included with the
 auth server. StrongLoop API Gateway [includes this data out-of-box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
 for demo purposes.
 
+Click "Allow" to approve the permission request. You should see:
 
-jkjthe authentication link and respond to the questions and eventually you
-will see the same page of notes again.
+```
+Notes
+--------------
+- Buy eggs
+- Buy milk
+- Buy sausages
+```
+
+That's it. We've successfully retrieved the notes using the OAuth 2.0
+Authentication Code Grant flow. For more information on whats happening behind
+the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
+
 
 The handler will redirect the user to the auth server and ask them to log in.
 Once the user logs in successfully, the auth server will return the

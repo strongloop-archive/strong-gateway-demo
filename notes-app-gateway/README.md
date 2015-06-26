@@ -289,17 +289,16 @@ middleware we just copied](sample-configs/step-3/client/server/middleware.json#L
 
 [Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
-Verify web server requests are being redirected to HTTPS
-
-Start the web-server:
+Start the client:
 
 ```
-node web-server
+node client
 ```
 
-Browse to [`http://localhost:3000`](http://localhost:3000) and check the URL bar
-to see if you've been redirected to `https://localhost:3001`. Shut down the
-server once you're done verifying the results.
+Browse to [`http://localhost:3000`](http://localhost:2001) and check the URL bar
+to see if you've been redirected to `https://localhost:2101`.
+
+Shut down the server once you're done verifying the results.
 
 ####2. Render then unauthorized view for the `/` route
 

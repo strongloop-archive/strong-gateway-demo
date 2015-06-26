@@ -243,11 +243,9 @@ to `localhost:2001`. This time you should see:
 Unauthorized
 ```
 
-The server is now denying unauthorized users access to the notes on the resource
-server..
+The server is now denying unauthorized users.
 
-
-### Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
+###Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 
 Since the API server is now blocking the web server from retrieving notes, we
 need to configure a way to authenticate on the API gateway. We will use the
@@ -450,13 +448,13 @@ documentation](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Ava
 for information on how to read the outputs.
 
 
-####Step 6 - Use MongoDB for the auth server's data source
+###Step 6 - Use MongoDB for the auth server's data source
 
-#####Start MongoDB
+####Start MongoDB
 
 Make sure MongoDB is running on port 27017.
 
-#####Install `loopback-connector-mongodb`
+####Install `loopback-connector-mongodb`
 
 Change to the auth server dir and install `loopback-connector-mongodb`:
 
@@ -466,11 +464,11 @@ npm install --save loopback-connector-mongodb
 cd .. # change back to the app root
 ```
 
-#####Configure the datasource
+####Configure the datasource
 
 Update [`auth-server/server/datasources.json`](sample-configs/step-6/auth-server/server/datasources.json#L4-L10).
 
-#####Try it out
+####Try it out
 
 Start all three servers:
 
@@ -505,13 +503,13 @@ You should see the following collections in your MongoDB database:
 Check each collection for entries related to the StrongLoop API Gateway, such
 as access token values, etc.
 
-####Step 7 - Use MySQL for the auth server's data source
+###Step 7 - Use MySQL for the auth server's data source
 
-#####Start MySQL
+####Start MySQL
 
 Make sure MySQL is running on port 3306.
 
-#####Install `loopback-connector-mysql`
+####Install `loopback-connector-mysql`
 
 Change to the auth server dir and install `loopback-connector-mysql`:
 
@@ -521,11 +519,11 @@ npm install --save loopback-connector-mysql
 cd .. # change back to the app root
 ```
 
-#####Configure the datasource
+####Configure the datasource
 
 Update [`auth-server/server/datasources.json`](sample-configs/step-7/auth-server/server/datasources.json#L4-L10).
 
-#####Create the database tables
+####Create the database tables
 
 Create [`auth-server/server/scripts/setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
 
@@ -543,7 +541,7 @@ You should see the following tables in your MySQL database:
 - OAuthPermission
 - User
 
-#####Try it out
+####Try it out
 
 Start all three servers:
 

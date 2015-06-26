@@ -174,15 +174,15 @@ This warning is safe to ignore.
 
 Stop the server when you're done verifying the results.
 
-#####2. Proxy auth server requests to the resource server
+####2. Proxy auth server requests to the resource server
 
 In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/step-2/auth-server/server/middleware.json#L39).
 
-#####3. Send client requests to the auth server
+####3. Send client requests to the auth server
 
 Change the [request URL port to 3004 `server/boot/route.js`](sample-configs/phase-1/web-server/server/boot/routes.js#L8).
 
-##### 4. Try it out
+#### 4. Try it out
 
 Start the resource server using the [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager):
 

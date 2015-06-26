@@ -341,19 +341,19 @@ Shut down the server when you're done verifying the results.
 
 ####Render the unauthorized view for the `/` route
 
-[Create a view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
+Create a [view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
 
-[Create the `/` route handler to render the `authorize` view](sample-configs/step-4/client/server/boot/routes.js#L6-L8).
+Create [the `/` route handler to render the `authorize` view](sample-configs/step-4/client/server/boot/routes.js#L6-L8).
 
 ####Retrieve the authentication code
 
-[Create the `/authorize` route handler](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+Create [the `/authorize` route handler](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
 
 ####Create a handler for the auth server response
 
-[Create the `/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L61).
+Create [the `/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L61).
 
-Create the [access token helper function](sample-configs/step-4/client/server/boot/routes.js#L66-78) and the [notes helper function](sample-configs/step-4/client/server/boot/routes.js#L80-L87).
+Create [the access token helper function](sample-configs/step-4/client/server/boot/routes.js#L66-78) and [the notes helper function](sample-configs/step-4/client/server/boot/routes.js#L80-L87).
 
 ####6. Try it out
 

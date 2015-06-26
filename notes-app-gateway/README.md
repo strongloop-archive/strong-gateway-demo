@@ -119,19 +119,11 @@ From the app root, clone the StrongLoop API Gateway into a dir named
 git clone https://github.com/strongloop/strong-gateway auth-server
 ```
 
-#####Change the default API gateway ports
+#####Change the default auth server ports
 
-The StrongLoop API Gateway is preconfigured to start on ports 3000 (HTTP) and
-3001 (HTTPS) out-of-box. Modify the auth server's `middleware.json` to start the
-server on ports [3002 (HTTP)](sample-configs/step-1/auth-server/server/middleware.json)
-and [3202 (HTTPS)](sample-configs/step-1/auth-server/server/middleware.json)
-instead.
-
-Modify the auth server to start on port Reconfigure the auth server start on ports 3002 (HTTP) and 3022 (HTTPS) instead.
-
-In the API Gateway's [`middleware.json`](sample-configs/step-1/gateway-server/middleware.json),
-[change the HTTP port to 3001](sample-configs/step-1/gateway-server/config.json)
-and [change the HTTPS port to 3101](sample-configs/step-1/gateway-server/config.json).
+We do not want to use the default auth server ports. Modify the auth server's
+[`middlware.json`](auth-server/server/middleware.json) to use port [3002 (HTTP)](auth-server/server/middleware.json)
+and [3202 (HTTPS)](auth-server/server/middleware.json).
 
 #####Change the HTTP redirection port
 

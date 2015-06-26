@@ -347,15 +347,24 @@ Shut down the server when you're done verifying the results.
 
 ####Retrieve the authentication code
 
-[Create a new `/authorize` handler to retrieve an auth code from the auth server](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+[Create a new `/authorize` handler to retrieve an authorization code from the
+auth server](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+
+####Create a handler for the auth server response
+
+[Create the `/token` endpoint to handle the API gateway authentication response](sample-configs/step-4/client/server/boot/routes.js#L21-L52).
+
+Create the [helper functions to retrieve the access token and notes](sample-configs/step-4/client/server/boot/routes.js#L57-L78).
+
+####6. Try it out
+
+Start all three servers again and browse to [`localhost:3000`](http://localhost:3000).
+Click the authentication link and respond to the questions and eventually you
+will see the same page of notes again.
 
 The handler will redirect the user to the auth server and ask them to log in.
 Once the user logs in successfully, the auth server will return the
 authorization code at the specified [`redirectUri`](sample-configs/step-4/client/server/boot/routes.js#L13).
-
-####5. Create a handler for the API gateway response
-
-[Create the `/token` endpoint to handle the API gateway authentication response](sample-configs/phase-3/web-server/server/boot/routes.js#L21-L52). You will also need to create the [helper functions to retrieve the access token and notes](sample-configs/phase-3/web-server/server/boot/routes.js#L57-L78).
 
 Notice we [get the authentication code from the query string and use it to
 retrieve an access
@@ -368,12 +377,6 @@ token retrieve the notes](sample-configs/phase-3/web-server/server/boot/routes.j
 
 When the notes are returned to the web server, we [render the index page and
 display it usual](sample-configs/phase-3/web-server/server/boot/routes.js#L49).
-
-####6. Try it out
-
-Start all three servers again and browse to [`localhost:3000`](http://localhost:3000).
-Click the authentication link and respond to the questions and eventually you
-will see the same page of notes again.
 
 > Notice the user `bob` is already registered for you when going through the
 authentication flow. This is because [`strong-gateway` automatically registers

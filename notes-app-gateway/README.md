@@ -191,23 +191,23 @@ Start the resource server using the [StrongLoop Process Manager](http://docs.str
 ```
 cd resource-server
 slc start
-slc ctl set-size 1 1 # set the cluster size to 1
 ```
 
-You should see it load on port 3002. In a new tab, start the gateway:
+Then start the auth server:
 
 ```
-node gateway-server
+cd ../auth-server
+slc start
 ```
 
-You should see it start on port 3004 for HTTP and 3005 for HTTPS. In a third
-tab, start the web server:
+Finally, start the client:
 
 ```
-node web-server
+cd ..
+node client
 ```
 
-You should see everything loading exactly the same as before:
+Browse to `localhost:2001` and you should see:
 
 ```
 Notes
@@ -217,13 +217,12 @@ Notes
 - Buy sausages
 ```
 
-In contrast to the previous architecture, the web server now fetches data
-through the API gateway, which in turn fetches data from the API server. The
-web server is now fully decoupled from the API server.
+While the results look identical to `notes-app-plain`, the client is now making
+requests to the auth server, which is acting as a proxy to the resource server.
+The client is now fully decoupled from the resource server.
 
-> We provide [`a startup script`](./server.js) to help start up all three
-servers at once. Execute `node server.js` from the project root and you should
-see all three servers loading at once.
+>You can set up this step automatically by executing `./sample-configs/step-2/install`
+from the app root.
 
 ###Step 3
 

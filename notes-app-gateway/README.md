@@ -423,30 +423,6 @@ That's it. We've successfully retrieved the notes using the OAuth 2.0
 Authentication Code Grant flow. For more information on whats happening behind
 the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
 
-
-The handler will redirect the user to the auth server and ask them to log in.
-Once the user logs in successfully, the auth server will return the
-authorization code at the specified [`redirectUri`](sample-configs/step-4/client/server/boot/routes.js#L13).
-
-Notice we [get the authentication code from the query string and use it to
-retrieve an access
-token](sample-configs/phase-3/web-server/server/boot/routes.js#L22)
-from the API gateway.
-
-Once the server receives a valid authorization code, it will respond with an
-access token.  We then we send [another request to the API gateway using this
-token retrieve the notes](sample-configs/phase-3/web-server/server/boot/routes.js#L36).
-
-When the notes are returned to the web server, we [render the index page and
-display it usual](sample-configs/phase-3/web-server/server/boot/routes.js#L49).
-
-> Notice the user `bob` is already registered for you when going through the
-authentication flow. This is because [`strong-gateway` automatically registers
-this sample user](https://github.com/strongloop/strong-gateway/tree/master/server/boot/create-sample-data.js#L2-L5)
-when not run in production mode (ie. NODE_ENV=prod). Also take a look at
-[`sample-data.json`](https://github.com/strongloop/strong-gateway/tree/master/server/sample-data.json)
-for more info.
-
 ###Step 5 - StrongLoop API Gateway policies
 
 While the main purpose of API gateways are typically authentication and

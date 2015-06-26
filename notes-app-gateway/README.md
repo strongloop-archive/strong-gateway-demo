@@ -23,7 +23,7 @@ topics. The end result of the tutorial will be the transformation of
 ##Setup
 
 - The basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- Everything in the [set up section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
+- Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
 ##Run
@@ -96,7 +96,6 @@ an authorization server instead:
 ```
 
 To do this, we need to:
-We need to:
 
 - 1. Set up the auth server
 - 2. Proxy requests to the auth server

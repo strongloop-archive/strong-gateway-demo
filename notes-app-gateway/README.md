@@ -280,8 +280,8 @@ The server is now denying requests from unauthorized users.
 ###Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 
 Since the auth server now denying the client from retrieving notes, we need a
-way to authenticate the client. Let's modify the auth server and allow it to
-authorize users using the [OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
+way to authenticate the client. Let's modify the auth server and allow resource
+requests using the [OAuth 2.0 Authorization Code Grant](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant)
 flow.
 
 ####Set up HTTPS on the client

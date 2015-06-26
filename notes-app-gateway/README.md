@@ -320,10 +320,9 @@ to the client's `middleware` dir:
 cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 ```
 
-Add a [`routes:before` section to the client's `middleware.json` to register the
-middleware we just copied](sample-configs/step-3/client/server/middleware.json#L22-L28).
+[Register the `https-redirect` middleware in `middleware.json`](sample-configs/step-4/client/server/middleware.json#L22-28).
 
-> Notice the middleware is [configured to redirect requests to `https-port` 2101](sample-configs/step-3/client/server/middleware.json#L25).
+>Notice the middleware is [configured to redirect requests to `https-port` 2101](sample-configs/step-4/client/server/middleware.json#L25).
 
 [Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 

@@ -257,8 +257,12 @@ At this point, requests are being proxied properly, but we do not enforce any
 type of security on auth server. Only authenticated users should be allowed to
 access the notes stored on the resource server.
 
-In the `auth` section of `auth-server/server/middleware.json`, [configure the
-`loopback-component-oauth2` middleware](sample-configs/step-3/auth-server/server/middleware.json#L27-48).
+####Configure the `loopback-component-oauth2` middleware
+
+[Configure the `loopback-component-oauth2` middleware](sample-configs/step-3/auth-server/server/middleware.json#L27-48)
+in `auth-server/server/middleware.json`.
+
+####Try it out
 
 Then start up all the servers (like you did in the previous section) and browse
 to `localhost:2001`. This time you should see:

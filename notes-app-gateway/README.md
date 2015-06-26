@@ -131,7 +131,12 @@ consistent ports throughout the entire demo.
 
 #####Remove unused portions of `middleware.json`
 
-Remove all values from the auth server's [`middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L26-27).
+Remove the following from the auth server's `middleware.json`:
+
+- [`auth` values](sample-configs/step-2/auth-server/server/middleware.json#L26-27).
+- [`rate-limiting-policy values](sample-configs/step-2/auth-server/server/middleware.json#L26-27).
+
+>We will explain these values and add the sections back in a later step.
 
 #####Verify the port changes
 
@@ -156,7 +161,7 @@ https://github.com/strongloop/strong-gateway-demo
 
 Stop the server when you're done verifying the results.
 
-
+---
 
 ##### 2. Proxy API gateway requests to the API server.
 

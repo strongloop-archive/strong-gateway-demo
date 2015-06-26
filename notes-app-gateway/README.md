@@ -462,7 +462,7 @@ node client/server/scripts/rate-limiting.js
 You should see:
 
 ```
-Access Token: PC71... # your access token will be different
+Access Token: ... # your access token value
 Key: url-api/notes - Limit: 1000 - Remaining: 999 - Reset: 60000
 Key: url-api/notes - Limit: 1000 - Remaining: 998 - Reset: 60000
 Key: url-api/notes - Limit: 1000 - Remaining: 997 - Reset: 60000

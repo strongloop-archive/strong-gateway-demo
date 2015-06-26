@@ -179,7 +179,7 @@ values from the auth server's `middleware.json`.
 
 #####Update the `https-redirect` middleware
 
-Change the [`http-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L37).
+Change the [`http-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L31).
 
 #####Verify the port changes
 

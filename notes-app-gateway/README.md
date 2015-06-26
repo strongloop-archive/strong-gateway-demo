@@ -483,7 +483,8 @@ cd ..
 node client
 ```
 
-Browse to `localhost:2001` and you should see:
+Browse to `localhost:2001`. Go through the authentication flow and you will
+eventually see:
 
 ```
 Notes
@@ -492,6 +493,7 @@ Notes
 - Buy milk
 - Buy sausages
 ```
+
 You should see the following collections in your MongoDB database:
 
 - OAuthAccessToken
@@ -499,6 +501,9 @@ You should see the following collections in your MongoDB database:
 - OAuthClientApplication
 - OAuthPermission
 - User
+
+Check each collection for entries related to the StrongLoop API Gateway, such
+as access token values, etc.
 
 ####Step 7 - Use MySQL for the auth server's data source
 
@@ -551,7 +556,8 @@ cd ..
 node client
 ```
 
-Browse to `localhost:2001`. You should see:
+Browse to `localhost:2001`. Go through the authentication flow and you will
+eventually see:
 
 ```
 Notes
@@ -560,6 +566,9 @@ Notes
 - Buy milk
 - Buy sausages
 ```
+
+Check each table for entries related to the StrongLoop API Gateway, such
+as access token values, etc.
 
 ---
 

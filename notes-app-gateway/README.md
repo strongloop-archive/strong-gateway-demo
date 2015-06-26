@@ -291,11 +291,14 @@ Create a dir named `private` in `client/server`:
 mkdir client/server/private
 ```
 
-Copy the [SSL certificate files` from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
-into the `private` dir you just created.
+Copy or create the [SSL certificate files` from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
+into the `private` dir.
+
+>You can create your own self-signed certificates instead of copying the
+provided files.
 
 ```
-cp -r sample-configs/step-3/client/server/private/ client/server/private
+cp -r sample-configs/step-4/client/server/private/ client/server/private
 ```
 
 Modify [`server.js` to start an HTTPS server](sample-configs/step-3/client/server/server.js#L21-L36).

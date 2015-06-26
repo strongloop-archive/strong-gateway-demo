@@ -73,10 +73,10 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
->You can set up this step automatically by executing
->`./sample-configs/step-1/install` from the app root.
+>You can set up this step automatically by executing `./sample-configs/step-1/install`
+from the app root.
 
-###Step 1
+###Step 2
 
 At the moment, the client is making requests directly to the resource server:
 

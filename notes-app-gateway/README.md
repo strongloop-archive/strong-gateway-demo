@@ -95,8 +95,8 @@ At the moment, the client is making requests directly to the resource server:
 +--------+     +----------+
 ```
 
-We would like to [proxy](https://en.wikipedia.org/wiki/Proxy) requests through
-an authorization server instead:
+We want to [proxy](https://en.wikipedia.org/wiki/Proxy) requests through an
+authorization server instead:
 
 ```
 +--------+     +---------------+     +----------+
@@ -128,7 +128,7 @@ Install the auth server's dependencies:
 ````
 cd auth-server
 npm install
-cd .. # change back to the app root after installing deps
+cd .. # change back to the app root
 ```
 
 #####Change the default auth server ports

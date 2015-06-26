@@ -506,10 +506,13 @@ Take a look at your MongoDB data. The following collections should be created:
 
 ####Step 7 - Use MySQL for the auth server's data source
 
-Make sure you have MySQL running on your machine. Start it using the default
-port 3306.
+#####Make sure MySQL is running
 
-Change to the auth server dir and install `loopback-connector-mysql`:
+Start MySQL on port 3306.
+
+#####Install `loopback-connector-mongodb`
+
+Change to the auth server dir and install `loopback-connector-mongodb`:
 
 ```
 cd auth-server
@@ -517,15 +520,46 @@ npm install --save loopback-connector-mysql
 cd .. # change back to the app root
 ```
 
-[Create the `setup-db.js` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
+#####Configure the datasource
 
-Run the script to create all the tables required by `strong-gateway`:
+Update [`auth-server/server/datasources.json`](sample-configs/step-7/auth-server/server/datasources.json).
+
+#####Create the `setup-db` script
+
+In `auth-server/server/scripts`, [create `setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
+
+Run it to create the tables required by the StrongLoop API Gateway:
 
 ```
 node auth-server/server/scripts/setup-db.js
 ```
 
-Start all three servers again and browse to `localhost:2001`. You should see
+Take a look at your MySQL database. The following tables should be created:
+
+- OAuthAccessToken
+- OAuthAuthorizationCode
+- OAuthClientApplication
+- OAuthPermission
+- User
+
+#####Try it out
+
+Start all three servers again.
+client via node):
+
+```
+cd resource-server
+slc start
+cd ../auth-server
+slc start
+cd ..
+node client
+```
+
+>The resource and auth servers should be started with Strong PM. The client
+should be started using regular node.
+
+Browse to `localhost:2001` and you should see:
 
 ```
 Notes
@@ -534,15 +568,6 @@ Notes
 - Buy mlik
 - Buy sausages
 ```
-
-Also take a look at your MySQL tables. Notice the five tables created by the
-[`setup-db` script](sample-configs/step-7/auth-server/server/scripts/setup-db.js):
-
-- OAuthAccessToken
-- OAuthAuthorizationCode
-- OAuthClientApplication
-- OAuthPermission
-- User
 
 ---
 

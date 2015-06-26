@@ -326,6 +326,11 @@ cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 
 [Register the `https-redirect` middleware in `middleware.json`](sample-configs/step-4/client/server/middleware.json#L22-28).
 
+#####Modify the auth server sample app registration
+
+Change the [`redirectURIs` value to `https://localhost:2101`](sample-configs/step-4/auth-server/server/sample-data.json)
+in `auth-server/server/sample-data.json`.
+
 #####Try it out
 
 Start the client:

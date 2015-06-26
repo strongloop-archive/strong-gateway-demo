@@ -255,7 +255,7 @@ from the app root.
 
 At this point, requests are being proxied properly, but we do not enforce any
 type of security on auth server. Only authenticated users should be allowed to
-access the notes stored on the resource server.
+access to the notes stored on the resource server.
 
 ####Configure the `loopback-component-oauth2` middleware
 

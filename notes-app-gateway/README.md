@@ -242,7 +242,7 @@ Modify [`server.js` to start an HTTPS server on port 2101](sample-configs/step-3
 
 >`http-port` is set in [`config.json`](sample-configs/step3/client/server/config.js)
 
-Copy the [`https-redirect` middleware`](sample-configs/step-3/client/server/middleware/https-redirect)
+Copy the [`https-redirect` middleware](sample-configs/step-3/client/server/middleware/https-redirect)
 to the client's `middleware` directory:
 
 ```

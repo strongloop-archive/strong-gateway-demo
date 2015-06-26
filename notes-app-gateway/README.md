@@ -180,7 +180,7 @@ In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/s
 
 ####3. Send client requests to the auth server
 
-Change the [request URL port to 3004 `server/boot/route.js`](sample-configs/phase-1/web-server/server/boot/routes.js#L8).
+[Change the request URL port to 3002 in `client/server/boot/routes.js`](sample-configs/step-2/client/server/boot/routes.js#L8).
 
 #### 4. Try it out
 
@@ -223,7 +223,7 @@ web server is now fully decoupled from the API server.
 servers at once. Execute `node server.js` from the project root and you should
 see all three servers loading at once.
 
-###Step 2
+###Step 3
 
 #### Enable security on the API gateway
 

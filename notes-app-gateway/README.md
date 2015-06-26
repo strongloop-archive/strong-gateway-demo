@@ -341,14 +341,13 @@ Shut down the server when you're done verifying the results.
 
 ####Render the unauthorized view for the `/` route
 
-[Add a new `/` route handler to render the `authorize` view](sample-configs/step-4/client/server/boot/routes.js#L6-L8).
-
 [Create a new view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
+
+[Create a new `/` route handler to render the `authorize` view](sample-configs/step-4/client/server/boot/routes.js#L6-L8).
 
 ####Retrieve the authentication code
 
-Create a [handler to retrieve an authentication code from the API
-gateway](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+Create a [handler to retrieve an auth code from the auth server](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
 
 The handler will [redirect the user to the authentication
 URL](sample-configs/phase-3/web-server/server/boot/routes.js#L18)

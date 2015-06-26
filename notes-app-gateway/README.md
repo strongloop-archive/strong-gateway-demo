@@ -428,7 +428,7 @@ provides set of features known as [*policies*](http://docs.strongloop.com/displa
 
 ####Rate limiting
 
-[Rate limiting](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting) is used to control the number of API calls from clients within a certain period of time.
+[*Rate limiting*](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting) is used to control the number of API calls from clients within a certain period of time.
 
 #####Set up the API gateway to use rate limiting
 

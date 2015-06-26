@@ -264,8 +264,8 @@ in `auth-server/server/middleware.json`.
 
 ####Try it out
 
-Then start up all the servers (like you did in the previous section) and browse
-to `localhost:2001`. This time you should see:
+[Start up all the servers](#try-it-out-1) again and browse to `localhost:2001`.
+You should see:
 
 ```
 401
@@ -273,7 +273,7 @@ to `localhost:2001`. This time you should see:
 Unauthorized
 ```
 
-The server is now denying unauthorized users.
+The server is now denying requests from unauthorized users.
 
 >You can set up this step automatically by executing `./sample-configs/step-3/install`
 

@@ -537,7 +537,7 @@ Update [`auth-server/server/datasources.json`](sample-configs/step-7/auth-server
 
 In `auth-server/server/scripts`, [create `setup-db.js`](sample-configs/step-7/auth-server/server/scripts/setup-db.js).
 
-Run it to create the tables required by the StrongLoop API Gateway:
+Run it to create the StrongLoop API Gateway tables:
 
 ```
 node auth-server/server/scripts/setup-db.js

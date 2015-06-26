@@ -351,7 +351,7 @@ Shut down the server when you're done verifying the results.
 
 ####Create a handler for the auth server response
 
-[Create the `/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L52).
+[Create the `/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L61).
 
 Create the [helper functions to retrieve the access token and notes](sample-configs/step-4/client/server/boot/routes.js#L57-L78).
 

@@ -208,7 +208,7 @@ Stop the server when you're done verifying the results.
 
 ####Proxy auth server requests to the resource server
 
-Change the [proxy ports to 3001 in `middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L39).
+Change the [proxy rule port to 3001 in `middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L39).
 
 ####3. Send client requests to the auth server
 

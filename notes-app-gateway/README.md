@@ -311,9 +311,11 @@ provided files.
 
 Set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
 
-#####Configure `server.js`
+#####Update `config.json`
 
 Update [`server.js` to start an HTTPS server](sample-configs/step-4/client/server/server.js#L21-L36).
+
+[Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
 #####Add HTTPS redirect middleware
 
@@ -326,9 +328,6 @@ cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 
 [Register the `https-redirect` middleware in `middleware.json`](sample-configs/step-4/client/server/middleware.json#L22-28).
 
->Notice the middleware is [configured to redirect requests to `https-port` 2101](sample-configs/step-4/client/server/middleware.json#L25).
-
-[Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
 Start the client:
 

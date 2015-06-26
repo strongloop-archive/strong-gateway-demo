@@ -294,12 +294,12 @@ mkdir client/server/private
 Copy or create the [SSL certificate files from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
 into the `private` dir.
 
->You can create your own self-signed certificates instead of copying the
-provided files.
-
 ```
 cp -r sample-configs/step-4/client/server/private/ client/server/private
 ```
+
+>You can create your own self-signed certificates instead of copying the
+provided files.
 
 Set [`https-port` to 2101 in `config.json`](sample-configs/step-4/client/server/config.json#L28).
 

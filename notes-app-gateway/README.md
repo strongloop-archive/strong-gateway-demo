@@ -450,16 +450,6 @@ documentation](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Ava
 for information on how to read the outputs.
 
 
-### Choosing a datasource for the `strong-gateway` data/metadata
-
-with LoopBack, it supports all the same data sources types (Microsoft SQL Server,
-MongoDB, MySQL, Oracle, and PostgreSQL). We'll demonstrate one NoSQL (MongoDB)
-and one relational database (MySQL) in this tutorial.
-
-- Datasources.json in gateway
-- Run setudb.js to create tables for relational db
-- Point to he docs for other types of datasources
-
 ####Step 6 - Use MongoDB for the auth server's data source
 
 #####Start MongoDB

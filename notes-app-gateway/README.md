@@ -350,7 +350,8 @@ Shut down the server when you're done verifying the results.
 ####Retrieve the authentication code
 
 Create a [handler to retrieve an authentication code from the API
-gateway](sample-configs/phase-3/web-server/server/boot/routes.js#L10-L19).
+gateway](sample-configs/step-4/client/server/boot/routes.js#L10-L19).
+
 The handler will [redirect the user to the authentication
 URL](sample-configs/phase-3/web-server/server/boot/routes.js#L18)
 on the API gateway to log in. Upon completion, the API gateway will

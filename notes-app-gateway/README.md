@@ -47,9 +47,9 @@ There are five main steps and two optional steps:
 - [Step 2 - Proxy requests through the auth server](#step-2---proxy-requests-through-the-auth-server)
 - [Step 3 - Enable security on the auth server](#step-3---enable-security-on-the-auth-server)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
-- [Step 5 - `strong-gateway` policies](#step-5)
-- [Step 6 (optional) - Use MongoDB for the API gateway's data source](#step-6)
-- [Step 7 (optional) - Use MySQL for the API gateway's data source](#step-7)
+- [Step 5 - StrongLoop API Gateway policies](#step-5)
+- [Step 6 (optional) - Use MongoDB for the auth server's data source](#step-6---use-mongodb-for-the-auth-servers-data-source)
+- [Step 7 (optional) - Use MySQL for the auth server's data source](#step-7---use-mysql-for-the-auth-servers-data-source)
 
 ###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 
@@ -483,7 +483,7 @@ and one relational database (MySQL) in this tutorial.
 - Run setudb.js to create tables for relational db
 - Point to he docs for other types of datasources
 
-####Step 6 - Use MongoDB for the API gateway's data source
+####Step 6 - Use MongoDB for the auth server's data source
 
 Throughout the entire tutorial, the auth server has been using an in-memory
 database. Let's configure it to use MongoDB as a datasource instead.
@@ -517,7 +517,7 @@ Take a look at your MongoDB collections. Notice five collections created:
 - OAuthPermission
 - User
 
-####Step 7 - Use MySQL for the API gateway's data source
+####Step 7 - Use MySQL for the auth server's data source
 
 Make sure you have MySQL running on your machine. Start it using the default
 port 3306.

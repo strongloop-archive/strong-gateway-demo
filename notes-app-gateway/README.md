@@ -543,7 +543,7 @@ Run it to create the StrongLoop API Gateway tables:
 node auth-server/server/scripts/setup-db.js
 ```
 
-The following tables should be created in your MySQL database:
+You should see the following tables in your MySQL database:
 
 - OAuthAccessToken
 - OAuthAuthorizationCode

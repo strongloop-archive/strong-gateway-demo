@@ -71,6 +71,16 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
+Install client and resource server's dependencies:
+
+````
+cd client
+npm install
+cd ../resource-server
+npm install
+cd .. # change back to the app root after installing deps
+```
+
 >You can set up this step automatically by executing `./sample-configs/step-1/install`
 from the app root.
 
@@ -164,27 +174,22 @@ This warning is safe to ignore.
 
 Stop the server when you're done verifying the results.
 
-#####2. Proxy the auth server requests to the resource server
-
-#####Change the auth server's proxy port
+#####2. Proxy auth server requests to the resource server
 
 In `middleware.json`, change the [`http-redirect` port to 3001](sample-configs/step-2/auth-server/server/middleware.json#L39).
 
-By default, the API gateway is already [configured to proxy requests to the API
-server on port 3002](sample-configs/phase-1/gateway-server/server/middleware.json#L36-L42).
-We won't need to make any changes at this time because we've [already set the
-API server port to 3002 in the previous tutorial](../notes-app-plain/api-server/server/config.json#L4).
-
-##### 3. Configure the web server to send requests to the API gateway
+#####3. Send client requests to the auth server
 
 Change the [request URL port to 3004 `server/boot/route.js`](sample-configs/phase-1/web-server/server/boot/routes.js#L8).
 
-##### 4. Test it out
+##### 4. Try it out
 
-Start the API server:
+Start the resource server using the [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager):
 
 ```
-node api-server
+cd resource-server
+slc start
+slc ctl set-size 1 1 # set the cluster size to 1
 ```
 
 You should see it load on port 3002. In a new tab, start the gateway:

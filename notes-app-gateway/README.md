@@ -43,7 +43,7 @@ execute the install script from any other dir.
 
 There are five main steps and two optional steps:
 
-- [Step 1 - Copy every file from `notes-app-plain` into `notes-app-gateway`](#step-1)
+- [Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`](#step-1)
 - [Step 2 - Proxy requests through the authorization server](#step-2)
 - [Step 3 - Enable security on the authorization server](#step-3)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
@@ -158,6 +158,9 @@ http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway
 Demo
 https://github.com/strongloop/strong-gateway-demo
 ```
+
+>You may see a browser warning because we are using self-signed certificates.
+This warning is safe to ignore.
 
 Stop the server when you're done verifying the results.
 

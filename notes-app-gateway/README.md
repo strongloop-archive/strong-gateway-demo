@@ -253,15 +253,15 @@ Copy the [`https-redirect` middleware](sample-configs/step-3/client/server/middl
 to the client's `middleware` dir:
 
 ```
-cp -r sample-configs/phase-2/web-server/server/middleware web-server/server/middleware
+cp -r sample-configs/step-3/client/server/middleware web-server/server/middleware
 ```
 
-Next, add a [`routes:before` section in the web server's `middleware.json` to
-register the middleware we just copied](sample-configs/phase-2/web-server/server/middleware.json#L22-L28).
+Add a [`routes:before` section to the client's `middleware.json` to register the
+middleware we just copied](sample-configs/step-3/client/server/middleware.json#L22-L28).
 
-> Notice the middleware is [configured to redirect requests to `httpsPort` 3001](sample-configs/phase-2/web-server/server/middleware.json#L25).
+> Notice the middleware is [configured to redirect requests to `https-port` 2101](sample-configs/step-3/client/server/middleware.json#L25).
 
-Finally, [add the `url` key to `config.json`](sample-configs/phase-2/web-server/server/config.json#L27).
+[Add the `url` key to `config.json`](sample-configs/step-3/client/server/config.json#L27).
 
 ##### 2. Verify web server requests are being redirected to HTTPS
 

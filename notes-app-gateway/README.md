@@ -232,7 +232,7 @@ access the notes stored on the resource server.
 
 ####1. Set up HTTPS on the client
 
-Create a new `private` directory in `client/server`:
+Create a new dir named `private` in `client/server`:
 
 ```
 mkdir client/server/private
@@ -241,12 +241,16 @@ mkdir client/server/private
 Copy all the [provided SSL certificate files](sample-configs/step-3/client/server/private)
 into the `private` dir.
 
+```
+cp -r sample-configs/step-3/client/server/private/ client/server/private
+```
+
 Modify [`server.js` to start an HTTPS server](sample-configs/step-3/client/server/server.js#L21-L36).
 
 Set [`https-port` to 2101 in `config.json`](sample-configs/step-3/client/server/config.json#L28).
 
 Copy the [`https-redirect` middleware](sample-configs/step-3/client/server/middleware/https-redirect)
-to the client's `middleware` directory:
+to the client's `middleware` dir:
 
 ```
 cp -r sample-configs/phase-2/web-server/server/middleware web-server/server/middleware

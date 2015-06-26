@@ -233,6 +233,21 @@ access the notes stored on the resource server.
 In the `auth` section of `auth-server/server/middleware.json`, [configure the
 `loopback-component-oauth2` middleware](sample-configs/step-3/auth-server/server/middleware.json#L27-48).
 
+Then start up all the servers (like you did in the previous section) and browse
+to `localhost:2001`. This time you should see:
+
+
+```
+401
+
+Unauthorized
+```
+
+The server is now denying unauthorized users access to the notes on the resource
+server..
+
+####Step 4 - 
+
 ####1. Set up HTTPS on the client
 
 Create a new dir named `private` in `client/server`:

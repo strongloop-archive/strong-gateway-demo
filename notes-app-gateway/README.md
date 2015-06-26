@@ -95,7 +95,7 @@ an authorization server instead:
 +--------+     +---------------+     +----------+
 ```
 
-Let's create the authorization server (auth server) using the [StrongLoop API Gateway]().
+To do this, we need to:
 We need to:
 
 - 1. Set up the auth server

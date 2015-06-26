@@ -13,10 +13,10 @@ tutorial](../notes-app-plain).
 
 ##Overview
 
-We build on `notes-app-plain` and introduce an authorization server to act as
-an intermediary between the client and resource server. We will incrementally
-improve on the previous tutorial over [seven steps](#tutorial) while covering a
-variety of [Strongloop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
+We build on `notes-app-plain` and introduce an authorization server (auth
+server)to act as an intermediary between the client and resource server. We will
+incrementally improve on the previous tutorial over [seven steps](#tutorial)
+while covering a variety of [Strongloop API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
 topics. The end result of the tutorial will be the transformation of
 `notes-app-plain` into `notes-app-gateway`.
 
@@ -44,14 +44,14 @@ execute the install script from any other dir.
 There are five main steps and two optional steps:
 
 - [Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`](#step-1)
-- [Step 2 - Proxy requests through the authorization server](#step-2)
-- [Step 3 - Enable security on the authorization server](#step-3)
+- [Step 2 - Proxy requests through the auth server](#step-2)
+- [Step 3 - Enable security on the auth server](#step-3)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
 - [Step 5 - `strong-gateway` policies](#step-5)
 - [Step 6 (optional) - Use MongoDB for the API gateway's data source](#step-6)
 - [Step 7 (optional) - Use MySQL for the API gateway's data source](#step-7)
 
-###Step 1
+###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 
 Start by copying all the files from `notes-app-plain` into a new working
 directory named `notes-app-gateway`.
@@ -84,7 +84,7 @@ cd .. # change back to the app root after installing deps
 >You can set up this step automatically by executing `./sample-configs/step-1/install`
 from the app root.
 
-###Step 2
+###Step 2 - Proxy requests through the auth server
 
 At the moment, the client is making requests directly to the resource server:
 
@@ -96,7 +96,7 @@ At the moment, the client is making requests directly to the resource server:
 ```
 
 We would like to [proxy](https://en.wikipedia.org/wiki/Proxy) requests through
-an authorization server (auth server) instead:
+an authorization server instead:
 
 ```
 +--------+     +---------------+     +----------+
@@ -224,7 +224,7 @@ The client is now fully decoupled from the resource server.
 >You can set up this step automatically by executing `./sample-configs/step-2/install`
 from the app root.
 
-###Step 3
+###Step 3 - Enable security on the auth server
 
 #### Enable security on the API gateway
 

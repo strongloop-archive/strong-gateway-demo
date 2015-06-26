@@ -313,7 +313,7 @@ provided files.
 
 #####Start an HTTPS server in `server.js`
 
-Update [`server.js` to start an HTTPS server](sample-configs/step-4/client/server/server.js#L21-L36).
+[Update `server.js` to start an HTTP and HTTPS server](sample-configs/step-4/client/server/server.js#L1-L53).
 
 #####Add HTTPS redirect middleware
 
@@ -355,9 +355,10 @@ Create the [access token helper function](sample-configs/step-4/client/server/bo
 
 Create the [`/token` route handler](sample-configs/step-4/client/server/boot/routes.js#L21-L61).
 
-####6. Try it out
+####Try it out
 
-Start all three servers again and browse to [`localhost:3000`](http://localhost:3000).
+[Start up all the servers](#try-it-out-1) again and browse to `localhost:2001`.
+
 Click the authentication link and respond to the questions and eventually you
 will see the same page of notes again.
 

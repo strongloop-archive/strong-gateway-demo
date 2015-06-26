@@ -140,7 +140,7 @@ authorization server instead:
 +--------+     +---------------+     +----------+
 ```
 
-####1. Set up the auth server
+####Set up the auth server
 
 #####Clone the auth server
 

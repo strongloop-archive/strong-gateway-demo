@@ -419,7 +419,9 @@ Notes
 - Buy sausages
 ```
 
-That's it. For more information on whats happening behind the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
+That's it. Shutdown the servers when you're done.
+
+For more information on whats happening behind the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
 
 ###Step 5 - StrongLoop API Gateway policies
 
@@ -442,27 +444,28 @@ in `client/server/scripts`.
 
 #####Try it out
 
-Start the API gateway:
+Start the auth server:
 
 ```
-note gateway-server
+node auth-server
 ```
 
-Then run the `rate-limiting-test` script:
+Run the `rate-limiting` script:
 
 ```
-PORT=3005 node web-server/server/scripts/rate-limiting-test
+node client/server/scripts/rate-limiting.js
 ```
 
 You should see output like:
 
 ```
-...
-url-api/notes: Limit 1000 Remaining: 999 Reset: 60000
-url-api/notes: Limit 1000 Remaining: 998 Reset: 60000
-url-api/notes: Limit 1000 Remaining: 997 Reset: 60000
-url-api/notes: Limit 1000 Remaining: 996 Reset: 59982
-url-api/notes: Limit 1000 Remaining: 995 Reset: 59980
+Access Token: PC71...
+Key: url-api/notes - Limit: 1000 - Remaining: 999 - Reset: 60000
+Key: url-api/notes - Limit: 1000 - Remaining: 998 - Reset: 60000
+Key: url-api/notes - Limit: 1000 - Remaining: 997 - Reset: 60000
+Key: url-api/notes - Limit: 1000 - Remaining: 996 - Reset: 59999
+Key: url-api/notes - Limit: 1000 - Remaining: 995 - Reset: 59999
+Key: url-api/notes - Limit: 1000 - Remaining: 994 - Reset: 59941
 ...
 ```
 

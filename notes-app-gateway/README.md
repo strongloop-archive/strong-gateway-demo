@@ -47,7 +47,7 @@ There are five main steps and two optional steps:
 - [Step 2 - Proxy requests through the auth server](#step-2---proxy-requests-through-the-auth-server)
 - [Step 3 - Enable security on the auth server](#step-3---enable-security-on-the-auth-server)
 - [Step 4 - Enable the OAuth 2.0 Authorization Code Flow on the web server](#step-4)
-- [Step 5 - StrongLoop API Gateway policies](#step-5)
+- [Step 5 - StrongLoop API Gateway policies](#step-5---strongloop-api-gateway-policies)
 - [Step 6 (optional) - Use MongoDB for the auth server's data source](#step-6---use-mongodb-for-the-auth-servers-data-source)
 - [Step 7 (optional) - Use MySQL for the auth server's data source](#step-7---use-mysql-for-the-auth-servers-data-source)
 

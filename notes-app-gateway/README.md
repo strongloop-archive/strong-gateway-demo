@@ -339,9 +339,9 @@ redirected to `https://localhost:2101`.
 
 Shut down the server when you're done verifying the results.
 
-####Render then unauthorized view for the `/` route
+####Render the unauthorized view for the `/` route
 
-On the web server, create a [new view named `unauthorized.ejs`](sample-configs/phase-3/web-server/server/views/unauthorized.ejs)
+[Create a new view named `unauthorized.ejs`](sample-configs/phase-4/client/server/views/unauthorized.ejs) in `client/server/views`.
 
 Then [modify the `/` route to render this view](sample-configs/phase-3/web-server/server/boot/routes.js#L6-L8).
 

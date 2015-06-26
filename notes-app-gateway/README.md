@@ -341,7 +341,7 @@ Shut down the server when you're done verifying the results.
 
 ####Render the unauthorized view for the `/` route
 
-Create a [view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
+Create [a view named `authorize.ejs`](sample-configs/step-4/client/server/views/authorize.ejs) in `client/server/views`.
 
 Create [the `/` route handler to render the `authorize` view](sample-configs/step-4/client/server/boot/routes.js#L6-L8).
 

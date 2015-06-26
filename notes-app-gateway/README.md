@@ -297,7 +297,7 @@ Create a dir named `private` in `client/server`:
 mkdir client/server/private
 ```
 
-Copy or create the [SSL certificate files from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
+Copy the [SSL certificate files from `sample-configs/step-4/client/server/private`](sample-configs/step-3/client/server/private)
 into the `private` dir.
 
 ```

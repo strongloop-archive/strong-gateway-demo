@@ -326,7 +326,7 @@ cp -r sample-configs/step-4/client/server/middleware/ client/server/middleware
 
 [Register the `https-redirect` middleware in `middleware.json`](sample-configs/step-4/client/server/middleware.json#L22-28).
 
-#####Modify the auth server sample app registration
+#####Modify the auth server sample data value
 
 Change the [`redirectURIs` value to `https://localhost:2101`](sample-configs/step-4/auth-server/server/sample-data.json#L14)
 in `auth-server/server/sample-data.json`.
@@ -363,8 +363,56 @@ Create the [`/token` route handler](sample-configs/step-4/client/server/boot/rou
 ####Try it out
 
 [Start up all the servers](#try-it-out-1) again and browse to `localhost:2001`.
+You should see:
 
-Click the authentication link and respond to the questions and eventually you
+```
+Notes
+-----
+Click [here] to start the OAuth 2.0 Authorization Grant flow.
+```
+
+Click "here". You should see:
+
+```
+Log in
+
+Username: [bob]
+Password: [••••••]
+[Submit]
+
+Hint - bob:secret
+```
+
+Notice in the URL bar, you've been redirected to `https://localhost:3202`. Log
+in with the `bob:secret` credentials by clicking "Submit". You should see:
+
+```
+Request Permissions
+
+Hi bob (foo@bar.com)!
+
+Client application demo-app is requesting access to your account.
+
+Permissions requested: demo
+
+Redirect URI: https://localhost:2101/token
+
+Do you approve?
+
+[Allow][Deny]
+```
+
+Once you are authenticated as `bob`, the auth server asks if you want to allow
+`demo-app` access to your account. Choose "Allow" to approve the permission
+request.
+
+>`bob` and `demo-app` values is simply sample data that has been preregistered
+with the auth server. StrongLoop API Gateway [includes these sample users
+out-of-box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
+for demo purposes.
+
+
+jkjthe authentication link and respond to the questions and eventually you
 will see the same page of notes again.
 
 The handler will redirect the user to the auth server and ask them to log in.

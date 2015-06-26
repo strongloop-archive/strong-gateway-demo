@@ -419,14 +419,12 @@ Notes
 - Buy sausages
 ```
 
-That's it. We've successfully retrieved the notes using the OAuth 2.0
-Authentication Code Grant flow. For more information on whats happening behind
-the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
+That's it. For more information on whats happening behind the scenes, see the [official documentation for this particular flow](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer'sGuide-Authorizationcodegrant).
 
 ###Step 5 - StrongLoop API Gateway policies
 
 In addition to the basic gateway features, the StrongLoop API gateway also
-provides set of features known as ["policies"](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway#StrongLoopAPIGateway-Policies).
+provides set of features known as [*policies*](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway#StrongLoopAPIGateway-Policies).
 
 ####Rate limiting
 

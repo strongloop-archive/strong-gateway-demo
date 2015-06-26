@@ -42,8 +42,8 @@ execute the install script from any other dir.
 
 We recommend running step 5 to view the completed demo.
 
->Steps 6 and 7 requires an external database for persistence. These two steps
-will not run automatically unless you have MongoDB/MySQL running properly.
+>To run steps 6 or 7, you need to start the corresponding database for that
+>particular step.
 
 ##Tutorial
 

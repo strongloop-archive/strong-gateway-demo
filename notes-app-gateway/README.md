@@ -160,10 +160,9 @@ consistent ports throughout the entire demo.
 
 #####Remove unused portions of `middleware.json`
 
-Remove the following from the auth server's `middleware.json`:
-
-- [`auth` values](sample-configs/step-2/auth-server/server/middleware.json#L26-27).
-- [`rate-limiting-policy` values](sample-configs/step-2/auth-server/server/middleware.json#L35-43).
+Remove [`auth`](sample-configs/step-2/auth-server/server/middleware.json#L26-27)
+and [`rate-limiting-policy`](sample-configs/step-2/auth-server/server/middleware.json#L35-43)
+values from the auth server's `middleware.json`.
 
 >We will explain these values and add the sections back in a later step.
 

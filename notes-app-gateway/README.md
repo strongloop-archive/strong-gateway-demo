@@ -564,7 +564,7 @@ cd ..
 node client
 ```
 
-Browse to `localhost:2001` and you should see:
+Browse to `localhost:2001`. You should see:
 
 ```
 Notes

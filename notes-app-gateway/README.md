@@ -430,17 +430,14 @@ provides set of features known as [*policies*](http://docs.strongloop.com/displa
 
 [*Rate limiting*](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting) is used to control the number of API calls from clients within a certain period of time.
 
-#####Configure rate limiting
+#####Configure the `rate-limiting-policy` middleware
 
 Configure the [`rate-limiting-policy` middleware in the auth server's
-`middleware.json`](sample-configs/step-5/auth-server/server/middleware.json#L58-L82).
+`middleware.json`](sample-configs/step-5/auth-server/server/middleware.json#L57-L83).
 
 #####Create the `rate-limiting-client` script
 
-[Create a helper script named
-`rate-limiting-client`](sample-configs/phase-4/web-server/server/scripts/rate-limiting-client.js). We will use this script to
-make a large number of requests and print the responses returned by the API
-gateway.
+[Create the `rate-limiting` script in `client/server/scripts`](sample-configs/step-5/client/server/scripts/rate-limiting.js).
 
 #####Try it out
 

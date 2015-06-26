@@ -174,8 +174,8 @@ Start the auth server:
 node auth-server
 ```
 
-Open your browser and go to `localhost:3002`. If everything is working properly,
-you should be redirected to `localhost:3202` and you should see:
+Browse to `localhost:3002`. You should be redirected to `localhost:3202` and you
+should see:
 
 ```
 StrongLoop API Gateway
@@ -188,7 +188,7 @@ https://github.com/strongloop/strong-gateway-demo
 ```
 
 >You may see a browser warning because we are using self-signed certificates.
-This warning is safe to ignore.
+This warning is safe to ignore, so choose the options to proceed when prompted.
 
 Stop the server when you're done verifying the results.
 

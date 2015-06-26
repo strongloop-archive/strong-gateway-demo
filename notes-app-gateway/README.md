@@ -73,14 +73,14 @@ notes-app-gateway
 
 We'll refer to the `notes-app-gateway` dir as the *app root* from here on.
 
-Install client and resource server's dependencies:
+Install resource server and client dependencies:
 
 ````
-cd client
+cd resource-server
 npm install
-cd ../resource-server
+cd ../client
 npm install
-cd .. # change back to the app root after installing deps
+cd .. # change back to the app root
 ```
 
 >You can set up this step automatically by executing `./sample-configs/step-1/install`

@@ -23,7 +23,7 @@ topics. The end result of the tutorial will be the transformation of
 ##Prerequisites
 
 - Completion of the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- Knowledge of [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
+- Knowledge of [StrongLoop Process Manager (PM)](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
 - Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 - Completion of [part 1 of the tutorial (`notes-app-plain`)](../notes-app-plain)
 
@@ -210,31 +210,24 @@ Stop the server when you're done verifying the results.
 
 Change the [proxy rule port to 3001 in `middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L39).
 
-####3. Send client requests to the auth server
+####Send client requests to the auth server
 
 Change the [request URL port to 3002](sample-configs/step-2/client/server/boot/routes.js#L8)
 and set the [`strictSSL` setting to `false`](sample-configs/step-2/client/server/boot/routes.js#L9)
 in `client/server/boot/routes.js`.
 
-#### 4. Try it out
+####Try it out
 
-Start the resource server using the [StrongLoop Process Manager](http://docs.strongloop.com/display/SLC/Using+Process+Manager):
+Start all three servers (resource server and the auth server using PM, client
+using regular node):
 
 ```
 cd resource-server
 slc start
-```
-
-Then start the auth server:
-
-```
+slc ctl set-size 1 1
 cd ../auth-server
 slc start
-```
-
-Finally, start the client:
-
-```
+slc ctl set-size 2 1
 cd ..
 node client
 ```

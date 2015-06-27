@@ -5,7 +5,7 @@ beta demo**.
 
 This demo contains a two-part tutorial and an example app for the [StrongLoop
 API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway),
-which we'll refer to as "API gateway" from here on.
+which we'll refer to as *auth server* from here on.
 
 - [Overview](#overview)
 - [Setup](#setup)
@@ -80,7 +80,7 @@ of the tutorial will fetch notes via the API gateway instead of directly from
 the API server:
 
 ```
-(Browser)          (API Gateway)              (Web Server)            (API Server)
+(Browser)    (StrongLoop API Gateway)              (Web Server)            (API Server)
 +-------+        +---------------+             +--------+             +----------+
 | User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
 | Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |

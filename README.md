@@ -62,24 +62,15 @@ infrastructure in preparation for part 2 of the tutorial.
 
 ####Part 2 (`notes-app-gateway`)
 
-[`notes-app-gateway`](notes-app-gateway) is comprehensive tutorial consisting of
-six major steps:
-
-- Step 1 - How to proxy requests through the API gateway without authentication
-- Step 2 - How to enable security on the API gateway
-- Step 3 - How to enable the OAuth 2.0 Authorization Code flow on the web server
-- Step 4 - How to use StrongLoop API Gateway policies
-- Step 5 - How to use MongoDB for the API gateway's data source
-- Step 6 - How to use MySQL for the API gateway's data source
-
-In each step, we incrementally improve on the app from part 1 of the tutorial.
-Various major topics are covered as we work through the transformation of
-`notes-app-plain` to `notes-app-gateway`. Upon completion, the app from part 1
-of the tutorial will fetch notes via the API gateway instead of directly from
-the API server:
+[`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial meant to
+demonstrate various features of the StrongLoop API Gateway. In each step, we
+incrementally improve on the app from part 1 of the tutorial. A variety of major
+topics are covered as we work through the transformation of `notes-app-plain` to
+`notes-app-gateway`. Upon completion, the app from part 1 of the tutorial will
+fetch notes via the API gateway instead of directly from the API server:
 
 ```
-(Browser)    (StrongLoop API Gateway)              (Web Server)            (API Server)
+(Browser)    (StrongLoop API Gateway)         (Web Server)            (API Server)
 +-------+        +---------------+             +--------+             +----------+
 | User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
 | Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
@@ -88,7 +79,7 @@ the API server:
 
 ###Example
 
-#### `oauth-playground`
+####`oauth-playground`
 
 This is a web app used to demonstrate various [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:

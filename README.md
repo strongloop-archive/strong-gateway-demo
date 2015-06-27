@@ -5,7 +5,7 @@ beta demo**.
 
 This demo contains a two-part tutorial and an example app for the [StrongLoop
 API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway),
-which we'll refer to as *auth server* from here on.
+which we'll refer to as the *API Gateway* from here on.
 
 - [Overview](#overview)
   - [Tutorial - `notes-app-plain` and `notes-app-gateway`](#tutorial)

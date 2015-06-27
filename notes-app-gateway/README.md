@@ -472,60 +472,64 @@ Key: url-api/notes - Limit: 1000 - Remaining: 994 - Reset: 59941
 ...
 ```
 
-Notice the headers show the number of remaining requests (999, 998, ...) and the
-time left until that count resets in milliseconds (60000, 59982, ...). See the
-[official docs](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting)
+Notice the headers show the maximum number of requests (1000), the number of
+remaining requests (999, 998, ...) and the time left (in ms) until that count
+resets (60000, 59982, ...). See the [official docs](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting)
 for more info.
 
-##### API Metrics
+####API Metrics
 
-> A subscriber license is required for this part of the tutorial. Please contact
-sales to obtain a trial license if you do not have a subscription. Otherwise,
-skip to phase 5.
+The StrongLoop API Gateway can gather metrics related to API usage. This is
+possible because the [`strong-express-metrics` middleware](https://github.com/strongloop/strong-express-metrics)
+is bundled with the StrongLoop API Gateway out-of-box. We will be using [StrongLoop Arc (Arc)](https://strongloop.com/node-js/arc/)
+to view the gathered metrics.
 
-Another useful feature of `strong-gateway` is the ability to gather metrics
-related to API usage. This is possible due to `strong-express-metrics`
-middleware bundled with `strong-gateway`. We will also be using `strong-arc` to
-view the metrics.
+#####Start the auth server
 
-###### 1. Start the gateway server using `strong-arc`
+Start the auth server using PM:
 
 ```
-cd gateway-server
+cd auth-server
+slc start
+```
+
+Start Arc:
+
+```
 slc arc
 ```
 
-At this point, `strong-arc` will automatically open your browser. Go to the
-metrics page and click the "app controller" button on the top right corner of
-the screen. Then click the play button in the drop down menu to start
-`strong-gateway` on port 3004.
+At this point, `strong-arc` will automatically open your browser.
 
-###### 2. Load the metrics screen
+Go to the metrics page and enter the following info:
+
+- Hostname: `localhost`
+- Port: `8701`
+
+#####Load the metrics screen
 
 Click the "Load" button on the left side of the screen. Once the metrics have
 loaded, you should see two processes running. After a few seconds, you should
-see a number of graphs load in the main content area. `strong-arc` is now ready
-to gather metrics.
+see a number of graphs load in the main content area. We are now ready to gather
+API metrics.
 
-###### 3. Make some API requests
+#####Perform API requests
 
-To create some metrics for `strong-arc` to gather, we'll reuse the
-[`rate-limiting-test` script from the previous section](sample-configs/phase-4/web-server/server/scripts/rate-limiting-test.js):
+To create metrics for to gather, we'll reuse the [`rate-limiting` script from
+the previous section](sample-configs/step-5/client/server/scripts/rate-limiting.js):
 
 ```
-node web-server/server/scripts/rate-limiting-test
+node client/server/scripts/rate-limiting.js
 ```
 
-This will simply make a large number of requests, which in turn will cause
-`strong-arc` to gather metrics.
+This script will make a large number of requests and cause fluctuations in the
+metrics graph data.
 
-###### 4. Verify the metrics gathered by `strong-arc`
+######Verify the metrics
 
-Go back to the `strong-arc` window and view the metrics. You should see a number
-of changes in the various graph outputs. See the [official `strong-arc`
-documentation](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Availablemetrics)
-for information on how to read the outputs.
-
+Go back to the Arc window and view the metrics. You should see activity in the
+various graph outputs. For more info on the graph outputs, see the [official
+docs](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Availablemetrics).
 
 ###Step 6 - Use MongoDB for the auth server's data source
 

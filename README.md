@@ -8,15 +8,12 @@ API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway),
 which we'll refer to as *auth server* from here on.
 
 - [Overview](#overview)
-  - [Tutorial](#tutorial)
-  - [Example](#example)
+  - [Tutorial - `notes-app-plain` and `notes-app-gateway`](#tutorial)
+  - [Example - `oauth-playground`](#example)
 - [Setup](#setup)
 - [Run](#run)
 
 ##Overview
-
-- [Tutorial - `notes-app-plain` and `notes-app-gateway`](#tutorial)
-- [Example - `oauth-playground`](#example)
 
 ###Tutorial
 

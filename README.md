@@ -8,6 +8,8 @@ API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway),
 which we'll refer to as *auth server* from here on.
 
 - [Overview](#overview)
+  - [Tutorial](#tutorial)
+  - [Example](#example)
 - [Setup](#setup)
 - [Run](#run)
 

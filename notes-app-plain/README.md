@@ -55,7 +55,7 @@ There are two major parts to this tutorial:
 1. [Create the resource server](#create-the-resource-server)
 2. [Create the client](#create-the-client)
 
-### Create the API server
+###Create the resource server
 
 Begin by building an API server to fetch our notes from. We will:
 

@@ -124,7 +124,9 @@ slc arc --licenses
 ```
 
 Then log in to Arc and you'll see the "Licenses" page showing your trial
-licenses. See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses)
+licenses.
+
+>See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses)
 for more info.
 
 ## Run

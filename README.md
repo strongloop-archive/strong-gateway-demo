@@ -1,4 +1,5 @@
->**A [StrongLoop license](#obtain-a-strongloop-license) is required for this beta demo.**
+>**A [StrongLoop license](#obtain-a-strongloop-license) is required for this
+beta demo.**
 
 #strong-gateway-demo
 

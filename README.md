@@ -86,11 +86,11 @@ We also include sample scripts for GUI-less flows:
 
 ### Install StrongLoop
 
-Make sure you have [StrongLoop installed](http://docs.strongloop.com/display/LB/Installing+StrongLoop):
-
 ```
 npm install -g strongloop
 ```
+
+>See ["Installing StrongLoop"](http://docs.strongloop.com/display/LB/Installing+StrongLoop).
 
 ### Minimum versions
 
@@ -126,8 +126,7 @@ slc arc --licenses
 Then log in to Arc and you'll see the "Licenses" page showing your trial
 licenses.
 
->See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses)
-for more info.
+>See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses).
 
 ## Run
 

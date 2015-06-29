@@ -11,7 +11,7 @@ API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
   - [Tutorial](#tutorial)
     - [Part 1 - `notes-app-plain`](#part-1-notes-app-plain)
     - [Part 2 - `notes-app-gateway`](#part-2-notes-app-gateway)
-  - [Example - `oauth-playground`](#example-oauth-playground)
+  - [Example - `oauth-playground`](#example--oauth-playground)
 - [Setup](#setup)
 - [Run](#run)
 

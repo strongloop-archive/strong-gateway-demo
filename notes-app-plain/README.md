@@ -18,10 +18,11 @@ The client will render a list of notes after fetching them from an API server. W
 completed project as the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
 in the [`notes-app-gateway` tutorial](notes-app-gateway).
 
-## Prerequisites
+##Prerequisites
 
-- Basic LoopBack knowledge from completion of the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- All the requirements in [`prerequisites.md`](../doc/prerequisites.md)
+- Knowledge of the basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Knowledge of [StrongLoop Process Manager (PM)](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
+- Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
 
 ## Overview
 

@@ -41,7 +41,6 @@ cd notes-app-gateway
 >We copy and remove files relative to the app root, so make sure you do not
 execute the install script from any other dir.
 
-
 >You may see `Command "shutdown" on "http://127.0.0.1:8701" failed with Error: connect ECONNREFUSED`
 if PM isn't already running. This is safe to ignore.
 

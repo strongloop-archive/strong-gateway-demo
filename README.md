@@ -39,7 +39,7 @@ The notes in this app are not stored on the web server, but are retrieved from
 a separate server (API server) instead:
 
 ```
-(Client)          (Resource Server)
+ (Client)      (Resource Server)
 +--------+        +--------+
 | Web    |------->| API    |
 | Server |<-------| Server |

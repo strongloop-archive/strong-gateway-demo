@@ -195,13 +195,14 @@ node client
 ```
 
 Browse to `http://localhost:2001` to view the notes fetched from the API server.
-Notice the [three notes created in the sample-data boot script](resource-server/server/boot/sample-data.js#L6-L8) are now being rendered by the client.
+Notice the [three notes created in the sample-data boot script](resource-server/server/boot/sample-data.js#L6-L8)
+are now being rendered by the client. Shut down the all the servers once you've
+confirmed everything is working properly.
 
 >You can run the included [`start-demo`](start-demo) script from the project
 root to automatically perform the steps above.
 
-Shut down the servers once you've confirmed everything is working properly. That
-concludes part 1 of the tutorial, [proceed to part 2 of the tutorial](../notes-app-gateway).
+That concludes part 1 of the tutorial, [proceed to part 2 of the tutorial](../notes-app-gateway).
 
 ---
 

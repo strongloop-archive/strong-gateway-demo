@@ -60,11 +60,11 @@ Upon completion, the client will fetch notes through the API gateway instead of
 interacting directly with the API server:
 
 ```
-(Web Server)      (API Gateway)        (API Server)
- +--------+     +---------------+      +----------+
- | Client |-----| Authorization |----->| Resource |
- |        |<----| Server        |<-----| Server   |
- +--------+     +---------------+      +----------+
+(Web Server)       (API Gateway)        (API Server)
+ +--------+      +---------------+      +----------+
+ | Client |----->| Authorization |----->| Resource |
+ |        |<-----| Server        |<-----| Server   |
+ +--------+      +---------------+      +----------+
 ```
 
 ###Example

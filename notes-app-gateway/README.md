@@ -94,7 +94,6 @@ cd resource-server
 npm install
 cd ../client
 npm install
-cd .. # change back to the app root
 ```
 
 ####Try it out
@@ -102,7 +101,7 @@ cd .. # change back to the app root
 Start both servers:
 
 ```
-cd resource-server
+cd ../resource-server
 slc start
 slc ctl set size 1 1
 cd .. # change back to the app root
@@ -161,7 +160,6 @@ Install the auth server's deps:
 ````
 cd auth-server
 npm install
-cd .. # change back to the app root
 ```
 
 #####Change the default auth server ports
@@ -182,7 +180,7 @@ values from the auth server's `middleware.json`.
 
 #####Change the `https-redirect` middleware port
 
-Change the [`http-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L31).
+Change the [`https-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L31).
 
 #####Verify the port changes
 

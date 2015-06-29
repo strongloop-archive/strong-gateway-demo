@@ -77,7 +77,7 @@ flows:
 - [Client Credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Clientcredentialsgrant)
 - [Resource Owner Password Credentials](http://docs.strongloop.com/display/LGW/Developer%27s+Guide#Developer%27sGuide-Resourceownerpasswordcredentialsgrant)
 
-We also include sample scripts for GUI-less flows:
+We also include sample scripts for GUI-less workflows:
 
 - [JWT Authorization Grant](oauth-playground/scripts/jwt-auth-grant.js)
 - [JWT Client Authentication](oauth-playground/scripts/jwt-client-auth.js)

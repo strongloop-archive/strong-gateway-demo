@@ -1,7 +1,7 @@
 {
   "name": "notes-app-gateway",
   "version": "1.0.0",
-  "description": "The \"Notes\" app with StrongLoop API gateway integration.",
+  "description": "Part 2 of the StrongLoop API Gateway tutorial.",
   "main": "server.js",
   "scripts": {
     "start": "./start-demo",
@@ -19,5 +19,5 @@
   "bugs": {
     "url": "https://github.com/strongloop/strong-gateway-demo/issues"
   },
-  "homepage": "https://github.com/strongloop/strong-gateway-demo"
+  "homepage": "https://github.com/strongloop/strong-gateway-demo/tree/master/notes-app-gateway"
 }

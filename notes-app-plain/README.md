@@ -1,8 +1,8 @@
 #notes-app-plain
 
 In this tutorial, we build a web server (client) and an API server (resource
-server). These two servers are prerequisites for the second part of the
-tutorial, [`notes-app-gateway`](../notes-app-gateway).
+server). These two servers are prerequisites for [the second part of the
+tutorial, `notes-app-gateway`](../notes-app-gateway).
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)

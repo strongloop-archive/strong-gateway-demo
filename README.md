@@ -22,7 +22,7 @@ API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
 The purpose of this two-part tutorial is to show you how to implement the API
 gateway as an OAuth 2.0 solution into an existing infrastructure.
 
-####Part 1 (`notes-app-plain`)
+####Part 1 - `notes-app-plain`
 
 [`notes-app-plain`](notes-app-plain) is a simple web app that renders a list of
 notes:
@@ -50,7 +50,7 @@ In OAuth 2.0 terminology, the web server is a ["client"](https://tools.ietf.org/
 We will be building the client and resource server apps in preparation for part
 2 of the tutorial.
 
-####Part 2 (`notes-app-gateway`)
+####Part 2 - `notes-app-gateway`
 
 [`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial meant to
 demonstrate various features of the StrongLoop API Gateway. In each step, we

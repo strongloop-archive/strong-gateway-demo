@@ -144,7 +144,7 @@ Delete `root.js` in the [`boot` dir](client/server/boot):
 rm client/server/boot/root.js
 ```
 
-Create [`index.ejs`](client/server/views/index.ejs) in the [`views` dir](client/server/views).
+Create [`notes.ejs`](client/server/views/notes.ejs) in the [`views` dir](client/server/views).
 
 ####4. Configure the `/` route
 

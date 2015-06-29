@@ -52,8 +52,8 @@ We will be building the client and resource server apps in preparation for part
 
 ####Part 2 - `notes-app-gateway`
 
-[`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial meant to
-demonstrate various features of the StrongLoop API Gateway. In each step, we
+[`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial that
+demonstrates various features of the StrongLoop API Gateway. In each step, we
 incrementally improve on the app from part 1 and cover a variety of topics as
 we work through the transformation of `notes-app-plain` to `notes-app-gateway`.
 Upon completion, the client will fetch notes through the API gateway instead of

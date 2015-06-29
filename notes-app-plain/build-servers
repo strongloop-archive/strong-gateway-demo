@@ -1,2 +1,2 @@
-cd client && npm i
-cd ../resource-server && npm i
+cd client && npm install
+cd ../resource-server && npm install

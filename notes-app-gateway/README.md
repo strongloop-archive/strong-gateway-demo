@@ -187,10 +187,10 @@ Change the [`https-redirect` middleware port to 3202](sample-configs/step-2/auth
 Start the auth server:
 
 ```
-node auth-server
+node .
 ```
 
-Browse to `localhost:3002`. You should be redirected to `localhost:3202` and you
+Browse to `localhost:3002`.You should be redirected to `localhost:3202` and you
 should see:
 
 ```
@@ -203,9 +203,9 @@ Demo
 https://github.com/strongloop/strong-gateway-demo
 ```
 
-Stop the server when you're done verifying the results.
-
 >You may see a browser warning because we are using self-signed certificates.
+
+Stop the server when you're done verifying the results.
 
 ####Proxy auth server requests to the resource server
 

@@ -50,35 +50,23 @@ start-demo
 
 ##Tutorial
 
-There are two major parts to this tutorial:
-
-1. [Create the resource server](#create-the-resource-server)
-2. [Create the client](#create-the-client)
-
 ###Create the resource server
-
-Begin by building an API server to fetch our notes from. We will:
-
-- Scaffold a new LoopBack project
-- Create a `notes` model
-- Create a boot script to add sample data
-- Change the default host port from 3000 to 3002
-
 
 #### 1. Scaffold a new LoopBack application
 
-Create a new directory to store all the project files we'll be creating:
+Create a new dir to store the project components:
 
 ```
 $ mkdir notes-app-plain
 ```
 
-We'll refer to this directory as the *project root* from here on. In the
-project root, create a new API server by running:
+We'll refer to this dir as the *project root* from here on.
+
+In the project root, create a new resource server by running:
 
 ```
 $ cd notes-app-plain
-$ slc loopback api-server
+$ slc loopback resource-server
 $ ... # follow the prompts
 ```
 

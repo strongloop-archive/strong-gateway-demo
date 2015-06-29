@@ -44,12 +44,11 @@ a separate server (API server) instead:
 | Web    |------->| API    |
 | Server |<-------| Server |
 +--------+        +--------+
+```
 
 In OAuth 2.0 terminology, the "Web Server" is known as a ["Client"](https://tools.ietf.org/html/rfc6749#section-1.1)) and the "API Server" is known as a ["Resource Server"](https://tools.ietf.org/html/rfc6749#section-1.1).
 We will be building the client and resource server components in preparation for
 part 2 of the tutorial.
-
----
 
 ####Part 2 (`notes-app-gateway`)
 

@@ -52,7 +52,7 @@ start-demo
 
 ###Create the resource server
 
-#### 1. Scaffold a new LoopBack application
+####1. Scaffold a new LoopBack application
 
 Create a new dir to store the project components:
 
@@ -70,9 +70,9 @@ $ slc loopback resource-server
 $ ... # follow the prompts
 ```
 
-#### 2. Create the `Note` model
+####2. Create the `Note` model
 
-##### Model info
+#####Model info
 
 - Name: `Note`
   - Data source: `db (memory)`
@@ -85,29 +85,29 @@ $ ... # follow the prompts
       - Not required
 
 ```
-$ cd api-server
-$ slc loopback:model Note
-$ ... # follow the prompts
+cd resource-server
+slc loopback:model Note
+... # follow the prompts
 ```
 
-#### 3. Create a boot script to add sample data
+####3. Create a boot script to add sample data
 
 ```
-$ slc loopback:boot-script sample-data
-$ ... # choose `async` when prompted
+slc loopback:boot-script sample-data
+... # choose `async` when prompted
 ```
 
-Then create the sample data as shown in [`server/boot/sample-data`](api-server/server/boot/sample-data.js#L2-L16).
+Create the sample data as shown in [`server/boot/sample-data`](resource-server/server/boot/sample-data.js#L2-L16).
 
-#### 4. Change the default port from 3000 to 3002
+####4. Change the default port from 3000 to 3002
 
-Change the [port in `server/config.json`](api-server/server/config.json#L4)
+Change the [port in `server/config.json`](resource-server/server/config.json#L4)
 from 3000 to 3002.
 
-> We change the host port for consistency between demo projects, meaning each
-> demo project will start their API servers on port 3002.
+>We change the host port for consistency between demo projects. This means
+resource servers throughout the entire tutorial always start on port 3002.
 
-### Create the API client
+###Create the API client
 
 Now that the API server is configured, we need to create an API client to
 display notes. The client will interact directly with the API server in order to

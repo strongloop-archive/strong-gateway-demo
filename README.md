@@ -136,7 +136,7 @@ the tutorials, feel free to skip directly to the [`oauth-playground` example](oa
 
 - [Tutorial part 1 - `notes-app-plain`](notes-app-plain)
 - [Tutorial part 2  - `notes-app-gateway`](notes-app-gateway)
-- Example - `oauth-playground`](oauth-playground)
+- [Example - `oauth-playground`](oauth-playground)
 
 ---
 

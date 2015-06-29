@@ -165,7 +165,7 @@ slc loopback:boot-script routes
 In the [`routes` boot script](client/server/boot/routes.js):
 
 - [Add `request` as a dependency](client/server/boot/routes.js#L1)
-- [Handle the `/` route](client/server/boot/routes.js#L4-L33)
+- [Handle the `/` route](client/server/boot/routes.js#L4-L36)
 
 Create [a view to display errors](client/server/views/error.ejs) and [a view to
 display the notes](client/server/views/notes.ejs).

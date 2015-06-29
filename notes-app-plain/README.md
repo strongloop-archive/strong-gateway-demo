@@ -43,7 +43,7 @@ Notes
 ##Run
 
 ```
-start-demo
+./start-demo
 ```
 
 >PM is required to run the start-demo script.
@@ -62,12 +62,12 @@ $ mkdir notes-app-plain
 
 We'll refer to this dir as the *project root* from here on.
 
-In the project root, create a new resource server by running:
+In the project root, create a new resource server:
 
 ```
-$ cd notes-app-plain
-$ slc loopback resource-server
-$ ... # follow the prompts
+cd notes-app-plain
+slc loopback resource-server
+... # follow the prompts
 ```
 
 ####2. Create the `Note` model
@@ -109,42 +109,32 @@ resource servers throughout the entire tutorial always start on port 3002.
 
 ###Create the API client
 
-Now that the API server is configured, we need to create an API client to
-display notes. The client will interact directly with the API server in order to
-fetch the sample data created in the previous section. To build the client, we
-will:
+####1. Scaffold a new LoopBack application
 
-- Scaffold a new LoopBack project
-- Configure server-side templating
-- Set up the home page
-- Configure the `/` routes
-
-#### 1. Scaffold a new LoopBack application
-
-In the project root, create another project named `web-server` by running:
+In the project root, create another project named `client`:
 
 ```
-$ slc loopback web-server
+$ slc loopback client
 ```
 
-#### 2. Configure server-side templates
+####2. Configure server-side templates
 
-Create a [`views` directory in the `server` directory](web-server/server/views)
-by running:
+Create a [`views` directory in the `server` directory](client/server/views):
 
 ```
-$ cd web-server
+$ cd client
 $ mkdir server/views
 ```
 
 Then:
 
-- [Add the `path` module as a dependency](web-server/server/server.js#L3)
-- [Set the view engine to `ejs`](web-server/server/server.js#L6)
-- [Set the path to the `views` directory](web-server/server/server.js#L7)
+- [Add the `path` module as a dependency](client/server/server.js#L3)
+- [Set the view engine to `ejs`](client/server/server.js#L6)
+- [Set the path to the `views` directory](client/server/server.js#L7)
 
-> Since LoopBack includes `ejs` out-of-box, you do not need to `npm install
-> --save ejs` when using `app.set('view engine', 'ejs')`.
+>You do not need to install EJS as a dependency (ie. `npm install --save ejs`)
+when using `app.set('view engine', 'ejs')` because LoopBack includes `ejs`
+out-of-box.
 
 #### 3. Set up the home page
 

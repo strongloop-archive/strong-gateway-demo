@@ -200,7 +200,8 @@ Notice the [three notes created in the sample-data boot script](resource-server/
 >You can run the included [`start-demo`](start-demo) script from the project
 root to automatically perform the steps above.
 
-That's it! [Proceed to the next tutorial](../notes-app-gateway).
+Shut down the servers once you've verified the demo. That concludes part 1 of
+the tutorial, [proceed to part 2 (`notes-app-gateway`)](../notes-app-gateway).
 
 ---
 

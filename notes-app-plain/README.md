@@ -107,7 +107,7 @@ from 3000 to 3002.
 >We change the host port for consistency between demo projects. This means
 resource servers throughout the entire tutorial always start on port 3002.
 
-###Create the API client
+###Create the client
 
 ####1. Scaffold a new LoopBack application
 
@@ -194,8 +194,8 @@ cd ..
 node client
 ```
 
-Browse to `http://localhost:2001` to view the notes fetched from the API server.
-Notice the [three notes created in the sample-data boot script](resource-server/server/boot/sample-data.js#L6-L8)
+Browse to `http://localhost:2001` to view the notes fetched from the resource
+server. Notice the [three notes created in the sample-data boot script](resource-server/server/boot/sample-data.js#L6-L8)
 are now being rendered by the client. Shut down the all the servers once you've
 confirmed everything is working properly.
 

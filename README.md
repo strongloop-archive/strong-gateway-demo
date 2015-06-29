@@ -39,11 +39,11 @@ The notes in this app are not stored on the web server, but are retrieved from
 a separate server (API server) instead:
 
 ```
- (Client)      (Resource Server)
-+--------+        +--------+
-| Web    |------->| API    |
-| Server |<-------| Server |
-+--------+        +--------+
+(Web Server)     (API Server)
+ +--------+      +----------+
+ | Client |----->| Resource |
+ |        |<-----| Server   |
+ +--------+      +----------+
 ```
 
 In OAuth 2.0 terminology, the web server is a ["client"](https://tools.ietf.org/html/rfc6749#section-1.1) and the API server is a ["resource server"](https://tools.ietf.org/html/rfc6749#section-1.1).
@@ -54,17 +54,17 @@ We will be building the client and resource server apps in preparation for part
 
 [`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial meant to
 demonstrate various features of the StrongLoop API Gateway. In each step, we
-incrementally improve on the app from part 1 (`notes-app-plain`). A variety of
-major topics are covered as we work through the transformation of `notes-app-plain` to
-`notes-app-gateway`. Upon completion, the app from part 1 of the tutorial will
-fetch notes via the API gateway instead of directly from the API server:
+incrementally improve on the app from part 1 of the tutorial. A variety of major
+topics are covered as we work through the transformation of `notes-app-plain` to
+`notes-app-gateway`. Upon completion, the client will fetch notes through the
+API gateway instead of interacting directly with the API server:
 
 ```
-(Browser)    (StrongLoop API Gateway)         (Web Server)            (API Server)
-+-------+        +---------------+             +--------+             +----------+
-| User  |----/-->| Authorization |-/api/notes->| Client |-/api/notes->| Resource |
-| Agent |<-notes-| Server        |<---notes----|        |<---notes----| Server   |
-+-------+        +---------------+             +--------+             +----------+
+(Web Server)      (API Gateway)        (API Server)
+ +--------+     +---------------+      +----------+
+ | Client |-----| Authorization |----->| Resource |
+ |        |<----| Server        |<-----| Server   |
+ +--------+     +---------------+      +----------+
 ```
 
 ###Example

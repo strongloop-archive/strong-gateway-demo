@@ -1,7 +1,7 @@
 #notes-app-plain
 
-In this tutorial, we build a web server (client) and an API server (resource
-server). These two servers will be used as the foundation for [part 2 of the
+In this tutorial, we build a client (web server) and a resource server (API
+server). These two components will be used as the foundation for [part 2 of the
 tutorial, `notes-app-gateway`](../notes-app-gateway).
 
 - [Overview](#overview)
@@ -11,31 +11,17 @@ tutorial, `notes-app-gateway`](../notes-app-gateway).
 
 ##Overview
 
-We will build the client (web server) and resource server (API server) in this
-tutorial. The client will render a list of notes after fetching the from the API
-server.
-The client will render a list of notes after fetching them from an API server. We will use the
-completed project as the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
-in the [`notes-app-gateway` tutorial](notes-app-gateway).
-
-##Prerequisites
-
-- Knowledge of the basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
-- Knowledge of [StrongLoop Process Manager (PM)](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
-- Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
-
-## Overview
-
-The application consists of two parts: the web server (client) and the API
-server (server). When the web server receives a request to `/` route, it
-initiates an HTTP request directly to the API server (via [REST](http://en.wikipedia.org/wiki/Representational_state_transfer))
-to retrieve a list of notes:
+We need to build two components: the client and the resource server. When the
+client receives a request, it initiates a second request to the resource server
+(via [REST](http://en.wikipedia.org/wiki/Representational_state_transfer)) to
+retrieve a list of notes:
 
 ```
-+--------+     +--------+
-| Web    |---->| API    |
-| Server |<----| Server |
-+--------+     +--------+
+(Web Server)     (API Server)
+ +--------+      +----------+
+ | Client |----->| Resource |
+ |        |<-----| Server   |
+ +--------+      +----------+
 ```
 
 Once the notes are retrieved, the web server displays it to the user:
@@ -48,26 +34,36 @@ Notes
 - Buy sausages
 ```
 
-The completed application will be used as the foundation for the next tutorial
-[`notes-app-gateway`](../notes-app-gateway).
+##Prerequisites
 
-## Run the demo
+- Knowledge of the basics from the [LoopBack tutorial series](https://github.com/strongloop/loopback-example#tutorial-series)
+- Knowledge of [StrongLoop Process Manager (PM)](http://docs.strongloop.com/display/SLC/Using+Process+Manager)
+- Everything in the [setup section of the main README](https://github.com/strongloop/strong-gateway-demo#setup)
+
+##Run
 
 ```
-$ npm install
-$ node .
+start-demo
 ```
 
-## Build the demo
+>PM is required to run the start-demo script.
 
-Let's begin by building an API server to fetch our notes from. We will:
+##Tutorial
+
+There are two major parts to this tutorial:
+
+1. [Create the resource server](#create-the-resource-server)
+2. [Create the client](#create-the-client)
+
+### Create the API server
+
+Begin by building an API server to fetch our notes from. We will:
 
 - Scaffold a new LoopBack project
 - Create a `notes` model
 - Create a boot script to add sample data
 - Change the default host port from 3000 to 3002
 
-### Create the API server
 
 #### 1. Scaffold a new LoopBack application
 

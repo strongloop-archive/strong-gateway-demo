@@ -160,6 +160,7 @@ Install the auth server's deps:
 ````
 cd auth-server
 npm install
+cd .. # change back to the app root
 ```
 
 #####Change the default auth server ports
@@ -187,7 +188,7 @@ Change the [`https-redirect` middleware port to 3202](sample-configs/step-2/auth
 Start the auth server:
 
 ```
-node .
+node auth-server
 ```
 
 Browse to `localhost:3002`.You should be redirected to `localhost:3202` and you

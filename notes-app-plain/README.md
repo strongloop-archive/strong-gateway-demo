@@ -114,6 +114,7 @@ resource servers throughout the entire tutorial always start on port 3002.
 In the project root, create another project named `client`:
 
 ```
+cd ..
 slc loopback client
 ```
 

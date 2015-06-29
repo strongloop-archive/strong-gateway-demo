@@ -117,7 +117,7 @@ update`.
 ### Obtain a StrongLoop license
 
 To get a free 30-day trial license for this beta demo, run [StrongLoop Arc](https://strongloop.com/node-js/arc/)
-with the `licenses` flag:
+with the "licenses" flag:
 
 ```
 slc arc --licenses

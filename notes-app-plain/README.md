@@ -57,7 +57,7 @@ Notes
 Create a new dir to store the project components:
 
 ```
-$ mkdir notes-app-plain
+mkdir notes-app-plain
 ```
 
 We'll refer to this dir as the *project root* from here on.

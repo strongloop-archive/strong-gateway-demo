@@ -94,8 +94,6 @@ npm install -g strongloop
 
 ### Minimum versions
 
-Make sure you have the following library versions:
-
 ```
 strongloop v4.0.4 (node v0.10.36)
 ├── strong-arc@1.4.2 (f74d03c)

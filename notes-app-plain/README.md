@@ -1,8 +1,19 @@
-# notes-app-plain
+#notes-app-plain
 
-In this tutorial, we build a simple web application using the [`client-server`
-architecture](http://simple.wikipedia.org/wiki/Client-server). The client will
-render a list of notes after fetching them from an API server. We will use the
+In this tutorial, we build a client and a resource server, both of which will be
+used as the foundation for the [`notes-app-gateway` tutorial](../notes-app-gateway).
+
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [Run](#run)
+- [Tutorial](#tutorial)
+
+##Overview
+
+We will build the client (web server) and resource server (API server) in this
+tutorial. The client will render a list of notes after fetching the from the API
+server.
+The client will render a list of notes after fetching them from an API server. We will use the
 completed project as the foundation for introducing [`strong-gateway`](https://github.com/strongloop/strong-gateway)
 in the [`notes-app-gateway` tutorial](notes-app-gateway).
 

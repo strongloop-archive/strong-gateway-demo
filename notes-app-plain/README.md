@@ -1,7 +1,7 @@
 #notes-app-plain
 
-In this tutorial, we build a client and a resource server, both of which will be
-used as the foundation for the [`notes-app-gateway` tutorial](../notes-app-gateway).
+In this tutorial, we build a client and a resource server. These two components
+will then be used as the foundation for the [`notes-app-gateway` tutorial](../notes-app-gateway).
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)

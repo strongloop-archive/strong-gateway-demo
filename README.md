@@ -11,7 +11,7 @@ API Gateway](http://docs.strongloop.com/display/LGW/StrongLoop+API+Gateway)
   - [Tutorial](#tutorial)
     - [Part 1 - `notes-app-plain`](#part-1-notes-app-plain)
     - [Part 2 - `notes-app-gateway`](#part-2-notes-app-gateway)
-  - [Example - `oauth-playground`](#example)
+  - [Example - `oauth-playground`](#example-oauth-playground)
 - [Setup](#setup)
 - [Run](#run)
 
@@ -67,9 +67,7 @@ interacting directly with the API server:
  +--------+      +---------------+      +----------+
 ```
 
-###Example
-
-####`oauth-playground`
+###Example - `oauth-playground`
 
 This is a web app used to demonstrate various [OAuth 2.0 Authorization Grant](http://tools.ietf.org/html/rfc6749#section-1.3)
 flows:

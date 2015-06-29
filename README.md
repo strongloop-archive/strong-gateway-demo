@@ -129,8 +129,9 @@ licenses.
 ## Run
 
 We suggest you start at [part 1 of the tutorial](notes-app-plain) and then move
-onto [part 2 of the tutorial](notes-app-gateway). If you are not interested in
-the tutorials, feel free to skip directly to the [`oauth-playground` example](oauth-playground).
+onto [part 2 of the tutorial](notes-app-gateway). Feel free to skip directly to
+the [`oauth-playground` example](oauth-playground) if you do not want to go
+through the tutorials.
 
 - [Tutorial part 1 - `notes-app-plain`](notes-app-plain)
 - [Tutorial part 2  - `notes-app-gateway`](notes-app-gateway)

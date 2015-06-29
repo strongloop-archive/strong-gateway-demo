@@ -201,7 +201,7 @@ Notice the [three notes created in the sample-data boot script](resource-server/
 root to automatically perform the steps above.
 
 Shut down the servers once you've confirmed everything is working properly. That
-concludes part 1 of the tutorial, [proceed to part 2 (`notes-app-gateway`)](../notes-app-gateway).
+concludes part 1 of the tutorial, [proceed to part 2 of the tutorial`](../notes-app-gateway).
 
 ---
 

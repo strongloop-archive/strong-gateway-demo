@@ -126,7 +126,7 @@ Create a [`views` dir in the `server` dir](client/server/views):
 mkdir client/server/views
 ```
 
-Then:
+Then in `client/server/server.js`:
 
 - [Add the `path` module as a dependency](client/server/server.js#L3)
 - [Set the view engine to `ejs`](client/server/server.js#L6)

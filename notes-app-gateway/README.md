@@ -525,7 +525,7 @@ previous section](sample-configs/step-5/client/server/scripts/rate-limiting.js):
 node client/server/scripts/rate-limiting.js
 ```
 
-This script will make a large number of requests and cause fluctuations in the
+This script will make a large number of requests and cause changes to the
 analytics graph data.
 
 ######Verify the graph changes

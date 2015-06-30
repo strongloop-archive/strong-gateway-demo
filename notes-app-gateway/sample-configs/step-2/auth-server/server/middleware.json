@@ -36,7 +36,8 @@
     "./middleware/proxy": {
       "params": {
         "rules": [
-          "^/api/(.*)$ http://localhost:3001/api/$1 [p]"
+          "^/api/(.*)$ http://localhost:3001/api/$1 [P]",
+          "^/protected/(.*)$ http://localhost:3000/protected/$1 [P]"
         ]
       }
     }

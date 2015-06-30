@@ -12,12 +12,7 @@ echo 'configuring step'
 cp -r ../notes-app-plain/client ./client
 cp -r ../notes-app-plain/resource-server ./resource-server
 git clone https://github.com/strongloop/strong-gateway auth-server
-cp $stepdir/build-servers* .
-cp $stepdir/server.js .
-cp $stepdir/start-demo .
-cp $stepdir/client/server/boot/routes.js client/server/boot/routes.js
-cp $stepdir/auth-server/server/config.json auth-server/server/config.json
-cp $stepdir/auth-server/server/middleware.json auth-server/server/middleware.json
+cp -r $stepdir/* .
 ./build-servers
 
 echo 'starting app'

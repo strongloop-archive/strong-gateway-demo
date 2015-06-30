@@ -479,12 +479,12 @@ remaining requests (999, 998, ...) and the time left (in ms) until that count
 resets (60000, 59982, ...). See the [official docs](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting)
 for more info.
 
-####API Metrics
+####API Analytics
 
-The StrongLoop API Gateway can gather metrics related to API usage. This is
+The StrongLoop API Gateway can gather analytics related to API usage. This is
 possible because the [`strong-express-metrics` middleware](https://github.com/strongloop/strong-express-metrics)
 is bundled with the StrongLoop API Gateway out-of-box. We will be using [StrongLoop Arc (Arc)](https://strongloop.com/node-js/arc/)
-to view the gathered metrics.
+to view the gathered analytics.
 
 #####Start the auth server
 
@@ -503,35 +503,38 @@ slc arc
 
 At this point, `strong-arc` will automatically open your browser.
 
-Go to the metrics page and enter the following info:
+Go to the "Analytics" page and enter the following info:
 
 - Hostname: `localhost`
 - Port: `8701`
 
-#####Load the metrics screen
+#####Load the analytics screen
 
-Click the "Load" button on the left side of the screen. Once the metrics have
-loaded, you should see two processes running. After a few seconds, you should
-see a number of graphs load in the main content area. We are now ready to gather
-API metrics.
+Click the "Load" button on the left side of the screen to load the graphs.
+
+>The data does not update automatically at time, you will need to click the
+"Load" button again to refresh the data. Have the graphs automatically reload
+will be coming in a future update.
 
 #####Perform API requests
 
-To create metrics for to gather, we'll reuse the [`rate-limiting` script from
-the previous section](sample-configs/step-5/client/server/scripts/rate-limiting.js):
+To create analytics to gather, we'll reuse the [`rate-limiting` script from the
+previous section](sample-configs/step-5/client/server/scripts/rate-limiting.js):
 
 ```
 node client/server/scripts/rate-limiting.js
 ```
 
 This script will make a large number of requests and cause fluctuations in the
-metrics graph data.
+analytics graph data.
 
-######Verify the metrics
+######Verify the graph changes
 
-Go back to the Arc window and view the metrics. You should see activity in the
-various graph outputs. For more info on the graph outputs, see the [official
-docs](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Availablemetrics).
+Go back to the Arc window and view the analytics again. Click "Load" again to
+refresh the data. You should many changes that correspond with the activity
+caused by the rate limiting script.
+
+>See the [official docs](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Availablemetrics).
 
 ###Step 6 - Use MongoDB for the auth server's data source
 

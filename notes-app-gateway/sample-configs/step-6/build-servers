@@ -1,3 +1,4 @@
-cd client && npm i
-cd ../resource-server && npm i
-cd ../auth-server && npm i
+#!/bin/bash
+cd client && npm install
+cd ../resource-server && npm install
+cd ../auth-server && npm install

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 rm -rf ~/.strong-pm
 slc ctl shutdown
 ./build-servers

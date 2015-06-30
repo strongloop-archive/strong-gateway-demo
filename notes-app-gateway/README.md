@@ -534,7 +534,7 @@ Go back to the Arc window and view the analytics again. Click "Load" again to
 refresh the data. You should many changes that correspond with the activity
 caused by the rate limiting script.
 
->See the [official docs](http://docs.strongloop.com/display/SLC/Metrics+API#MetricsAPI-Availablemetrics).
+>See ["API Analytics"](http://docs.strongloop.com/display/SLC/API+Analytics).
 
 ###Step 6 - Use MongoDB for the auth server's data source
 

@@ -481,10 +481,9 @@ for more info.
 
 ####API Analytics
 
-The StrongLoop API Gateway can gather analytics related to API usage. This is
-possible because the [`strong-express-metrics` middleware](https://github.com/strongloop/strong-express-metrics)
-is bundled with the StrongLoop API Gateway out-of-box. We will be using [StrongLoop Arc (Arc)](https://strongloop.com/node-js/arc/)
-to view the gathered analytics.
+The StrongLoop API Gateway can gather analytics related to API usage. We will be
+using [StrongLoop Arc (Arc)](https://strongloop.com/node-js/arc/) to view the
+collected data.
 
 #####Start the auth server
 
@@ -512,9 +511,8 @@ Go to the "Analytics" page and enter the following info:
 
 Click the "Load" button on the left side of the screen to load the graphs.
 
->The data does not update automatically at time, you will need to click the
-"Load" button again to refresh the data. Have the graphs automatically reload
-will be coming in a future update.
+>The graph does not update automatically, you will need to click the "Load"
+button to refresh the data. This will be addressed in a future update.
 
 #####Perform API requests
 

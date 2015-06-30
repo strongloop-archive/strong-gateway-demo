@@ -1,3 +1,4 @@
+#!/bin/bash
 stepdir=sample-configs/step-7
 
 echo 'cleaning app root'
@@ -12,11 +13,7 @@ echo 'configuring step'
 cp -r ../notes-app-plain/client ./client
 cp -r ../notes-app-plain/resource-server ./resource-server
 git clone https://github.com/strongloop/strong-gateway auth-server
-cp $stepdir/build-servers* .
-cp $stepdir/server.js .
-cp $stepdir/start-demo .
-cp -r $stepdir/client/* client
-cp -r $stepdir/auth-server/* auth-server
+cp -r $stepdir/* .
 ./build-servers
 
 echo 'starting app'

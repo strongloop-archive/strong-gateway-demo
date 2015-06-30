@@ -14,12 +14,18 @@ module.exports = function(app) {
           msg: err
         });
 
+      if (response.statusCode === 401)
+        res.render('error', {
+          title: response.statusCode,
+          msg: body
+        });
+
       try {
         var notes = JSON.parse(body);
       } catch (e) {
         return res.render('error', {
           title: e.name,
-          msg: e.message + ' ' + body
+          msg: e.message + ' && ' + body
         });
       }
 

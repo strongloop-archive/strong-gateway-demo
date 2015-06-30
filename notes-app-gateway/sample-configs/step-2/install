@@ -1,3 +1,4 @@
+#!/bin/bash
 stepdir=sample-configs/step-2
 
 echo 'cleaning app root'

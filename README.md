@@ -113,15 +113,10 @@ update`.
 
 ### Obtain a StrongLoop license
 
-To get a free 30-day trial license for this beta demo, run [StrongLoop Arc](https://strongloop.com/node-js/arc/)
-with the "licenses" flag:
-
-```
-slc arc --licenses
-```
-
-Then log into Arc and you'll see the "Licenses" page showing your trial
-licenses.
+The StrongLoop Gateway is currently under private beta. Please contact
+sales@strongloop.com to have a license provisioned. After receiving confirmation
+that a license has been provisioned, run `slc arc --licenses` to retrieve the new
+license key
 
 >See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses).
 

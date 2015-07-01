@@ -408,7 +408,7 @@ Once you are authenticated as `bob`, the auth server asks if you want to allow
 `demo-app` access to your account.
 
 >`bob` and `demo-app` are preregistered sample data values included with the
-auth server. StrongLoop API Gateway [includes this data out-of-box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
+auth server. StrongLoop API Gateway [includes this data out of the box](https://github.com/strongloop/strong-gateway/blob/master/server/boot/create-sample-data.js#L2-L5)
 for demo purposes.
 
 Click "Allow" to approve the permission request. You should see:
@@ -502,7 +502,7 @@ slc arc
 
 At this point, `strong-arc` will automatically open your browser.
 
-Go to the "Analytics" page and enter the following info:
+Go to the "API Analytics" module and enter the following info:
 
 - Hostname: `localhost`
 - Port: `8701`

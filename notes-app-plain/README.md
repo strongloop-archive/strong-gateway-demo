@@ -92,6 +92,8 @@ slc loopback:model Note
 
 ####3. Create a boot script to add sample data
 
+Run the following to add sample data to the [built-in memory db](http://docs.strongloop.com/display/LB/Memory+connector):
+
 ```
 slc loopback:boot-script sample-data
 ... # choose `async` when prompted
@@ -133,8 +135,8 @@ Then in `client/server/server.js`:
 - [Set the path to the `views` directory](client/server/server.js#L7)
 
 >You do not need to install EJS as a dependency (ie. `npm install --save ejs`)
-when using `app.set('view engine', 'ejs')` because LoopBack includes `ejs`
-out-of-box.
+when using `app.set('view engine', 'ejs')` because LoopBack is built on top of
+Express and EJS is included out of the box.
 
 ####3. Set up the home page
 

@@ -101,14 +101,6 @@ slc loopback:boot-script sample-data
 
 Create the sample data as shown in [`server/boot/sample-data`](resource-server/server/boot/sample-data.js#L2-L16).
 
-####4. Change the default port from 3000 to 3002
-
-Change the [port in `server/config.json`](resource-server/server/config.json#L4)
-from 3000 to 3002.
-
->We change the host port for consistency between demo projects. This means
-resource servers throughout the entire tutorial always start on port 3002.
-
 ###Create the client
 
 ####1. Scaffold a new LoopBack application
@@ -176,9 +168,6 @@ display the notes](client/server/views/notes.ejs).
 
 Change the [port in `server/config.json`](client/server/config.json#L4)
 from 3000 to 2001.
-
->We change the host port for consistency between demo projects. This means
-clients throughout the entire tutorial always start on port 2001.
 
 ##Try it out
 

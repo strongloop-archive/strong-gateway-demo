@@ -8,7 +8,7 @@ module.exports = function(app) {
   });
 
   app.get('/authorize', function(req, res) {
-    var authEndpoint = 'http://localhost:3002/oauth/authorize';
+    var authEndpoint = 'http://localhost:3001/oauth/authorize';
     var clientId = 123;
     var redirectUri = 'https://localhost:2101/token';
     var scope = 'demo';
@@ -64,7 +64,7 @@ module.exports = function(app) {
 };
 
 function getAccessTokenUsingAuthCode(code, cb) {
-  request.post('https://localhost:3202/oauth/token', {
+  request.post('https://localhost:3101/oauth/token', {
     'content-type': 'application/x-www-form-urlencoded',
     form: {
       code: code,
@@ -78,7 +78,7 @@ function getAccessTokenUsingAuthCode(code, cb) {
 }
 
 function getNotesUsingAccessToken(token, cb) {
-  request.get('https://localhost:3202/api/notes', {
+  request.get('https://localhost:3101/api/notes', {
     qs: {
       access_token: token
     },

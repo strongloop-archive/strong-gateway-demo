@@ -1,6 +1,6 @@
 var request = require('request');
 
-var authServerPort = process.env.PORT || 3202;
+var authServerPort = process.env.PORT || 3101;
 // Build the token request using client credentials grant type
 var form = {
   grant_type: 'password',

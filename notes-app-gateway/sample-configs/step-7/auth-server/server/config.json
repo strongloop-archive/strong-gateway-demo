@@ -1,8 +1,8 @@
 {
   "restApiRoot": "/_internal",
   "host": "0.0.0.0",
-  "port": 3002,
+  "port": 3001,
   "legacyExplorer": false,
-  "https-port": 3202,
-  "url": "https://localhost:3202/"
+  "https-port": 3101,
+  "url": "https://localhost:3101/"
 }

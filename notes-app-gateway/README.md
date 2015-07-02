@@ -165,11 +165,8 @@ cd .. # change back to the app root
 
 #####Change the default auth server ports
 
-Modify the auth server's `config.json` to use ports [3002 (HTTP)](sample-configs/step-2/auth-server/server/config.json#L4)
-and [3202 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
-
->We do not not use the default auth server ports because we want to assign
-consistent ports throughout the entire demo.
+Modify the auth server's `config.json` to use ports [3001 (HTTP)](sample-configs/step-2/auth-server/server/config.json#L4)
+and [3101 (HTTPS)](sample-configs/step-2/auth-server/server/config.json#L6-L7).
 
 #####Remove unused portions of `middleware.json`
 
@@ -181,7 +178,7 @@ values from the auth server's `middleware.json`.
 
 #####Change the `https-redirect` middleware port
 
-Change the [`https-redirect` middleware port to 3202](sample-configs/step-2/auth-server/server/middleware.json#L31).
+Change the [`https-redirect` middleware port to 3101](sample-configs/step-2/auth-server/server/middleware.json#L31).
 
 #####Verify the port changes
 
@@ -191,7 +188,7 @@ Start the auth server:
 node auth-server
 ```
 
-Browse to `localhost:3002`.You should be redirected to `localhost:3202` and you
+Browse to `localhost:3001`.You should be redirected to `localhost:3101` and you
 should see:
 
 ```
@@ -210,11 +207,11 @@ Stop the server when you're done verifying the results.
 
 ####Proxy auth server requests to the resource server
 
-Change the [proxy rule port to 3001 in `middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L39).
+Change the [proxy rule port to 3002 in `middleware.json`](sample-configs/step-2/auth-server/server/middleware.json#L39).
 
 ####Send client requests to the auth server
 
-Change the [request URL port to 3002](sample-configs/step-2/client/server/boot/routes.js#L8)
+Change the [request URL port to 3001](sample-configs/step-2/client/server/boot/routes.js#L8)
 and set the [`strictSSL` setting to `false`](sample-configs/step-2/client/server/boot/routes.js#L9)
 in `client/server/boot/routes.js`.
 

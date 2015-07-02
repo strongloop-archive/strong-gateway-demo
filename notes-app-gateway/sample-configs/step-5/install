@@ -1,27 +1,31 @@
 #!/bin/bash
 stepdir=sample-configs/step-5
+plaindir=../notes-app-plain
 
 echo 'cleaning app root'
 slc ctl shutdown
 rm -rf ./*
+rm -rf .strong-pm
 rm -rf ~/.strong-pm
+rm $plaindir/resource-server/pmctl
+rm $plaindir/resource-server/runctl
 git checkout README.md
 git checkout package.json
 git checkout sample-configs
 
 echo 'configuring step'
-cp -r ../notes-app-plain/client ./client
-cp -r ../notes-app-plain/resource-server ./resource-server
 git clone https://github.com/strongloop/strong-gateway auth-server
-cp -r $stepdir/* .
+cp -r $plaindir/resource-server resource-server
+cp -r $plaindir/client client
+cp -r $stepdir/* . && rm install
 ./build-servers
 
 echo 'starting app'
-cd resource-server
+cd auth-server
 slc start
-sleep 1
 slc ctl set-size 1 1
-cd ../auth-server
+sleep 1
+cd ../resource-server
 slc start
 slc ctl set-size 2 1
 cd ..

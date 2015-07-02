@@ -1,11 +1,12 @@
 #!/bin/bash
+rm -rf .strong-pm
 rm -rf ~/.strong-pm
 slc ctl shutdown
 ./build-servers
-cd resource-server
+cd auth-server
 slc start
 slc ctl set-size 1 1
-cd ../auth-server
+cd ../resource-server
 slc start
 slc ctl set-size 2 1
 cd ..

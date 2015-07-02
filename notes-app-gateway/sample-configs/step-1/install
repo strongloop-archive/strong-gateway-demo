@@ -1,25 +1,27 @@
 #!/bin/bash
 stepdir=sample-configs/step-1
+plaindir=../notes-app-plain
 
 echo 'cleaning app root'
 slc ctl shutdown
 rm -rf ./*
+rm -rf .strong-pm
 rm -rf ~/.strong-pm
+rm $plaindir/resource-server/pmctl
+rm $plaindir/resource-server/runctl
 git checkout README.md
 git checkout package.json
 git checkout sample-configs
 
 echo 'configuring step'
-cp -r ../notes-app-plain/client ./client
-cp -r ../notes-app-plain/resource-server ./resource-server
-cp $stepdir/build-servers* .
-cp $stepdir/server.js .
-cp $stepdir/start-demo .
+cp -r $plaindir/resource-server resource-server
+cp -r $plaindir/client client
+cp -r $stepdir/* . && rm install
 ./build-servers
 
 echo 'starting app'
 cd resource-server
 slc start
 slc ctl set-size 1 1
-cd ../
+cd ..
 node client

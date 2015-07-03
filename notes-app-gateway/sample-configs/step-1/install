@@ -1,27 +1,28 @@
 #!/bin/bash
-stepdir=sample-configs/step-1
-plaindir=../notes-app-plain
+. common.sh
+shopt -s extglob
+rm !($gatewaydir/README.md|$gatewaydir/package.json|$gatewaydir/sample-configs)
+shopt -u extglob
 
-echo 'cleaning app root'
-slc ctl shutdown
-rm -rf ./*
-rm -rf .strong-pm
-rm -rf ~/.strong-pm
-rm $plaindir/resource-server/pmctl
-rm $plaindir/resource-server/runctl
-git checkout README.md
-git checkout package.json
-git checkout sample-configs
+# echo 'cleaning app root'
+# slc ctl shutdown
+# rm -rf $gatewaydir/*
+# rm -rf $gatewaydir/.strong-pm
+# rm -rf ~/.strong-pm
+# rm $plaindir/resource-server/pmctl
+# rm $plaindir/resource-server/runctl
+# git checkout $gatewaydir/README.md
+# git checkout $gatewaydir/package.json
+# git checkout $gatewaydir/sample-configs
 
-echo 'configuring step'
-cp -r $plaindir/resource-server resource-server
-cp -r $plaindir/client client
-cp -r $stepdir/* . && rm install
-./build-servers
+# echo 'configuring step'
+# cp -r $plaindir/resource-server $gatewaydir/resource-server
+# cp -r $plaindir/client $gatewaydir/client
+# cp -r $stepdir/* $gatewaydir && rm $gatewaydir/install
+# ./$gatewwaydir/build-servers
 
-echo 'starting app'
-cd resource-server
-slc start
-slc ctl set-size 1 1
-cd ..
-node client
+# echo 'starting app'
+# cd $gatewaydir/resource-server
+# slc start
+# slc ctl set-size 1 1
+# node $gatewaydir/client

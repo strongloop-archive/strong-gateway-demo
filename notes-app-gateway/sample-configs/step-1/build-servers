@@ -1,3 +1,4 @@
 #!/bin/bash
-cd resource-server && npm install
-cd ../client && npm install
+. common.sh
+cd $gatewaydir/resource-server && npm install
+cd $gatewaydir/client && npm install

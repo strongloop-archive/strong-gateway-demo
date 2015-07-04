@@ -1,10 +1,14 @@
 #!/bin/bash
-. common.sh
-rm -rf $gatewaydir/.strong-pm
-rm -rf ~/.strong-pm
-slc ctl shutdown
-./$gatewaydir/build-servers
-cd $gatewaydir/resource-server
+echo 'resetting pm'
+slc ctl shutdown &> /dev/null
+rm -rf ~/.strong-pm &> /dev/null
+rm -rf .strong-pm &> /dev/null
+
+echo 'building servers'
+./build-servers
+
+echo 'starting app'
+cd resource-server
 slc start
 slc ctl set-size 1 1
-node $gatewaydir/client
+node ../client

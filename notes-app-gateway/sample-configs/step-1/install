@@ -1,28 +1,30 @@
 #!/bin/bash
-. common.sh
 shopt -s extglob
-rm !($gatewaydir/README.md|$gatewaydir/package.json|$gatewaydir/sample-configs)
+
+readonly stepdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+readonly gatewaydir=$stepdir/../..
+readonly plaindir=$gatewaydir/../notes-app-plain
+
+echo 'resetting pm'
+slc ctl shutdown &> /dev/null
+rm -rf ~/.strong-pm &> /dev/null
+rm -rf $gatewaydir/.strong-pm &> /dev/null
+
+echo 'cleaning app root'
+rm -rf $gatewaydir/!(README.md|package.json|sample-configs)
+rm $plaindir/resource-server/pmctl &> /dev/null
+rm $plaindir/resource-server/runctl &> /dev/null
+
+echo 'building step'
+cp -r $plaindir/resource-server $gatewaydir/resource-server
+cp -r $plaindir/client $gatewaydir/client
+cp -r $stepdir/!(common.sh|install) $gatewaydir
+$gatewaydir/build-servers
+
+echo 'starting app'
+cd $gatewaydir/resource-server
+slc start
+slc ctl set-size 1 1
+node $gatewaydir/client
+
 shopt -u extglob
-
-# echo 'cleaning app root'
-# slc ctl shutdown
-# rm -rf $gatewaydir/*
-# rm -rf $gatewaydir/.strong-pm
-# rm -rf ~/.strong-pm
-# rm $plaindir/resource-server/pmctl
-# rm $plaindir/resource-server/runctl
-# git checkout $gatewaydir/README.md
-# git checkout $gatewaydir/package.json
-# git checkout $gatewaydir/sample-configs
-
-# echo 'configuring step'
-# cp -r $plaindir/resource-server $gatewaydir/resource-server
-# cp -r $plaindir/client $gatewaydir/client
-# cp -r $stepdir/* $gatewaydir && rm $gatewaydir/install
-# ./$gatewwaydir/build-servers
-
-# echo 'starting app'
-# cd $gatewaydir/resource-server
-# slc start
-# slc ctl set-size 1 1
-# node $gatewaydir/client

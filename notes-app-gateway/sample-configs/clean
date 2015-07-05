@@ -1,0 +1,9 @@
+#!/bin/bash
+readonly stepdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+readonly gatewaydir=$stepdir/..
+readonly plaindir=$gatewaydir/../notes-app-plain
+
+echo 'cleaning app root'
+rm -rf $gatewaydir/!(README.md|package.json|sample-configs)
+rm $plaindir/resource-server/pmctl &> /dev/null
+rm $plaindir/resource-server/runctl &> /dev/null

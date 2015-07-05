@@ -1,13 +1,17 @@
 #!/bin/bash
-rm -rf .strong-pm
-rm -rf ~/.strong-pm
-slc ctl shutdown
+echo 'resetting pm'
+slc ctl shutdown &> /dev/null
+rm -rf ~/.strong-pm &> /dev/null
+rm -rf .strong-pm &> /dev/null
+
+echo 'building servers'
 ./build-servers
+
+echo 'starting app'
 cd auth-server
 slc start
 slc ctl set-size 1 1
 cd ../resource-server
 slc start
 slc ctl set-size 2 1
-cd ..
-node client
+node ../client

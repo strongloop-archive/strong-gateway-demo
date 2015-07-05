@@ -1,32 +1,36 @@
 #!/bin/bash
-stepdir=sample-configs/step-5
-plaindir=../notes-app-plain
+shopt -s extglob
+
+readonly stepdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+readonly gatewaydir=$stepdir/../..
+readonly plaindir=$gatewaydir/../notes-app-plain
+
+echo 'resetting pm'
+slc ctl shutdown &> /dev/null
+rm -rf ~/.strong-pm &> /dev/null
+rm -rf $gatewaydir/.strong-pm &> /dev/null
 
 echo 'cleaning app root'
-slc ctl shutdown
-rm -rf ./*
-rm -rf .strong-pm
-rm -rf ~/.strong-pm
-rm $plaindir/resource-server/pmctl
-rm $plaindir/resource-server/runctl
-git checkout README.md
-git checkout package.json
-git checkout sample-configs
+rm -rf $gatewaydir/!(README.md|package.json|sample-configs)
+rm $plaindir/resource-server/pmctl &> /dev/null
+rm $plaindir/resource-server/runctl &> /dev/null
 
-echo 'configuring step'
-git clone https://github.com/strongloop/strong-gateway auth-server
-cp -r $plaindir/resource-server resource-server
-cp -r $plaindir/client client
-cp -r $stepdir/* . && rm install
-./build-servers
+echo 'building step'
+git clone https://github.com/strongloop/strong-gateway $gatewaydir/auth-server
+cp -r $plaindir/resource-server $gatewaydir/resource-server
+cp -r $plaindir/client $gatewaydir/client
+cp -r $stepdir/!(common.sh|install) $gatewaydir
+cd $gatewaydir/auth-server && npm install
+cd $gatewaydir/resource-server && npm install
+cd $gatewaydir/client && npm install
 
 echo 'starting app'
-cd auth-server
+cd $gatewaydir/auth-server
 slc start
 slc ctl set-size 1 1
-sleep 1
-cd ../resource-server
+cd $gatewaydir/resource-server
 slc start
 slc ctl set-size 2 1
-cd ..
-node client
+node $gatewaydir/client
+
+shopt -u extglob

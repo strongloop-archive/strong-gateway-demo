@@ -19,7 +19,8 @@ echo 'building step'
 cp -r $plaindir/resource-server $gatewaydir/resource-server
 cp -r $plaindir/client $gatewaydir/client
 cp -r $stepdir/!(common.sh|install) $gatewaydir
-$gatewaydir/build-servers
+cd $gatewaydir/resource-server && npm install
+cd $gatewaydir/client && npm install
 
 echo 'starting app'
 cd $gatewaydir/resource-server

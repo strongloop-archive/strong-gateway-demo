@@ -29,17 +29,13 @@ topics. The end result of the tutorial will be the transformation of
 
 ##Run
 
-You can run any step of this tutorial by executing it's corresponding
-*install* script from the [app root (ie. the `notes-app-gateway` dir)]().
-For example, to run step 1:
+You can run any step of this tutorial by executing it's corresponding *install*
+script. For example, to run step 1:
 
 ```
 cd notes-app-gateway
 ./sample-configs/step-1/install
 ```
-
->We copy and remove files relative to the app root, so make sure you do not
-execute the install script from any other dir.
 
 >You may see `Command "shutdown" on "http://127.0.0.1:8701" failed with Error: connect ECONNREFUSED`
 if PM isn't already running. This is safe to ignore.
@@ -119,9 +115,6 @@ Notes
 ```
 
 Stop the servers when you're done verifying the results.
-
->You can set up this step automatically by executing `./sample-configs/step-1/install`
-from the app root.
 
 ###Step 2 - Proxy requests through the auth server
 
@@ -247,9 +240,6 @@ The client is now fully decoupled from the resource server.
 
 Shut down all the servers when you're done verifying the results.
 
->You can set up this step automatically by executing `./sample-configs/step-2/install`
-from the app root.
-
 ###Step 3 - Enable security on the auth server
 
 At this point, requests are being proxied properly, but we do not enforce any
@@ -273,8 +263,6 @@ Unauthorized
 ```
 
 The server is now denying requests from unauthorized users.
-
->You can set up this step automatically by executing `./sample-configs/step-3/install`
 
 ###Step 4 - Enable the OAuth 2.0 Authorization Code flow on the client
 

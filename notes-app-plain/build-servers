@@ -1,3 +1,3 @@
-#!/bin/bash
-cd ../resource-server && npm install
+#!/usr/bin/env bash
 cd client && npm install
+cd ../resource-server && npm install

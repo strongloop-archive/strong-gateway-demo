@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 shopt -s extglob
 
 readonly curdir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 rm -rf .strong-pm
 rm -rf ~/.strong-pm
 slc ctl shutdown

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 cd auth-server && npm install
 cd ../resource-server && npm install
 cd ../client && npm install

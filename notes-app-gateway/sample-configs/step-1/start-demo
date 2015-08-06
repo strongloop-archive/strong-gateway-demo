@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo 'resetting pm'
 slc ctl shutdown &> /dev/null
 rm -rf ~/.strong-pm &> /dev/null

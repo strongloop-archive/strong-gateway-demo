@@ -145,7 +145,7 @@ From the app root, clone the [StrongLoop API Gateway](https://github.com/strongl
 into a dir named `auth-server`:
 
 ```
-git clone https://github.com/strongloop/strong-gateway auth-server
+git clone -b 'v1.0.10' https://github.com/strongloop/strong-gateway auth-server
 ```
 
 Install the auth server's deps:

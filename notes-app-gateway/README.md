@@ -99,7 +99,7 @@ Start both servers:
 ```
 cd ../resource-server
 slc start
-slc ctl set size 1 1
+slc ctl set-size 1 1
 cd .. # change back to the app root
 node client
 ```

@@ -16,7 +16,7 @@ rm $plaindir/resource-server/pmctl &> /dev/null
 rm $plaindir/resource-server/runctl &> /dev/null
 
 echo 'building step'
-git clone https://github.com/strongloop/strong-gateway $gatewaydir/auth-server
+git clone -b 'v1.0.10' --single-branch --depth 1 https://github.com/strongloop/strong-gateway $gatewaydir/auth-server
 cp -r $plaindir/resource-server $gatewaydir/resource-server
 cp -r $plaindir/client $gatewaydir/client
 cp -r $stepdir/!(common.sh|install) $gatewaydir

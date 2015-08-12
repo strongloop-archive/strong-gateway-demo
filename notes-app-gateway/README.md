@@ -214,10 +214,10 @@ Start all three servers (resource server and the auth server using PM, client
 using regular node):
 
 ```
-cd resource-server
+cd auth-server
 slc start
 slc ctl set-size 1 1
-cd ../auth-server
+cd resource-server
 slc start
 slc ctl set-size 2 1
 cd ..

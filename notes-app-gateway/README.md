@@ -544,9 +544,9 @@ Update [`auth-server/server/datasources.json`](sample-configs/step-6/auth-server
 Start all three servers:
 
 ```
-cd resource-server
+cd auth-server
 slc start
-cd ../auth-server
+cd ../resource-server
 slc start
 cd ..
 node client
@@ -617,9 +617,9 @@ You should see the following tables in your MySQL database:
 Start all three servers:
 
 ```
-cd resource-server
+cd auth-server
 slc start
-cd ../auth-server
+cd ../resource-server
 slc start
 cd ..
 node client

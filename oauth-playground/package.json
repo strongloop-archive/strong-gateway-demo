@@ -15,13 +15,12 @@
     "api"
   ],
   "scripts": {
-    "preinstall": "build-servers",
     "pretest": "jshint .",
     "start": "node .",
     "test": "mocha"
   },
   "dependencies": {
-    "strong-gateway": "^1.0.0"
+    "strong-gateway": "1.0.10"
   },
   "homepage": "https://github.com/strongloop/strong-gateway-demo",
   "repository": {

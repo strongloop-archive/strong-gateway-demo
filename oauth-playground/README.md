@@ -12,6 +12,7 @@ flows.
 
 ```
 npm install
+./build-servers # use build-servers.cmd on windows
 node .
 ```
 

@@ -70,6 +70,12 @@ There are five main steps and two optional steps:
 - [Step 6 (optional) - Use MongoDB for the auth server's data source](#step-6---use-mongodb-for-the-auth-servers-data-source)
 - [Step 7 (optional) - Use MySQL for the auth server's data source](#step-7---use-mysql-for-the-auth-servers-data-source)
 
+>Anytime you find yourself lost or in an invalid state, please run the included
+>[`clean` script](./sample-configs/clean) (ie. `./sample-configs/clean`) to
+>reset the application to it's initial state. Then run any install script to
+>get bring the project back to the desired step (ie.
+>`./sample-configs/step-1/install`, etc).
+
 ###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 
 ####Copy the resource server and client

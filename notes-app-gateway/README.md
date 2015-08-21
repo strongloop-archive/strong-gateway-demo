@@ -39,8 +39,7 @@ topics. The end result of the tutorial will be the transformation of
 >Anytime you find yourself lost or in an invalid state, please run the included
 >[`clean` script](./sample-configs/clean) (ie. `./sample-configs/clean`) to
 >reset the application to it's initial state. Then run any install script to
->get bring the project back to the desired step (ie.
->`./sample-configs/step-1/install`, etc).
+>get bring the project back to the desired step (ie. `./sample-configs/step-1/install`).
 
 You can run any step of this tutorial by executing it's corresponding *install*
 script. For example, to run step 1:
@@ -73,8 +72,7 @@ There are five main steps and two optional steps:
 >Anytime you find yourself lost or in an invalid state, please run the included
 >[`clean` script](./sample-configs/clean) (ie. `./sample-configs/clean`) to
 >reset the application to it's initial state. Then run any install script to
->get bring the project back to the desired step (ie.
->`./sample-configs/step-1/install`, etc).
+>get bring the project back to the desired step (ie. `./sample-configs/step-1/install`).
 
 ###Step 1 - Copy files from `notes-app-plain` to `notes-app-gateway`
 

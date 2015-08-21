@@ -29,6 +29,19 @@ topics. The end result of the tutorial will be the transformation of
 
 ##Run
 
+>Please note, we recommend running the included `install` scripts in the
+>`sample-configs` dir instead of trying to manually run the steps on your own.
+>The reason is `strong-pm` organizes service id's according to which apps you
+>start first. Unless you are 100% sure you are starting the apps in the same
+>order as the install scripts, just use the provided scripts to ensure a working
+>demo.
+>
+>Anytime you find yourself lost or in an invalid state, please run the included
+>[`clean` script](./sample-configs/clean) (ie. `./sample-configs/clean`) to
+>reset the application to it's initial state. Then run any install script to
+>get bring the project back to the desired step (ie.
+>`./sample-configs/step-1/install`, etc).
+
 You can run any step of this tutorial by executing it's corresponding *install*
 script. For example, to run step 1:
 

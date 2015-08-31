@@ -9,7 +9,7 @@
     {
       "name": "local-protected-resource",
       "verb": "ALL",
-      "endpoint": "^/protected/(.*)$",
+      "endpoint": "^/protected|me|_internal/(.*)$",
       "pipelineId": "local-protected-resource-pipeline"
     },
     {
@@ -24,7 +24,6 @@
       "policyIds": [
         "default-metrics-policy",
         "default-auth-policy",
-        "default-rate-limiting-policy",
         "default-api-proxy-policy"
       ]
     },
@@ -34,7 +33,6 @@
         "default-metrics-policy",
         "auth-note-policy",
         "auth-demo-policy",
-        "default-rate-limiting-policy",
         "default-api-proxy-policy"
       ]
     },
@@ -43,7 +41,6 @@
       "policyIds": [
         "default-metrics-policy",
         "auth-demo-policy",
-        "default-rate-limiting-policy",
         "local-protected-resource-proxy-policy"
       ]
     }
@@ -76,32 +73,6 @@
       "scopes": [
         "demo"
       ]
-    },
-    {
-      "name": "default-rate-limiting-policy",
-      "type": "rateLimiting",
-      "phase": "routes:after",
-      "limit": 100,
-      "interval": 60000,
-      "keys": {
-        "app": {
-          "template": "app-${app.id}",
-          "limit": 1000
-        },
-        "ip": 500,
-        "url": {
-          "template": "url-${urlPaths[0]}/${urlPaths[1]}",
-          "limit": 1000
-        },
-        "user": {
-          "template": "user-${user.id}",
-          "limit": 1000
-        },
-        "app,user": {
-          "template": "app-${app.id}-user-${user.id}",
-          "limit": 1000
-        }
-      }
     },
     {
       "name": "default-api-proxy-policy",

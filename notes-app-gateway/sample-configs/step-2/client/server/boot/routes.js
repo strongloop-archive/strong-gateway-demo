@@ -14,8 +14,8 @@ module.exports = function(app) {
           msg: err
         });
 
-      if (response.statusCode === 401)
-        res.render('error', {
+      if (response.statusCode > 400)
+        return res.render('error', {
           title: response.statusCode,
           msg: body
         });

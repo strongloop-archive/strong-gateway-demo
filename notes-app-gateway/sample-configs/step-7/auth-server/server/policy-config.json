@@ -9,7 +9,7 @@
     {
       "name": "local-protected-resource",
       "verb": "ALL",
-      "endpoint": "^/protected/(.*)$",
+      "endpoint": "^/protected|me|_internal/(.*)$",
       "pipelineId": "local-protected-resource-pipeline"
     },
     {

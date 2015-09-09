@@ -25,7 +25,7 @@ module.exports = function(app) {
       } catch (e) {
         return res.render('error', {
           title: e.name,
-          msg: e.message
+          msg: e.message + ' && ' + body
         });
       }
 

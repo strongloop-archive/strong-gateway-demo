@@ -9,5 +9,6 @@ echo 'cleaning app root'
 rm -rf $gatewaydir/!(README.md|package.json|sample-configs)
 rm $plaindir/resource-server/pmctl &> /dev/null
 rm $plaindir/resource-server/runctl &> /dev/null
+slc ctl shutdown
 
 shopt -u extglob

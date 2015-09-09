@@ -1,0 +1,51 @@
+{
+  "mappings": [
+    {
+      "name": "all-apis",
+      "verb": "ALL",
+      "endpoint": "^/api/(.*)$",
+      "pipelineId": "default-api-pipeline"
+    },
+    {
+      "name": "local-protected-resource",
+      "verb": "ALL",
+      "endpoint": "^/protected/(.*)$",
+      "pipelineId": "local-protected-resource-pipeline"
+    }
+  ],
+  "pipelines": [
+    {
+      "name": "default-api-pipeline",
+      "policyIds": [
+        "default-metrics-policy",
+        "default-api-proxy-policy"
+      ]
+    },
+    {
+      "name": "local-protected-resource-pipeline",
+      "policyIds": [
+        "default-metrics-policy",
+        "local-protected-resource-proxy-policy"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "name": "default-metrics-policy",
+      "type": "metrics",
+      "phase": "initial:before"
+    },
+    {
+      "name": "default-api-proxy-policy",
+      "type": "reverseProxy",
+      "phase": "proxies",
+      "targetURL": "http://localhost:3002/api/$1"
+    },
+    {
+      "name": "local-protected-resource-proxy-policy",
+      "type": "reverseProxy",
+      "phase": "proxies",
+      "targetURL": "http://localhost:3000/protected/$1"
+    }
+  ]
+}

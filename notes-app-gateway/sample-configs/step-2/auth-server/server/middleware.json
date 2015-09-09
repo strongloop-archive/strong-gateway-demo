@@ -4,8 +4,7 @@
     },
     "cors": {
     },
-    "strong-express-metrics": {
-    }
+    "strong-express-metrics": []
   },
   "initial": {
     "compression": {
@@ -24,6 +23,9 @@
     }
   },
   "auth": {
+    "loopback-component-oauth2#authenticate": []
+  },
+  "auth:after": {
   },
   "routes:before": {
     "./middleware/https-redirect": {
@@ -33,24 +35,24 @@
     }
   },
   "routes:after": {
-    "./middleware/proxy": {
-      "params": {
-        "rules": [
-          "^/api/(.*)$ http://localhost:3002/api/$1 [P]",
-          "^/protected/(.*)$ http://localhost:3000/protected/$1 [P]"
-        ]
-      }
-    }
+    "./middleware/rate-limiting-policy": []
+  },
+  "proxies": {
+    "./middleware/proxy": []
   },
   "files": {
     "loopback#static": [
       {
         "params": "$!../client/public",
-        "paths": ["/"]
+        "paths": [
+          "/"
+        ]
       },
       {
         "params": "$!../client/admin",
-        "paths": ["/admin"]
+        "paths": [
+          "/admin"
+        ]
       }
     ]
   },
@@ -58,6 +60,10 @@
     "loopback#url-not-found": {}
   },
   "final:after": {
-    "errorhandler": {"params": {"log": false}}
+    "errorhandler": {
+      "params": {
+        "log": false
+      }
+    }
   }
 }

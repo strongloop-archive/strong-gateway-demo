@@ -2,7 +2,6 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var path = require('path');
 var http = require('http');
-var sslCert = require('./private/ssl_cert');
 var https = require('https');
 
 var app = module.exports = loopback();
@@ -18,25 +17,13 @@ boot(app, __dirname, function(err) {
     var httpServer = http.createServer(app).listen(port, host, function() {
       printServingMsg('http', host, port);
 
-      var httpsOptions = app.httpsOptions = {
-        key: sslCert.privateKey,
-        cert: sslCert.certificate
+      app.close = function(cb) {
+        app.removeAllListeners('started');
+        app.removeAllListeners('loaded');
+        httpServer.close();
       };
-      var httpsPort = app.get('https-port');
-      var httpsServer = https.createServer(httpsOptions, app).listen(
-          app.httpsPort, host, function() {
-        printServingMsg('https', host, httpsPort);
 
-        app.close = function(cb) {
-          app.removeAllListeners('started');
-          app.removeAllListeners('loaded');
-          httpServer.close(function() {
-            httpsServer.close(cb);
-          });
-        };
-
-        app.emit('started');
-      });
+      app.emit('started');
     });
   };
 

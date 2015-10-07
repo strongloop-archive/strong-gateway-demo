@@ -1,6 +1,3 @@
->**A [StrongLoop license](#obtain-a-strongloop-license) is required for this
-beta demo.**
-
 #strong-gateway-demo
 
 This demo contains a two-part tutorial and an example app for the [StrongLoop
@@ -112,11 +109,6 @@ strongloop v4.0.4 (node v0.10.36)
 update`.
 
 ### Obtain a StrongLoop license
-
-The StrongLoop Gateway is currently under private beta. Please contact
-sales@strongloop.com to have a license provisioned. After receiving confirmation
-that a license has been provisioned, run `slc arc --licenses` to retrieve the new
-license key
 
 >See ["Managing your licenses"](http://docs.strongloop.com/display/SL/Managing+your+licenses).
 

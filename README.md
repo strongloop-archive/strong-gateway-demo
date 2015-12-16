@@ -20,8 +20,8 @@ gateway as an OAuth 2.0 solution into an existing infrastructure.
 
 ####Part 1 - `notes-app-plain`
 
-[`notes-app-plain`](notes-app-plain) is a simple web app that renders a list of
-notes:
+[`notes-app-plain`](https://github.com/strongloop/strong-gateway-demo/tree/master/notes-app-plain) is a simple web app
+that renders a list of notes:
 
 ```
 Notes
@@ -48,7 +48,7 @@ We will be building the client and resource server apps in preparation for part
 
 ####Part 2 - `notes-app-gateway`
 
-[`notes-app-gateway`](notes-app-gateway) is a seven-step tutorial that
+[`notes-app-gateway`](https://github.com/strongloop/strong-gateway-demo/tree/master/notes-app-gateway) is a seven-step tutorial that
 demonstrates various features of the StrongLoop API Gateway. In each step, we
 incrementally improve on the app from part 1 and cover a variety of topics as
 we work through the transformation of `notes-app-plain` to `notes-app-gateway`.
@@ -75,8 +75,8 @@ flows:
 
 We also include sample scripts for GUI-less workflows:
 
-- [JWT Authorization Grant](oauth-playground/scripts/jwt-auth-grant.js)
-- [JWT Client Authentication](oauth-playground/scripts/jwt-client-auth.js)
+- [JWT Authorization Grant](https://github.com/strongloop/strong-gateway-demo/blob/master/oauth-playground/scripts/jwt-auth-grant.js)
+- [JWT Client Authentication](https://github.com/strongloop/strong-gateway-demo/blob/master/oauth-playground/scripts/jwt-client-auth.js)
 
 ## Setup
 
@@ -105,8 +105,7 @@ strongloop v4.0.4 (node v0.10.36)
 └── nodefly-register@0.3.3
 ```
 
->Check your library versions by running `slc -v` or update them by running `slc
-update`.
+>Check your versions by running `slc -v` or update them by running `npm install -g strongloop`.
 
 ### Obtain a StrongLoop license
 
@@ -114,14 +113,13 @@ update`.
 
 ## Run
 
-We suggest you start at [part 1 of the tutorial](notes-app-plain) and then move
-onto [part 2 of the tutorial](notes-app-gateway). Feel free to skip directly to
-the [`oauth-playground` example](oauth-playground) if you do not want to go
-through the tutorials.
+Start with [part 1 of the tutorial](https://github.com/strongloop/strong-gateway-demo/tree/master/notes-app-plain) 
+Then move to [part 2 of the tutorial](https://github.com/strongloop/strong-gateway-demo/tree/master/notes-app-gateway).
 
-- [Tutorial part 1 - `notes-app-plain`](notes-app-plain)
-- [Tutorial part 2  - `notes-app-gateway`](notes-app-gateway)
-- [Example - `oauth-playground`](oauth-playground)
+Feel free to skip directly to the 
+[`oauth-playground` example](https://github.com/strongloop/strong-gateway-demo/tree/master/oauth-playground) if you don't
+want to go through the tutorials.
+
 
 ---
 

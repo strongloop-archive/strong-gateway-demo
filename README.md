@@ -120,7 +120,6 @@ Feel free to skip directly to the
 [`oauth-playground` example](https://github.com/strongloop/strong-gateway-demo/tree/master/oauth-playground) if you don't
 want to go through the tutorials.
 
-
 ---
 
-[Other LoopBack demos](https://github.com/strongloop/loopback-demo)
+[More LoopBack examples](https://github.com/strongloop/loopback-example)

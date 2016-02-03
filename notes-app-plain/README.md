@@ -198,4 +198,4 @@ That concludes part 1 of the tutorial, [proceed to part 2 of the tutorial](../no
 
 ---
 
-[Other LoopBack Examples](https://github.com/strongloop/loopback-example)
+[More LoopBack examples](https://github.com/strongloop/loopback-example)

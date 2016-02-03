@@ -658,4 +658,4 @@ as access token values, etc.
 
 ---
 
-[Other LoopBack Examples](https://github.com/strongloop/loopback-example)
+[More LoopBack examples](https://github.com/strongloop/loopback-example)

@@ -70,4 +70,4 @@ When you run the demo, you can click on link to start the corresponding OAuth
 
 ---
 
-[Other LoopBack Examples](https://github.com/strongloop/loopback-example)
+[More LoopBack examples](https://github.com/strongloop/loopback-example)

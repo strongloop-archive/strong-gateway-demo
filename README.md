@@ -1,3 +1,7 @@
+NOTE: StrongLoop Gateway `strong-gateway` is **deprecated** as of 03/22/2016.
+StrongLoop Gateway is now part of IBM API Connect, as the _Micro Gateway_ for securing and 
+forwarding requests to a back-end API.  For more information, see https://developer.ibm.com/apiconnect.
+
 #strong-gateway-demo
 
 This demo contains a two-part tutorial and an example app for the [StrongLoop

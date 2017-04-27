@@ -481,6 +481,7 @@ Notice the headers show the maximum number of requests (1000), the number of
 remaining requests (999, 998, ...) and the time left (in ms) until that count
 resets (60000, 59982, ...). For more info on rate limiting, see the [official docs](http://docs.strongloop.com/display/LGW/Configuring+policies#Configuringpolicies-Configuringratelimiting).
 
+<!-- API Analytics is not yet published to the public, uncomment when it is released
 ####API Analytics
 
 The StrongLoop API Gateway can gather analytics related to API usage. We will be
@@ -535,6 +536,7 @@ again to refresh the data. You should many changes that correspond with the
 activity caused by the rate limiting script.
 
 >See ["API Analytics"](http://docs.strongloop.com/display/SLC/API+Analytics).
+-->
 
 ###Step 6 - Use MongoDB for the auth server's data source
 
